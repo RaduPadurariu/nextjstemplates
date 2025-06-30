@@ -1,7 +1,7 @@
 import React from "react";
 
 const PortalTeams = () => {
-  return <div>PortalTeams</div>;
+  return <section>PortalTeams</section>;
 };
 
 export default PortalTeams;

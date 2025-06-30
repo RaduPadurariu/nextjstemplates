@@ -1,7 +1,7 @@
 import React from "react";
 
 const PortalFooter = () => {
-  return <div>PortalFooter</div>;
+  return <section id="portalContact">PortalFooter</section>;
 };
 
 export default PortalFooter;

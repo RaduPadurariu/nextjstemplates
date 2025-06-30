@@ -1,7 +1,7 @@
 import React from "react";
 
 const PortalDownload = () => {
-  return <div>PortalDownload</div>;
+  return <section>PortalDownload</section>;
 };
 
 export default PortalDownload;

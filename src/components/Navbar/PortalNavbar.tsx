@@ -42,7 +42,7 @@ const PortalNavbar = () => {
               <ul
                 className={`${
                   open ? "flex" : "hidden"
-                } md:flex flex-col md:flex-row absolute md:relative left-0 md:left-auto top-[80px] md:top-auto w-full text-black md:text-white overflow-hidden bg-white md:bg-transparent z-50 text-base font-medium`}
+                } md:flex flex-col md:flex-row absolute md:relative left-0 md:left-auto top-[80px] md:top-auto w-full text-black md:text-white overflow-hidden bg-white md:bg-transparent z-50 text-base font-medium py-3 md:py-0`}
                 id="menuitem"
               >
                 {portalNavbar.map((link) => {

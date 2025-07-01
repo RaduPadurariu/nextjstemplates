@@ -4,7 +4,7 @@ import React from "react";
 const PortalHero = () => {
   return (
     <section id="portalHero">
-      <div className="portal-container flex flex-col-reverse md:flex-row justify-between pb-20">
+      <div className="portal-container flex flex-col-reverse md:flex-row justify-between pb-5">
         <div className="mt-[12%] w-full md:w-1/2">
           <h1 className="font-normal text-5xl md:text-[60px] leading-[70px]">
             Next JS Templates <br />
@@ -39,7 +39,7 @@ const PortalHero = () => {
               height={500}
               src="/images/portal/home.png"
               alt="no-home-bg"
-              className="w-full h-auto"
+              className="max-h-full object-contain"
             />
           </div>
         </div>

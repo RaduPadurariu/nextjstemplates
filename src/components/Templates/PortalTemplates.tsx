@@ -7,7 +7,7 @@ const PortalTemplates = () => {
   return (
     <section
       id="portalTemplates"
-      className="my-12 w-full h-full bg-no-repeat bg-cover bg-left-[20%] text-center bg-[url('/images/portal/over.png')]"
+      className="mt-12 mb-0 w-full h-full bg-no-repeat bg-cover bg-left-[20%] text-center bg-[url('/images/portal/over.png')]"
     >
       <br />
       <br />
@@ -16,7 +16,7 @@ const PortalTemplates = () => {
         <div>
           <h1 className="text-center font-normal text-4xl">Templates</h1>
           <p className="font-normal text-center my-5 mx-0 opacity-50">
-            Enhance Your Brand Potential With Giant Advertising Blimps
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem.
           </p>
         </div>
 

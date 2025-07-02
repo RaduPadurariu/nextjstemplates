@@ -1,3 +1,11 @@
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiJest,
+} from "react-icons/si";
+import { JSX } from "react";
+
 export const portalNavbar = [
   { id: 1, title: "Home", link: "#portalNavbar" },
   { id: 2, title: "Templates", link: "#portalTemplates" },
@@ -41,5 +49,39 @@ export const portalTemplatesList = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
     link: "/usershop",
     color: "group-hover:text-[#e67e22]",
+  },
+];
+
+export type TechnologyItem = {
+  id: number;
+  title: string;
+  icon: JSX.Element;
+  desc: string;
+};
+
+export const portalTechnologiesList: TechnologyItem[] = [
+  {
+    id: 1,
+    title: "Next.js",
+    icon: <SiNextdotjs size={50} color="#000" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  },
+  {
+    id: 2,
+    title: "TypeScript",
+    icon: <SiTypescript size={50} color="#3178C6" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  },
+  {
+    id: 3,
+    title: "Jest",
+    icon: <SiJest size={50} color="#C21325" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  },
+  {
+    id: 4,
+    title: "Tailwind CSS",
+    icon: <SiTailwindcss size={50} color="#06B6D4" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
 ];

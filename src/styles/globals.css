@@ -7,6 +7,7 @@
     /* Portal */
     --portalTextPrimary: #5d58f7;
     --portalTextSecondary: #5d58f7;
+    --portalBackgroundPrimary: #f8f8ff;
   }
 
   * {
@@ -90,7 +91,7 @@
     color: black;
   }
 
-  .portalTemplates-shadow {
+  .portalTemplates_shadow {
     box-shadow: 0px 20px 51px 9px rgba(0, 0, 0, 0.08);
   }
 

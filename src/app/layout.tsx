@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const metadata: Metadata = {
-  title: "Next JS Templates",
+  title: "Next.js Templates",
   description:
     "A Collection of Next JS Templates using Next JS, Typescript, Jest and Tailwind CSS",
   keywords: [

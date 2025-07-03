@@ -8,6 +8,7 @@
     --portalTextPrimary: #5d58f7;
     --portalTextSecondary: #5d58f7;
     --portalBackgroundPrimary: #f8f8ff;
+    --portalBackgroundSecondary: #2a2a2a;
   }
 
   * {
@@ -52,6 +53,7 @@
 }
 
 @layer utilities {
+  /* Portal Next.js */
   .portalHeader::after {
     content: "";
     position: absolute;
@@ -95,10 +97,22 @@
     box-shadow: 0px 20px 51px 9px rgba(0, 0, 0, 0.08);
   }
 
-  /* Responsive */
+  /* Responsive Portal*/
   @media (min-width: 375px) {
     .portalHero_btns {
       flex-direction: row;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .portalFooter__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .portalFooter__grid {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 

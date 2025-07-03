@@ -10,7 +10,7 @@ export const portalNavbar = [
   { id: 1, title: "Home", link: "#portalNavbar" },
   { id: 2, title: "Templates", link: "#portalTemplates" },
   { id: 3, title: "Technologies", link: "#portalTechnologies" },
-  { id: 4, title: "Contact", link: "#portalContact" },
+  { id: 4, title: "Contact", link: "#portalFooter" },
 ];
 
 export const portalTemplatesList = [
@@ -83,5 +83,100 @@ export const portalTechnologiesList: TechnologyItem[] = [
     title: "Tailwind CSS",
     icon: <SiTailwindcss size={50} color="#06B6D4" />,
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  },
+];
+
+export const portalSocialIcons = [
+  {
+    id: 1,
+    iconClass: "fab fa-facebook-f",
+  },
+  {
+    id: 2,
+    iconClass: "fab fa-instagram",
+  },
+  {
+    id: 3,
+    iconClass: "fab fa-twitter",
+  },
+  {
+    id: 4,
+    iconClass: "fab fa-youtube",
+  },
+];
+
+export const portalPostsTags = [
+  {
+    id: 0,
+    tag: "App",
+  },
+  {
+    id: 1,
+    tag: "Business",
+  },
+  {
+    id: 2,
+    tag: "Corporate",
+  },
+  {
+    id: 3,
+    tag: "Creative",
+  },
+  {
+    id: 4,
+    tag: "Design",
+  },
+  {
+    id: 5,
+    tag: "Mobile",
+  },
+  {
+    id: 6,
+    tag: "Travel",
+  },
+];
+
+export const portalBlogCategories = [
+  {
+    id: 1,
+    category: "App Review",
+  },
+  {
+    id: 2,
+    category: "Audio Post",
+  },
+  {
+    id: 3,
+    category: "Default Post",
+  },
+  {
+    id: 4,
+    category: "Uncategorized",
+  },
+  {
+    id: 5,
+    category: "Video Post",
+  },
+  {
+    id: 6,
+    category: "Website Review",
+  },
+];
+
+export const portalContactInfo = [
+  {
+    id: 1,
+    info: "Location",
+    icon: "fas fa-map-marker-alt",
+  },
+  {
+    id: 2,
+    info: "+977 9813253082",
+    icon: "fas fa-mobile-alt",
+  },
+  {
+    id: 3,
+    info: "example@gmail.com",
+    icon: "fas fa-envelope",
   },
 ];

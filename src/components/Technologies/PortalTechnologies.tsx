@@ -1,12 +1,11 @@
 import { portalTechnologiesList } from "@/data/portalData";
 import Image from "next/image";
-import React from "react";
 
 const PortalTechnologies = () => {
   return (
     <section
       id="portalTechnologies"
-      className="pb-12 pt-30 bg-[var(--portalBackgroundPrimary)]"
+      className="pb-12 pt-28 bg-[var(--portalBackgroundPrimary)]"
     >
       <div className="portal-container">
         <div>
@@ -20,7 +19,7 @@ const PortalTechnologies = () => {
           <ul className="grid w-full md:w-1/2 grid-cols-2 gap-5 mr-0 md:mr-5">
             {portalTechnologiesList.map((tech) => {
               return (
-                <li key={tech.id} className="">
+                <li key={tech.id}>
                   <div>{tech.icon}</div>
                   <h3 className="font-normal py-5 text-xl">{tech.title}</h3>
                   <p className="font-normal opacity-50">{tech.desc}</p>
@@ -32,10 +31,9 @@ const PortalTechnologies = () => {
             <div className="bg-no-repeat bg-cover bg-[url('/images/portal/fe1.png')]">
               <Image
                 src="/images/portal/fe.png"
-                alt="no-img"
+                alt="no-img-phone"
                 width={533}
                 height={421}
-                className="overflow-clip"
                 style={{ overflowClipMargin: "content-box" }}
               />
             </div>

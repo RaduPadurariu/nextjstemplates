@@ -1,17 +1,13 @@
 import { portalTemplatesList } from "@/data/portalData";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const PortalTemplates = () => {
   return (
     <section
       id="portalTemplates"
-      className="mt-12 mb-0 w-full h-full bg-no-repeat bg-cover bg-left-[20%] text-center bg-[url('/images/portal/over.png')]"
+      className="mt-12 mb-0 w-full h-full bg-no-repeat bg-cover bg-left-[20%] text-center bg-[url('/images/portal/over.png')] py-20"
     >
-      <br />
-      <br />
-      <br />
       <div className="portal-container px-5 py-24 sm:px-24 sm:p-24 rounded bg-white portalTemplates_shadow">
         <div>
           <h1 className="text-center font-normal text-4xl">Templates</h1>
@@ -33,7 +29,6 @@ const PortalTemplates = () => {
                     height={170}
                     src={`${template.img}`}
                     alt="no-home-bg"
-                    className="overflow-clip"
                   />
                   <i
                     className={`${template.icon} absolute top-[30%] left-0 right-0 text-5xl text-white`}
@@ -52,9 +47,6 @@ const PortalTemplates = () => {
           })}
         </ul>
       </div>
-      <br />
-      <br />
-      <br />
     </section>
   );
 };

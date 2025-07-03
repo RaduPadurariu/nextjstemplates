@@ -1,7 +1,7 @@
 "use client";
 import { portalNavbar } from "@/data/portalData";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const PortalNavbar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -63,6 +63,7 @@ const PortalNavbar = () => {
             <span
               className=" text-white block cursor-pointer text-2xl ml-5 text-center md:hidden"
               onClick={() => setOpen(!open)}
+              data-testid="burger"
             >
               {open ? (
                 <i className="fa fa-times"></i>

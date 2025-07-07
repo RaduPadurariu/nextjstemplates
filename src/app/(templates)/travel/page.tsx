@@ -1,15 +1,15 @@
 const page = () => {
   return (
     <div>
-      User Posts
+      Travel
       <p>
         template to use:{" "}
         <a
-          href="https://courses.webdevsimplified.com/"
+          href="https://www.youtube.com/watch?v=RGix5NcNffo"
           target="_blank"
           className="text-blue-600 underline"
         >
-          User Posts
+          Booking Travel
         </a>
       </p>
     </div>

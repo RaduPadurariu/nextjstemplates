@@ -1,3 +1,5 @@
+// Portal Next.js
+
 import {
   SiNextdotjs,
   SiTypescript,
@@ -16,38 +18,39 @@ export const portalNavbar = [
 export const portalTemplatesList = [
   {
     id: 1,
-    title: "User Login",
+    title: "Fake Login",
     icon: "fas fa-sign-in-alt",
     img: "/images/portal/o1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/userlogin",
+    link: "/fakelogin",
     color: "group-hover:text-[#5d58f7]",
   },
   {
     id: 2,
-    title: "User Dashboard",
-    icon: "fas fa-tachometer-alt",
+    title: "User Posts",
+    icon: "fas fa-file-alt",
     img: "/images/portal/o2.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/userdashboard",
-    color: "group-hover:text-[#ef4444]",
+    link: "/userposts",
+    color: "group-hover:text-[#ef4444] ",
   },
   {
     id: 3,
-    title: "User Posts",
-    icon: "fas fa-file-alt",
+    title: "Travel",
+    icon: "fas fa-plane-departure",
     img: "/images/portal/o3.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/userposts",
-    color: "group-hover:text-[#22c55e] ",
+    link: "/travel",
+    color: "group-hover:text-[#22c55e]",
   },
+
   {
     id: 4,
-    title: "User Shop",
+    title: "Shop",
     icon: "fas fa-shopping-cart",
     img: "/images/portal/o4.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/usershop",
+    link: "/shop",
     color: "group-hover:text-[#e67e22]",
   },
 ];
@@ -180,3 +183,5 @@ export const portalContactInfo = [
     icon: "fas fa-envelope",
   },
 ];
+
+// Shop

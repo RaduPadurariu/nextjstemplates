@@ -1,15 +1,15 @@
 const page = () => {
   return (
     <div>
-      User Posts
+      Fake login
       <p>
         template to use:{" "}
         <a
-          href="https://courses.webdevsimplified.com/"
-          target="_blank"
           className="text-blue-600 underline"
+          href="https://themewagon.github.io/argon-dashboard-tailwind/"
+          target="_blank"
         >
-          User Posts
+          Login & Dashboard
         </a>
       </p>
     </div>

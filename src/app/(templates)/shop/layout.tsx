@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import "../styles/portal.css";
+import "../../../styles/globals.css";
+import "../../../styles/shop.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const metadata: Metadata = {
-  title: "Next.js Templates",
+  title: "Tools Shop",
   description:
-    "A Collection of Next JS Templates using Next JS, Typescript, Jest and Tailwind CSS",
+    "A Tools Shop created with Next.js, typescript, jest and tailwind css. ",
   keywords: [
     "nextjs",
     "react",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     { name: "Radu Padurariu", url: "https://radupadurariu2025.netlify.app" },
   ],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/shop/favicon.ico",
   },
 };
 
@@ -29,9 +29,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className="">{children}</body>
-    </html>
-  );
+  return <>{children}</>;
 }

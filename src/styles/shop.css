@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+@layer base {
+  :root {
+    /* Colors */
+    /* Shop */
+    --shopTextPrimary: #888;
+    --shopTextSecondary: #59ad35;
+
+    --shopBGPrimary: #232323;
+    --shopBGSecondary: #313131;
+    --shopBGOrange: #e26d0f;
+    --shopBGCart: #535353;
+    --shopBGHeader: #373737;
+  }
+
+  .shopFamily {
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 13px;
+    line-height: 1.5em;
+    color: var(--shopTextPrimary);
+  }
+}
+
+@layer components {
+  .shop-container {
+    max-width: 2048px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .shop-subContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shop__logo_container {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .shop__header_searchBar {
+    margin-left: 0;
+    text-align: right;
+    margin-right: 0;
+    height: 42px;
+  }
+
+  .shop__header_cart_container {
+  }
+
+  .shop__header_cart_link {
+    position: relative;
+    z-index: 0;
+    background: var(--shopBGCart);
+    overflow: hidden;
+  }
+
+  .shop__header_cart_link::after {
+    content: "";
+    right: 0;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 4px 0 0 4px;
+    background: var(--shopTextSecondary);
+    transition: left 0.3s ease-in-out;
+  }
+
+  .shop__header_cart_link:hover::after {
+    left: 0;
+  }
+
+  .shop__nav_closeBtn::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin: -1px 0 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .shop__nav_closeBtn::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin: -1px 0 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* Responsive Shop*/
+  @media (min-width: 768px) {
+    .shop__logo_container {
+      width: 50%;
+      margin: 20px 0;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .shop__logo_container {
+      width: auto;
+      margin-right: 5%;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: -55px;
+      text-align: left;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import "../../../styles/globals.css";
 import "../../../styles/shop.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import ShopHeader from "./components/Header/ShopHeader";
+import ShopNavbar from "./components/Header/Navbar/ShopNavbar";
 
 export const metadata: Metadata = {
   title: "Tools Shop",
@@ -29,5 +30,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <div className="shopFamily">
+      <ShopHeader />
+      <ShopNavbar />
+      {children}
+    </div>
+  );
 }

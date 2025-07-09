@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "tailwindcss";
 @layer base {
   :root {
     /* Colors */
     /* Shop */
     --shopTextPrimary: #888;
     --shopTextSecondary: #59ad35;
-
     --shopBGPrimary: #232323;
     --shopBGSecondary: #313131;
     --shopBGOrange: #e26d0f;
@@ -49,9 +47,6 @@
     text-align: right;
     margin-right: 0;
     height: 42px;
-  }
-
-  .shop__header_cart_container {
   }
 
   .shop__header_cart_link {

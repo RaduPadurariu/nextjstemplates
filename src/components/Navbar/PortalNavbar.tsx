@@ -28,14 +28,20 @@ const PortalNavbar = () => {
         <div className="portal-container">
           <div className="flex justify-between items-center transition-all duration-500">
             <div>
-              <a href="#portalNavbar">
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("portalNavbar")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <Image
                   src="/images/portal/logo.png"
                   alt="no-logo"
                   width={83}
                   height={83}
                 />
-              </a>
+              </button>
             </div>
 
             <nav className="flex items-center">
@@ -51,12 +57,20 @@ const PortalNavbar = () => {
                       key={link.id}
                       className="inline-block mt-2.5 md:mt-0 mb-2.5 md:mb-0 m-12 md:m-0 md:mr-10"
                     >
-                      <a href={link.link}>{link.title}</a>
+                      <button
+                        onClick={() => {
+                          document
+                            .getElementById(`${link.link}`)
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        {link.title}
+                      </button>
                     </li>
                   );
                 })}
               </ul>
-              <button className="hidden md:inline-block outline-none text-xs text-white py-3 px-[30px] rounded-[5px] border-2 border-white cursor-pointer whitespace-nowrap">
+              <button className="shop__navbar_starterBtn hidden md:inline-block outline-none text-xs text-white py-3 px-[30px] rounded-[5px] border-2 border-white cursor-pointer whitespace-nowrap">
                 Get Started
               </button>
             </nav>

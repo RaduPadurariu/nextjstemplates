@@ -3,6 +3,7 @@ import "../../../styles/shop.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import ShopHeader from "./components/Header/ShopHeader";
 import ShopNavbar from "./components/Header/Navbar/ShopNavbar";
+import ShopFooter from "./components/Footer/ShopFooter";
 
 export const metadata: Metadata = {
   title: "Tools Shop",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <ShopHeader />
       <ShopNavbar />
       {children}
+      <ShopFooter />
     </div>
   );
 }

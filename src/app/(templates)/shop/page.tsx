@@ -1,5 +1,4 @@
 import ShopFeatures from "./components/HomeSections/Features/ShopFeatures";
-import ShopFooter from "./components/Footer/ShopFooter";
 
 import ShopHero from "./components/HomeSections/Hero/ShopHero";
 import ShopHomeBlog from "./components/HomeSections/HomeBlog/ShopHomeBlog";
@@ -17,7 +16,6 @@ const page = () => {
       <ShopFeatures />
       <ShopHomeBlog />
       <ShopNewsletter />
-      <ShopFooter />
     </div>
   );
 };

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import "../styles/globals.css";
 import "../styles/portal.css";
-
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const metadata: Metadata = {

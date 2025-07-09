@@ -1,5 +1,11 @@
-@import "tailwindcss";
 @layer base {
+  html,
+  body {
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   :root {
     /* Colors */
 
@@ -54,11 +60,10 @@
 
   .navSticky button {
     color: var(--portalTextPrimary);
-    border: 2px solid var(--portalTextPrimary);
   }
 
-  .navSticky li a {
-    color: var(--portalTextPrimary);
+  .navSticky .shop__navbar_starterBtn {
+    border: 2px solid var(--portalTextPrimary);
   }
 
   .navSticky span {

@@ -9,7 +9,7 @@ import ShopWelcome from "./components/HomeSections/Wellcome/ShopWelcome";
 
 const page = () => {
   return (
-    <div>
+    <div className="shop-container">
       <ShopHero />
       <ShopWelcome />
       <ShopProducts />

@@ -28,8 +28,8 @@ const ShopNavbar = () => {
 
   return (
     <section
-      className={`text-white bg-[var(--shopBGPrimary)] py-2.5 md:py-0 ${
-        isSticky ? "fixed top-0 left-0 w-full z-[101]" : ""
+      className={`text-white bg-[var(--shopBGPrimary)] py-2.5 md:py-0 shop-container ${
+        isSticky ? "fixed top-0 right-0 left-0 w-full z-[101] mx-auto" : ""
       }`}
     >
       <div className="shop-subContainer px-3.5 md:px-0 w-100% md:w-[750px] lg:w-[970px] xl:w-[1170px]">

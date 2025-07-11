@@ -48,16 +48,17 @@ const PortalNavbar = () => {
               <ul
                 className={`${
                   open ? "flex" : "hidden"
-                } md:flex flex-col md:flex-row absolute md:relative left-0 md:left-auto top-[80px] md:top-auto w-full text-black md:text-white overflow-hidden bg-white md:bg-transparent z-50 text-base font-medium py-3 md:py-0`}
+                } md:flex flex-col md:flex-row absolute md:relative left-0 md:left-auto top-[80px] md:top-auto w-full text-black md:text-white overflow-hidden bg-white md:bg-transparent z-50 text-base font-medium py-3 md:py-3`}
                 id="menuitem"
               >
                 {portalNavbar.map((link) => {
                   return (
                     <li
                       key={link.id}
-                      className="inline-block mt-2.5 md:mt-0 mb-2.5 md:mb-0 m-12 md:m-0 md:mr-10"
+                      className="block pt-2.5 md:pt-0 pb-2.5 md:pb-0 p-12 md:p-0 md:pr-10 h-full cursor-pointer"
                     >
                       <button
+                        className="h-full flex py-0.5 md:py-4 cursor-pointer"
                         onClick={() => {
                           document
                             .getElementById(`${link.link}`)

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @layer base {
   :root {
     /* Colors */
@@ -97,6 +98,40 @@
     top: 50%;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
+  }
+
+  /* Hero Carousel */
+
+  #shop__hero_carousel .swiper-button-prev,
+  #shop__hero_carousel .swiper-button-next {
+    color: var(--shopTextPrimary) !important;
+  }
+
+  #shop__hero_carousel .swiper-button-prev:hover,
+  #shop__hero_carousel .swiper-button-next:hover {
+    color: var(--shopBGOrange) !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #shop__hero_carousel .swiper-button-prev::after,
+  #shop__hero_carousel .swiper-button-next::after {
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+
+  #shop__hero_carousel .swiper-pagination-bullet {
+    background: black !important;
+    border: 2px solid #e26d0f;
+    width: 17px !important;
+    height: 17px !important;
+    opacity: 1 !important;
+  }
+
+  #shop__hero_carousel .swiper-pagination-bullet-active {
+    background: #e26d0f !important;
+    border: 2px solid #e26d0f;
+    width: 17px !important;
+    height: 17px !important;
   }
 
   /* Responsive Shop*/

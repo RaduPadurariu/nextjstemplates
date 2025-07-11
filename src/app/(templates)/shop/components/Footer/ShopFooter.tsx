@@ -4,7 +4,7 @@ import React from "react";
 const ShopFooter = () => {
   return (
     <div>
-      <footer className="bg-[var(--shopBGHeader)] pt-0 mt-[30px] lg:mt-0">
+      <footer className="bg-[var(--shopBGHeader)] pt-0 shop-container">
         <div className="pb-2.5">
           <div className="shop-subContainer px-6 md:px-0 w-100% md:w-[750px] lg:w-[970px] xl:w-[1170px]">
             <div className="grid ml-[-15px] mr-[-15px] overflow-hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-4">

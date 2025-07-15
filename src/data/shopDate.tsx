@@ -217,7 +217,7 @@ export const shopHomeProductCarouselTop = [
     id: 2,
     src: "/images/shop/Home/HomeProduct2.png",
     title: "Crescent CTK70MP 70-Piece M...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer...",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
     price: "78.00",
   },
   {
@@ -279,8 +279,43 @@ export const shopHomeProductCarouselBottom = [
   {
     id: 5,
     src: "/images/shop/Home/HomeProduct10.png",
-    title: "DEWALT DW920K-2",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem adipiscing elite...",
+    title: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
     price: "420.00",
   },
+];
+
+export const shopAccountRegistrationList = [
+  { id: 1, title: "Faster checkout" },
+  { id: 2, title: "Save multiple shipping addresses" },
+  { id: 3, title: "View and track orders and more" },
+];
+
+export const shopContactList = [
+  {
+    id: 1,
+    icon: "fas fa-home",
+    title: "ADDRESS",
+    desc: "7563 St. Vicent Place, Glasgow",
+  },
+  {
+    id: 2,
+    icon: "fas fa-phone-volume",
+    title: "PHONE",
+    desc: "+09123 456 789",
+  },
+  {
+    id: 3,
+    icon: "fas fa-history",
+    title: "HOURS",
+    desc: "7 Days a week from 10:00 am to 6:00 pmt",
+  },
+  { id: 4, icon: "fas fa-laptop", title: "EMAIL", desc: "zemes@demolink.org" },
+];
+
+export const shopContactSocial = [
+  { id: 1, icon: "fab fa-facebook-f", desc: "follow us on Facebook" },
+  { id: 2, icon: "fab fa-twitter", desc: "Join us on twitter" },
+  { id: 3, icon: "fab fa-instagram", desc: "follow us on instagram" },
+  { id: 4, icon: "fab fa-youtube", desc: "subscribe us on youtube" },
 ];

@@ -49,13 +49,13 @@ const ShopNewsletter = () => {
             <ul className="flex flex-wrap mt-[15px] sm:mt-0">
               <li className="p-1 group-hover">
                 <span className="w-[60px] h-[60px] block rounded-full relative text-center bg-white">
-                  <i className="fab fa-twitter text-[28px] pt-4 text-[#dcdbdb] hover:text-black"></i>
+                  <i className="fab fa-twitter text-[28px] pt-4 text-[var(--shopBorderPrimary)] hover:text-black"></i>
                 </span>
               </li>
               <li className="p-1">
                 <span className="w-[60px] h-[60px] block rounded-full relative text-center bg-white">
                   {" "}
-                  <i className="fab fa-facebook text-[28px] pt-4 text-[#dcdbdb] hover:text-black"></i>
+                  <i className="fab fa-facebook text-[28px] pt-4 text-[var(--shopBorderPrimary)] hover:text-black"></i>
                 </span>
               </li>
             </ul>

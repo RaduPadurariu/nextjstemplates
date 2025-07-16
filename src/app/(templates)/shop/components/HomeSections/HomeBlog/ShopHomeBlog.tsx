@@ -16,11 +16,14 @@ const ShopHomeBlog = () => {
         <div className="overflow-hidden my-[-15px]">
           {shopBlogData.slice(0, 2).map((blog) => {
             return (
-              <div key={blog.id} className="m-h-[1px] relative w-full">
+              <div key={blog.slug} className="m-h-[1px] relative w-full">
                 <div className="mt-[27px] flex gap-10 items-center justify-between flex-col sm:flex-row">
                   <div
                     className={`w-full sm:w-1/2 ${
-                      blog.id === 1 ? "sm:order-1" : "sm:order-2"
+                      blog.slug ===
+                      "non-moderno-harum-class-est-virtute-quo-augue-sint-ipsa-pede"
+                        ? "sm:order-1"
+                        : "sm:order-2"
                     }`}
                   >
                     <div
@@ -34,7 +37,10 @@ const ShopHomeBlog = () => {
                   </div>
                   <div
                     className={` mb-10 w-full sm:w-1/2 mt-5 sm:mt-0 ${
-                      blog.id === 1 ? "sm:order-2" : "sm:order-1"
+                      blog.slug ==
+                      "non-moderno-harum-class-est-virtute-quo-augue-sint-ipsa-pede"
+                        ? "sm:order-2"
+                        : "sm:order-1"
                     }`}
                   >
                     <p>
@@ -49,7 +55,8 @@ const ShopHomeBlog = () => {
                       {blog.heading}
                     </p>
                     <p className="hidden md:block">
-                      {blog.id === 1
+                      {blog.slug ===
+                      "non-moderno-harum-class-est-virtute-quo-augue-sint-ipsa-pede"
                         ? blog.desc.slice(0, 271)
                         : blog.desc.slice(0, 258)}
                       ...

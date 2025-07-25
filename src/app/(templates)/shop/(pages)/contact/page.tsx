@@ -94,7 +94,7 @@ const ShopContact = () => {
                     <div className="mt-3">
                       <button
                         type="submit"
-                        className="py-2.5 px-[17px] tracking-[-0.06em] text-lg mb-[31px] mt-[18px] bg-[var(--shopTextSecondary)] border border-[var(--shopTextSecondary)] text-white uppercase inline-block align-middle font-bold m-0 leading-[1.43] cursor-pointer"
+                        className="py-2.5 px-[17px] tracking-[-0.06em] text-lg mb-[31px] mt-[18px] bg-[var(--shopTextSecondary)] border border-[var(--shopTextSecondary)] text-white uppercase inline-block align-middle font-bold m-0 leading-[1.43] cursor-pointer hover:bg-[var(--shopBGHeader)] transition-all rounded duration-300 ease-in-out"
                       >
                         Submit
                       </button>

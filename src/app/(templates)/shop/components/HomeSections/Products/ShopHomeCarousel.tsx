@@ -1,6 +1,5 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,18 +7,7 @@ import React from "react";
 import { Navigation, Controller } from "swiper/modules";
 import Link from "next/link";
 import Image from "next/image";
-
-type Product = {
-  src: string;
-  price: string;
-  title: string;
-  desc: string;
-};
-
-interface ShopHomeCarouselProps {
-  data: Product[];
-  swiperRef?: React.MutableRefObject<SwiperType | null>;
-}
+import { ShopHomeCarouselProps } from "../../../types/shopTypes";
 
 const ShopHomeCarousel: React.FC<ShopHomeCarouselProps> = ({
   data,

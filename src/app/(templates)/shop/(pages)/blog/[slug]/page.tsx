@@ -4,6 +4,7 @@ import React from "react";
 import ShopBreadcrumbs from "../../../components/Breadcrumbs/ShopBreadcrumbs";
 import ShopRecentArticles from "../ShopRecentArticles";
 import Link from "next/link";
+import ShopSingleBlogForm from "../../../components/Blog/ShopSingleBlogForm";
 
 const BlogSinglePage = async ({
   params,
@@ -99,60 +100,7 @@ const BlogSinglePage = async ({
               </ul>
             </div>
             <div className="mt-[30px]">
-              <form action="">
-                <h3 className="text-5xl m-0 text-[var(--shopBGHeader)] mb-5">
-                  Leave a comment
-                </h3>
-                <div className="pb-0.5 flex flex-col md:flex-row items-center">
-                  <div className="mt-[15px] w-full md:w-1/3 pr-[15px]">
-                    <label
-                      htmlFor="shop_comment_name"
-                      className="text-sm text-[var(--shopBGHeader)] inline-block max-w-full"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="shop_comment_name"
-                      className="border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGHeader)] w-full block align-top py-1.5 px-2.5 leading-[1.43]"
-                    />
-                  </div>
-                  <div className="mt-[15px] w-full md:w-1/3 pr-[15px]">
-                    <label
-                      htmlFor="shop_comment_email"
-                      className="text-sm text-[var(--shopBGHeader)] inline-block max-w-full"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGHeader)] w-full block align-top py-1.5 px-2.5 leading-[1.43]"
-                      id="shop_comment_email"
-                    />
-                  </div>
-                </div>
-                <div className="mt-[15px] ">
-                  <label
-                    htmlFor="shop_comment_area"
-                    className="text-sm text-[var(--shopBGHeader)] inline-block max-w-full"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    name=""
-                    id="shop_comment_area"
-                    className="border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGHeader)] w-full h-[100px] block align-top py-1.5 px-2.5 leading-[1.43]"
-                  ></textarea>
-                </div>
-                <div className="mt-[15px]">
-                  <button
-                    type="submit"
-                    className="bg-[var(--shopTextSecondary)] text-white py-1.5 px-3 text-sm inline-block align-middle m-0 font-bold leading-[1.43] text-center whitespace-nowrap cursor-pointer uppercase hover:bg-[var(--shopBGHeader)] transition-all duration-300 ease-in-out"
-                  >
-                    Post comment
-                  </button>
-                </div>
-              </form>
+              <ShopSingleBlogForm />
             </div>
           </div>
 

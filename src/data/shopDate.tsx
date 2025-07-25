@@ -1,3 +1,5 @@
+import { shopCatalogProduct } from "@/app/(templates)/shop/types/shopTypes";
+
 export const shopCurrency = [
   { id: 1, currency: "USD" },
   { id: 2, currency: "EUR" },
@@ -176,83 +178,110 @@ export const shopHeroProducts = [
   },
 ];
 
-export const shopHomeProductCarouselTop = [
+export const shopHomeProductCarousel = [
   {
     id: 1,
-    src: "/images/shop/Home/HomeProduct1.png",
-    title: "Black and Decker 20V Max Li...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    price: "265.00",
-  },
-  {
-    id: 2,
-    src: "/images/shop/Home/HomeProduct2.png",
-    title: "Crescent CTK70MP 70-Piece M...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    price: "78.00",
-  },
-  {
-    id: 3,
-    src: "/images/shop/Home/HomeProduct3.png",
-    title: "Custom Leathercraft 1134 To...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
-    price: "420.00",
-  },
-
-  {
-    id: 4,
     src: "/images/shop/Home/HomeProduct4.png",
     title: "DEWALT Bare-Tool DW059B",
+    longTitle: "DEWALT Bare-Tool DW059B Drill Driver Kit with Extra Battery",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    price: "170.00",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 170.0,
   },
 
-  {
-    id: 5,
-    src: "/images/shop/Home/HomeProduct5.png",
-    title: "DEWALT DC970K-2 18-Volt Dri...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    price: "320.00",
-  },
-];
-
-export const shopHomeProductCarouselBottom = [
-  {
-    id: 1,
-    src: "/images/shop/Home/HomeProduct6.png",
-    title: "DEWALT DW1169 14-Piece Pilo...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    price: "265.00",
-  },
   {
     id: 2,
-    src: "/images/shop/Home/HomeProduct7.png",
-    title: "DEWALT DW2153 Impact Ready ...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer...",
-    price: "315.00",
+    src: "/images/shop/Home/HomeProduct5.png",
+    title: "DEWALT DC970K-2 18-Volt Dri...",
+    longTitle: "DEWALT DC970K-2 18-Volt Drill Driver Kit",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 320.0,
   },
   {
     id: 3,
-    src: "/images/shop/Home/HomeProduct8.png",
-    title: "DEWALT DW4890 15-Piece Reci...",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
-    price: "459.00",
+    src: "/images/shop/Home/HomeProduct1.png",
+    title: "Black and Decker 20V Max Li...",
+    longTitle: "Black and Decker 20V Max Lithium Ion 8-Inch Chain Saw",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
   },
-
   {
     id: 4,
-    src: "/images/shop/Home/HomeProduct9.png",
-    title: "DEWALT DW715 15-Amp 12-Inch...",
+    src: "/images/shop/Home/HomeProduct2.png",
+    title: "Crescent CTK70MP 70-Piece M...",
+    longTitle: "Crescent CTK70MP 70-Piece Mechanics Tool Set with Storage Case",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    price: "119.00",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 78.0,
+  },
+  {
+    id: 5,
+    src: "/images/shop/Home/HomeProduct3.png",
+    title: "Custom Leathercraft 1134 To...",
+    longTitle: "Custom Leathercraft 1134 Tool Backpack, 48-Pocket",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 420.0,
   },
 
   {
-    id: 5,
+    id: 6,
+    src: "/images/shop/Home/HomeProduct6.png",
+    title: "DEWALT DW1169 14-Piece Pilo...",
+    longTitle: "DEWALT DW1169 14-Piece Pilot-Point Twist Drill Bit Assortment",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+  },
+  {
+    id: 7,
+    src: "/images/shop/Home/HomeProduct7.png",
+    title: "DEWALT DW2153 Impact Ready ...",
+    longTitle: "DEWALT DW2153 Impact Ready Accessory Set",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 315.0,
+  },
+  {
+    id: 8,
+    src: "/images/shop/Home/HomeProduct8.png",
+    title: "DEWALT DW4890 15-Piece Reci...",
+    longTitle: "DEWALT DW4890 15-Piece Reciprocating Saw Blade Tough Case Set",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 459.0,
+  },
+
+  {
+    id: 9,
+    src: "/images/shop/Home/HomeProduct9.png",
+    title: "DEWALT DW715 15-Amp 12-Inch...",
+    longTitle: "DEWALT DW715 15-Amp 12-Inch Compound Miter saw",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 119.0,
+  },
+
+  {
+    id: 10,
     src: "/images/shop/Home/HomeProduct10.png",
     title: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
+    longTitle: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
-    price: "420.00",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 420.0,
   },
 ];
 
@@ -469,4 +498,97 @@ export const shopBlogTags = [
   { id: 8, title: "Power tools" },
   { id: 9, title: "Specials" },
   { id: 10, title: "Welding supplies" },
+];
+
+// Catalog
+
+export const shopCatalogSidebarProducts = [
+  {
+    id: 1,
+    title: "Black & Decker 71-91291 129...",
+    price: "361.13",
+    src: "/images/shop/Catalog/product1.avif",
+  },
+  {
+    id: 2,
+    title: "Black & Decker BDCDMT120 20...",
+    price: "145.17",
+    src: "/images/shop/Catalog/product2.avif",
+  },
+  {
+    id: 3,
+    title: "Black and Decker 20V Max Li...",
+    price: "227.86",
+    src: "/images/shop/Catalog/product3.avif",
+  },
+];
+
+export const shopCatalogCollection = [
+  { id: 1, title: "Abrasives" },
+  { id: 2, title: "Air Compressors" },
+  { id: 3, title: "Air Tools" },
+  { id: 4, title: "Auto Repair" },
+  { id: 5, title: "Batteries, Chargers" },
+  { id: 6, title: "Buyer's Guides" },
+  { id: 7, title: "Casters" },
+  { id: 8, title: "Chain Saws" },
+  { id: 9, title: "Cleaning Equipment" },
+  { id: 10, title: "Clearance" },
+  { id: 11, title: "Clothing" },
+  { id: 12, title: "Commercial Trucking" },
+  { id: 13, title: "Construction" },
+  { id: 14, title: "Electrical" },
+  { id: 15, title: "Renewable Energy" },
+];
+
+export const shopCatalogProductTypes = [
+  { id: 1, title: "Accessories" },
+  { id: 2, title: "Air Tools" },
+  { id: 3, title: "Hand Tools" },
+  { id: 4, title: "Plumbing Tools" },
+  { id: 5, title: "Power Tools" },
+];
+
+export const shopCatalogSortOptions = [
+  {
+    id: 1,
+    name: "Best Selling",
+    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
+      (a.id ?? 0) - (b.id ?? 0),
+    value: "ID",
+  },
+  {
+    id: 2,
+    name: "Name: A - Z",
+    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
+      a.title.localeCompare(b.title),
+    value: "nameAsc",
+  },
+  {
+    id: 3,
+    name: " Name: Z - A",
+    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
+      b.title.localeCompare(a.title),
+    value: "nameDesc",
+  },
+  {
+    id: 4,
+    name: "Price: low to high",
+    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
+      (Number(a.price) ?? 0) - (Number(b.price) ?? 0),
+    value: "priceAsc",
+  },
+  {
+    id: 4,
+    name: "Price: high to low",
+    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
+      (Number(b.price) ?? 0) - (Number(a.price) ?? 0),
+    value: "priceDesc",
+  },
+];
+
+export const shopItemsPerPageOptions = [
+  { id: 1, value: 6, name: "6" },
+  { id: 2, value: 9, name: "9" },
+  { id: 3, value: 12, name: "12" },
 ];

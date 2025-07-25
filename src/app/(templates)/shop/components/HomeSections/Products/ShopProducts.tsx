@@ -1,9 +1,6 @@
 "use client";
 import ShopHomeCarousel from "./ShopHomeCarousel";
-import {
-  shopHomeProductCarouselBottom,
-  shopHomeProductCarouselTop,
-} from "@/data/shopDate";
+import { shopHomeProductCarousel } from "@/data/shopDate";
 import { Swiper as SwiperType } from "swiper";
 import { useRef } from "react";
 
@@ -19,7 +16,7 @@ const ShopProducts = () => {
         </h2>
 
         <ShopHomeCarousel
-          data={shopHomeProductCarouselTop}
+          data={shopHomeProductCarousel.slice(0, 5)}
           swiperRef={topSwiperRef}
         />
 
@@ -47,7 +44,7 @@ const ShopProducts = () => {
         </div>
 
         <ShopHomeCarousel
-          data={shopHomeProductCarouselBottom}
+          data={shopHomeProductCarousel.slice(5, 10)}
           swiperRef={bottomSwiperRef}
         />
       </div>

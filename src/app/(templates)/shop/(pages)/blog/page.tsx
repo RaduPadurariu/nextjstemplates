@@ -1,6 +1,6 @@
 import React from "react";
 import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
-import { shopBlogData } from "@/data/shopDate";
+import { shopBlogData } from "@/data/shopData";
 import Link from "next/link";
 import Image from "next/image";
 import ShopRecentArticles from "./ShopRecentArticles";

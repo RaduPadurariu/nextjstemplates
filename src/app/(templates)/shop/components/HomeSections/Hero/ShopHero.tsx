@@ -7,7 +7,7 @@ import "./../../../../../../styles/shop.css";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import React from "react";
-import { shopHeroCarousel, shopHeroProducts } from "@/data/shopDate";
+import { shopHeroCarousel, shopHeroProducts } from "@/data/shopData";
 import Link from "next/link";
 import Image from "next/image";
 

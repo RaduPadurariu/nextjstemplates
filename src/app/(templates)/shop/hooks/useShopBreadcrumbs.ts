@@ -1,4 +1,4 @@
-import { shopBlogData } from "@/data/shopDate";
+import { shopBlogData } from "@/data/shopData";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 

@@ -8,7 +8,7 @@ import {
   shopCatalogSortOptions,
   shopHomeProductCarousel,
   shopItemsPerPageOptions,
-} from "@/data/shopDate";
+} from "@/data/shopData";
 import Image from "next/image";
 import Link from "next/link";
 import { shopCatalogProduct } from "../../types/shopTypes";
@@ -40,7 +40,12 @@ const ShopCatalog = () => {
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     setDisplayProducts(filteredProducts.slice(start, end));
+    window.scrollTo(0, 0);
   }, [filteredProducts, currentPage, itemsPerPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [itemsPerPage]);
 
   return (
     <div className="shop-container">
@@ -206,11 +211,12 @@ const ShopCatalog = () => {
                 );
               })}
             </ul>
-            <div className="border border-[var(--shopBorderPrimary)] overflow-hidden mt-[30px] px-2.5 flex justify-between">
+            <div className="border border-[var(--shopBorderPrimary)] overflow-hidden mt-[30px] px-2.5 flex flex-col sm:flex-row justify-between ">
               <p className="h-10 leading-10">
-                1 -{" "}
-                {itemsPerPage < filteredProducts.length
-                  ? itemsPerPage
+                {(currentPage - 1) * itemsPerPage + 1} -
+                {(currentPage - 1) * itemsPerPage + itemsPerPage <
+                filteredProducts.length
+                  ? (currentPage - 1) * itemsPerPage + itemsPerPage
                   : filteredProducts.length}{" "}
                 product(s) of {filteredProducts.length}
               </p>

@@ -1,4 +1,4 @@
-import { shopBlogRecentArticles, shopBlogTags } from "@/data/shopDate";
+import { shopBlogRecentArticles, shopBlogTags } from "@/data/shopData";
 import Link from "next/link";
 import React from "react";
 

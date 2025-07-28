@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import ShopHeader from "./components/Header/ShopHeader";
 import ShopNavbar from "./components/Header/Navbar/ShopNavbar";
 import ShopFooter from "./components/Footer/ShopFooter";
+import { ShopContextProvider } from "./context/ShopContextProvider";
 
 export const metadata: Metadata = {
   title: "Tools Shop",
@@ -32,11 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="shopFamily">
-      <ShopHeader />
-      <ShopNavbar />
-      {children}
-      <ShopFooter />
-    </div>
+    <ShopContextProvider>
+      <div className="shopFamily">
+        <ShopHeader />
+        <ShopNavbar />
+        {children}
+        <ShopFooter />
+      </div>
+    </ShopContextProvider>
   );
 }

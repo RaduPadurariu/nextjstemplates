@@ -1,4 +1,4 @@
-import { shopBlogData } from "@/data/shopDate";
+import { shopBlogData } from "@/data/shopData";
 import React from "react";
 
 const ShopHomeBlog = () => {

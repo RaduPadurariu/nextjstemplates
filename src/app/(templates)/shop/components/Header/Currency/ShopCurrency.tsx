@@ -1,7 +1,7 @@
 "use client";
 import { FaAngleDown } from "react-icons/fa";
 
-import { shopCurrency } from "@/data/shopDate";
+import { shopCurrency } from "@/data/shopData";
 import React, { useState } from "react";
 
 const ShopCurrency = () => {

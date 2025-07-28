@@ -27,13 +27,14 @@ export const portalTemplatesList = [
   },
   {
     id: 2,
-    title: "User Posts",
-    icon: "fas fa-file-alt",
-    img: "/images/portal/o2.png",
+    title: "Shop",
+    icon: "fas fa-shopping-cart",
+    img: "/images/portal/o4.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/userposts",
-    color: "group-hover:text-[#ef4444] ",
+    link: "/shop",
+    color: "group-hover:text-[#e67e22]",
   },
+
   {
     id: 3,
     title: "Travel",
@@ -43,15 +44,14 @@ export const portalTemplatesList = [
     link: "/travel",
     color: "group-hover:text-[#22c55e]",
   },
-
   {
     id: 4,
-    title: "Shop",
-    icon: "fas fa-shopping-cart",
-    img: "/images/portal/o4.png",
+    title: "User Posts",
+    icon: "fas fa-file-alt",
+    img: "/images/portal/o2.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/shop",
-    color: "group-hover:text-[#e67e22]",
+    link: "/userposts",
+    color: "group-hover:text-[#ef4444] ",
   },
 ];
 

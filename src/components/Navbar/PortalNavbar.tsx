@@ -29,6 +29,7 @@ const PortalNavbar = () => {
           <div className="flex justify-between items-center transition-all duration-500">
             <div>
               <button
+                className="cursor-pointer"
                 onClick={() => {
                   document
                     .getElementById("portalNavbar")

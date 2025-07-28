@@ -1,4 +1,4 @@
-import { shopFeatures } from "@/data/shopDate";
+import { shopFeatures } from "@/data/shopData";
 import React from "react";
 
 const ShopFeatures = () => {

@@ -35,11 +35,13 @@ const PortalTemplates = () => {
                   ></i>
                 </Link>
                 <div>
-                  <h3
-                    className={`font-light my-5 mx-0 text-xl ${template.color} transition-colors duration-300`}
-                  >
-                    {template.title}
-                  </h3>
+                  <Link href={template.link}>
+                    <h3
+                      className={`font-light my-5 mx-0 text-xl ${template.color} transition-colors duration-300`}
+                    >
+                      {template.title}
+                    </h3>
+                  </Link>
                   <p className="opacity-50 font-normal">{template.desc}</p>
                 </div>
               </li>

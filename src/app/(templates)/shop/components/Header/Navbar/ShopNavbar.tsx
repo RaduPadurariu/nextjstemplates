@@ -1,14 +1,29 @@
 "use client";
 
-import { shopCategoryList, shopNavLinks } from "@/data/shopDate";
+import { shopCategoryList, shopNavLinks } from "@/data/shopData";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
+import { useShopContext } from "../../../context/useShopContext";
+import { useRouter } from "next/navigation";
 
 const ShopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
+  const router = useRouter();
+
+  const { setCategoryChanged } = useShopContext();
+
+  const handleCategoryClick = (categoryTitle: string) => {
+    const encodedCategory = encodeURIComponent(categoryTitle);
+    const params = new URLSearchParams();
+    params.set("category", encodedCategory);
+    params.set("selected", "");
+    setCategoryChanged(categoryTitle);
+    setIsOpen(!isOpen);
+    router.push(`/shop/myProducts?${params.toString()}`);
+  };
 
   useEffect(() => {
     // dispatch(getCartTotal);
@@ -73,15 +88,18 @@ const ShopNavbar = () => {
                 <div
                   className={`${
                     categoryOpen ? "flex" : "hidden"
-                  } bg-white md:bg-[var(--shopBGPrimary)] relative md:absolute w-full top-[100%] left-0 p-0 items-center px-0 md:px-[30px]`}
+                  } bg-white md:bg-[var(--shopBGPrimary)] relative md:absolute w-full top-[100%] left-0 p-0`}
                 >
-                  <ul className="text-left text-base font-normal bg-white md:bg-[var(--shopBGPrimary)] text-[var(--shopTextSecondary)] md:text-white z-[102] flex flex-col pt-3 pb-3">
+                  <ul className=" text-base font-normal bg-white md:bg-[var(--shopBGPrimary)]  text-[var(--shopTextSecondary)] md:text-white z-[102] flex flex-col pt-3 pb-3 w-full">
                     {shopCategoryList.map((item) => {
                       return (
-                        <li className="py-2 px-6" key={item.id}>
-                          <Link href="/shop/products" className="">
+                        <li className="w-full" key={item.id}>
+                          <button
+                            className="cursor-pointer py-3 px-0 md:px-[30px] w-full text-left hover:bg-[#333]"
+                            onClick={() => handleCategoryClick(item.title)}
+                          >
                             {item.title}
-                          </Link>
+                          </button>
                         </li>
                       );
                     })}
@@ -98,6 +116,7 @@ const ShopNavbar = () => {
                   >
                     <Link
                       href={link.link}
+                      onClick={() => setIsOpen(!isOpen)}
                       className="text-[var(--shopTextSecondary)] md:text-white text-base sm:text-lg  md:text-xs lg:text-xl  relative md:uppercase align-middle block h-auto md:h-[69px] leading-[1em] md:leading-[69px] py-[15px] sm:py-3 md:py-0 pr-[35px] md:pr-6 pl-0 md:pl-6 border-r-0 md:border-r border-r-[var(--shopBGSecondary)]"
                     >
                       {link.title}

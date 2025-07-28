@@ -1,4 +1,4 @@
-import { shopBlogData } from "@/data/shopDate";
+import { shopBlogData } from "@/data/shopData";
 import { notFound } from "next/navigation";
 import React from "react";
 import ShopBreadcrumbs from "../../../components/Breadcrumbs/ShopBreadcrumbs";

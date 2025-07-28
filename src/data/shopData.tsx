@@ -1,4 +1,7 @@
-import { shopCatalogProduct } from "@/app/(templates)/shop/types/shopTypes";
+import {
+  shopCatalogProduct,
+  shopMyProduct,
+} from "@/app/(templates)/shop/types/shopTypes";
 
 export const shopCurrency = [
   { id: 1, currency: "USD" },
@@ -17,31 +20,115 @@ export const shopNavLinks = [
 export const shopCategoryList = [
   {
     id: 1,
-    title: "Scule",
+    title: "Gradinarit",
+    subItem: [
+      {
+        id: 1,
+        subCategory: "Iarba si gazon",
+        selected: false,
+      },
+      {
+        id: 2,
+        subCategory: "Pomicultura",
+        selected: false,
+      },
+      {
+        id: 3,
+        subCategory: "Agricultura",
+        selected: false,
+      },
+      {
+        id: 4,
+        subCategory: "Zootehnie",
+        selected: false,
+      },
+      {
+        id: 5,
+        subCategory: "Plante si ghivece",
+        selected: false,
+      },
+    ],
   },
   {
     id: 2,
-    title: "Electrice",
+    title: "Scule",
+    subItem: [
+      {
+        id: 1,
+        subCategory: "Scule de mana",
+        selected: false,
+      },
+      {
+        id: 2,
+        subCategory: "Scule electrice",
+        selected: false,
+      },
+    ],
   },
   {
     id: 3,
-    title: "Mecanice",
+    title: "Electronice",
+    subItem: [
+      {
+        id: 1,
+        subCategory: "Instrumente",
+        selected: false,
+      },
+      {
+        id: 2,
+        subCategory: "Accesorii",
+        selected: false,
+      },
+    ],
   },
+
   {
     id: 4,
-    title: "Gradinarit",
-  },
-  {
-    id: 5,
     title: "Constructii",
-  },
-  {
-    id: 6,
-    title: "Auto",
+    subItem: [
+      {
+        id: 1,
+        subCategory: "Utilaje",
+        selected: false,
+      },
+      {
+        id: 2,
+        subCategory: "Materiale",
+        selected: false,
+      },
+    ],
   },
   {
     id: 7,
+    title: "Auto",
+    subItem: [
+      {
+        id: 1,
+        subCategory: "Consumabile",
+        selected: false,
+      },
+      {
+        id: 2,
+        subCategory: "Echipamente",
+        selected: false,
+      },
+    ],
+  },
+  {
+    id: 8,
     title: "Survival",
+    subItem: [
+      {
+        id: 1,
+        subCategory: "Camping",
+        selected: false,
+      },
+      {
+        id: 2,
+        subCategory: "Militare",
+        selected: false,
+      },
+    ],
   },
 ];
 
@@ -579,7 +666,7 @@ export const shopCatalogSortOptions = [
     value: "priceAsc",
   },
   {
-    id: 4,
+    id: 5,
     name: "Price: high to low",
     sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
       (Number(b.price) ?? 0) - (Number(a.price) ?? 0),
@@ -591,4 +678,136 @@ export const shopItemsPerPageOptions = [
   { id: 1, value: 6, name: "6" },
   { id: 2, value: 9, name: "9" },
   { id: 3, value: 12, name: "12" },
+];
+
+// My products
+
+export const shopMyProductsSortOptions = [
+  {
+    id: 1,
+    name: "Best Selling",
+    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+      a.id.localeCompare(b.id),
+    value: "ID",
+  },
+  {
+    id: 2,
+    name: "Name: A - Z",
+    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+      a.title.localeCompare(b.title),
+    value: "nameAsc",
+  },
+  {
+    id: 3,
+    name: " Name: Z - A",
+    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+      b.title.localeCompare(a.title),
+    value: "nameDesc",
+  },
+  {
+    id: 4,
+    name: "Price: low to high",
+    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+      (Number(a.price) ?? 0) - (Number(b.price) ?? 0),
+    value: "priceAsc",
+  },
+  {
+    id: 5,
+    name: "Price: high to low",
+    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+      (Number(b.price) ?? 0) - (Number(a.price) ?? 0),
+    value: "priceDesc",
+  },
+];
+
+export const shopMyProductList = [
+  {
+    id: "01.01.01",
+    title: "Masina de tuns gazon electrica",
+    src: "/images/shop/MyProducts/01.01.01_Masina de tuns gazon electrica.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.02",
+    title: "Motocoasa",
+    src: "/images/shop/MyProducts/01.01.02_Motocoasa.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+
+  {
+    id: "01.02.01",
+    title: "Foarfece gradina",
+    src: "/images/shop/MyProducts/01.02.01_Foarfece gradina.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.03.01",
+    title: "Motosapa",
+    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.04.01",
+    title: "Motosapa",
+    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.05.01",
+    title: "Motosapa",
+    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.06.01",
+    title: "Motosapa",
+    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.07.01",
+    title: "Motosapa",
+    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
 ];

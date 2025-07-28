@@ -1,6 +1,6 @@
 "use client";
 import ShopHomeCarousel from "./ShopHomeCarousel";
-import { shopHomeProductCarousel } from "@/data/shopDate";
+import { shopHomeProductCarousel } from "@/data/shopData";
 import { Swiper as SwiperType } from "swiper";
 import { useRef } from "react";
 

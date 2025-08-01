@@ -7,12 +7,15 @@ import React from "react";
 import { Navigation, Controller } from "swiper/modules";
 import Link from "next/link";
 import Image from "next/image";
+import { useShopContext } from "../../../context/useShopContext";
 import { ShopHomeCarouselProps } from "../../../types/shopTypes";
 
 const ShopHomeCarousel: React.FC<ShopHomeCarouselProps> = ({
   data,
   swiperRef,
 }) => {
+  const { selectedCurrency, handleAddToCart } = useShopContext();
+
   return (
     <Swiper
       modules={[Navigation, Controller]}
@@ -65,8 +68,12 @@ const ShopHomeCarousel: React.FC<ShopHomeCarouselProps> = ({
               </div>
               <div className="relative">
                 <div className="flex pl-5 font-bold text-2xl xl:text-4xl text-[var(--shopTextSecondary)]">
-                  <div>$</div>
-                  <div>{item.price}</div>
+                  <div>{selectedCurrency?.sign}</div>
+                  <div>
+                    {(
+                      item.price * (selectedCurrency?.coefficient ?? 1)
+                    ).toFixed(2)}
+                  </div>
                 </div>
                 <p className="text-base text-[#333] m-0 pt-4 pr-0 pb-1 pl-5">
                   {item.title}
@@ -74,14 +81,17 @@ const ShopHomeCarousel: React.FC<ShopHomeCarouselProps> = ({
                 <p className="pl-5 text-[var(--shopTextPrimary)]">
                   {item.desc}
                 </p>
-                <div className="pt-4 pl-5 flex group">
+                <button
+                  className="pt-4 pl-5 flex group items-center"
+                  onClick={(e) => handleAddToCart(e, item)}
+                >
                   <div className="relative text-white p-0  rounded flex justify-around cursor-pointer bg-[var(--shopTextSecondary)] group-hover:bg-[var(--shopBGOrange)] transition-all duration-300 ease-in-out">
                     <i className="fa fa-shopping-cart z-[1] text-2xl cursor-pointer rounded text-white bg-[var(--shopBGPrimary)] group-hover:bg-[var(--shopBGOrange)] p-2 transition-all duration-300 ease-in-out"></i>
                     <span className="uppercase block font-normal text-white text-sm cursor-pointer py-[10px] px-[7px] lg:px-[17px]">
                       Add to cart
                     </span>
                   </div>
-                </div>
+                </button>
               </div>
             </div>
           </div>

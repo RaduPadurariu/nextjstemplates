@@ -3,9 +3,9 @@ import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
 import { shopBlogData } from "@/data/shopData";
 import Link from "next/link";
 import Image from "next/image";
-import ShopRecentArticles from "./ShopRecentArticles";
+import ShopRecentArticles from "../../components/Blog/ShopRecentArticles";
 
-const page = () => {
+const ShopBlogPage = () => {
   return (
     <div className="shop-container">
       <ShopBreadcrumbs />
@@ -25,7 +25,7 @@ const page = () => {
                         src={`${blog.blogSrc}`}
                         width={290}
                         height={290}
-                        className="object-cover h-full"
+                        className="object-cover"
                       />
                     </div>
                     <div>
@@ -62,4 +62,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShopBlogPage;

@@ -2,7 +2,7 @@ import { shopBlogData } from "@/data/shopData";
 import { notFound } from "next/navigation";
 import React from "react";
 import ShopBreadcrumbs from "../../../components/Breadcrumbs/ShopBreadcrumbs";
-import ShopRecentArticles from "../ShopRecentArticles";
+import ShopRecentArticles from "../../../components/Blog/ShopRecentArticles";
 import Link from "next/link";
 import ShopSingleBlogForm from "../../../components/Blog/ShopSingleBlogForm";
 

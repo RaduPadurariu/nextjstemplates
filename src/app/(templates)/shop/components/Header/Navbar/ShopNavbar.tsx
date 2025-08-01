@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { useShopContext } from "../../../context/useShopContext";
 import { useRouter } from "next/navigation";
+import { ShopMyProductsCategory } from "../../../types/shopTypes";
 
 const ShopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +14,14 @@ const ShopNavbar = () => {
   const [categoryOpen, setCategoryOpen] = useState(false);
   const router = useRouter();
 
-  const { setCategoryChanged } = useShopContext();
+  const { setSelectedCategory } = useShopContext();
 
-  const handleCategoryClick = (categoryTitle: string) => {
-    const encodedCategory = encodeURIComponent(categoryTitle);
+  const handleCategoryClick = (category: ShopMyProductsCategory) => {
+    const encodedCategory = encodeURIComponent(category.title);
     const params = new URLSearchParams();
     params.set("category", encodedCategory);
     params.set("selected", "");
-    setCategoryChanged(categoryTitle);
+    setSelectedCategory(category);
     setIsOpen(!isOpen);
     router.push(`/shop/myProducts?${params.toString()}`);
   };
@@ -96,7 +97,7 @@ const ShopNavbar = () => {
                         <li className="w-full" key={item.id}>
                           <button
                             className="cursor-pointer py-3 px-0 md:px-[30px] w-full text-left hover:bg-[#333]"
-                            onClick={() => handleCategoryClick(item.title)}
+                            onClick={() => handleCategoryClick(item)}
                           >
                             {item.title}
                           </button>

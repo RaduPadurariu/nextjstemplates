@@ -3,10 +3,11 @@ import { FaAngleDown } from "react-icons/fa";
 
 import { shopCurrency } from "@/data/shopData";
 import React, { useState } from "react";
+import { useShopContext } from "../../../context/useShopContext";
 
 const ShopCurrency = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [currency, setCurrency] = useState<string>(shopCurrency[1].currency);
+  const { selectedCurrency, setSelectedCurrency } = useShopContext();
 
   return (
     <div className="inline-block">
@@ -15,7 +16,7 @@ const ShopCurrency = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="w-[60px] h-[35px]inline-block py-0 px-1.5 leading-9 relative z-10 font-normal text-[var(--shopTextSecondary)] text-sm tracking-[0.1em] shop__currency_active flex items-center"
         >
-          {currency}{" "}
+          {selectedCurrency?.currency}
           <FaAngleDown
             className={`text-sm text-white transition-transform duration-200 ease-in-out ${
               isOpen ? "rotate-180" : "rotate-0"
@@ -34,7 +35,11 @@ const ShopCurrency = () => {
               <li
                 onClick={() => {
                   setIsOpen(() => !isOpen);
-                  setCurrency(currency.currency);
+                  setSelectedCurrency(currency);
+                  localStorage.setItem(
+                    "shopCurrency",
+                    JSON.stringify(currency.currency)
+                  );
                 }}
                 key={currency.id}
                 className="font-normal text-white py-[5px] px-0 bg-[var(--shopTextSecondary)] hover:bg-black cursor-pointer"

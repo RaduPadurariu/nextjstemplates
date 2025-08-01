@@ -9,8 +9,7 @@ const ShopMyFilterList = ({
 }: {
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }) => {
-  const { categoryChanged, selectedCategory, setSelectedCategory } =
-    useShopContext();
+  const { selectedCategory, setSelectedCategory } = useShopContext();
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -66,7 +65,7 @@ const ShopMyFilterList = ({
       <div className="flex flex-col">
         <div className="p-[15px] lg:p-7 mb-[30px]">
           <h3 className="uppercase text-[var)--shopTextPrimary] m-0 text-sm font-bold tracking-widest">
-            {categoryChanged}
+            {selectedCategory?.title}
           </h3>
           <ul className="mt-[15px]">
             {selectedCategory?.subItem.map((category) => {

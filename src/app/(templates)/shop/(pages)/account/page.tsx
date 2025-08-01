@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
 import { shopAccountRegistrationList } from "@/data/shopData";
 
-const ShopAccount = () => {
+const ShopAccountPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
@@ -102,4 +102,4 @@ const ShopAccount = () => {
   );
 };
 
-export default ShopAccount;
+export default ShopAccountPage;

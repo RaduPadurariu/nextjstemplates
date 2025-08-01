@@ -2,23 +2,23 @@
 import React, { Suspense, useEffect, useState } from "react";
 import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
 import {
-  shopCatalogSortOptions,
   shopItemsPerPageOptions,
   shopMyProductList,
   shopMyProductsSortOptions,
 } from "@/data/shopData";
 import Image from "next/image";
 import Link from "next/link";
-import { shopMyProduct } from "../../types/shopTypes";
+import { ShopMyProduct } from "../../types/shopTypes";
 import ShopMyFilterList from "../../components/MyProducts/ShopMyFilterList";
 import { useShopContext } from "../../context/useShopContext";
 
-const ShopCatalog = () => {
+const ShopMyProductPage = () => {
   const [viewType, setViewType] = useState<"grid" | "list">("grid");
-  const { categoryChanged, selectedCategory } = useShopContext();
-  const [filteredProducts, setFilteredProducts] = useState<shopMyProduct[]>([]);
+  const { selectedCategory, selectedCurrency, handleAddToCart } =
+    useShopContext();
+  const [filteredProducts, setFilteredProducts] = useState<ShopMyProduct[]>([]);
   const [shopCatalogOption, setShopCatalogOption] = useState("ID");
-  const [displayProducts, setDisplayProducts] = useState<shopMyProduct[]>([]);
+  const [displayProducts, setDisplayProducts] = useState<ShopMyProduct[]>([]);
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -29,8 +29,11 @@ const ShopCatalog = () => {
     const noneSelected = selectedCategory.subItem.every((el) => !el.selected);
 
     const filtered = noneSelected
-      ? shopMyProductList.filter((el) => el.category === selectedCategory.title)
+      ? shopMyProductList
+          .slice(10)
+          .filter((el) => el.category === selectedCategory.title)
       : shopMyProductList
+          .slice(10)
           .filter((el) => el.category === selectedCategory.title)
           .filter((e) =>
             selectedCategory.subItem
@@ -66,7 +69,7 @@ const ShopCatalog = () => {
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-3/4 md:order-2 px-[15px] relative">
             <h1 className="text-3xl font-bold m-0 text-[var(--shopBGHeader)]">
-              {categoryChanged}
+              {selectedCategory?.title}
             </h1>
             <div className="mt-[30px] text-[var(--shopTextPrimary)]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -113,7 +116,7 @@ const ShopCatalog = () => {
                   onChange={(e) => setShopCatalogOption(e.target.value)}
                   className="inline-block w-auto align-top text-[var(--shopBGHeader)] border border-[var(--shopBorderPrimary)] text-sm bg-white leading-[1.43] py-1.5 px-2.5 h-[34px]"
                 >
-                  {shopCatalogSortOptions.map((option) => {
+                  {shopMyProductsSortOptions.map((option) => {
                     return (
                       <option key={option.id} value={option.value} className="">
                         {option.name}
@@ -189,9 +192,14 @@ const ShopCatalog = () => {
                         viewType == "grid" ? "lg:w-full" : "lg:w-3/4"
                       }`}
                     >
-                      <div className="flex justify-between items-center leading-[40px] border-b border-[var(--shopBorderPrimary)]">
+                      <div className="flex items-center leading-[40px] border-b border-[var(--shopBorderPrimary)]">
                         <p className="text-2xl lg:text-[40px] text-[var(--shopTextSecondary)] font-bold tracking-tighter pb-[5px]">
-                          {product.price}
+                          {selectedCurrency?.sign}
+                        </p>
+                        <p className="text-2xl lg:text-[40px] text-[var(--shopTextSecondary)] font-bold tracking-tighter pb-[5px]">
+                          {(
+                            product.price * (selectedCurrency?.coefficient ?? 1)
+                          ).toFixed(2)}
                         </p>
                       </div>
                       <div
@@ -210,7 +218,10 @@ const ShopCatalog = () => {
                       >
                         {product.longDesc}
                       </div>
-                      <div className="pt-4 flex group mt-auto">
+                      <div
+                        className="pt-4 flex group mt-auto"
+                        onClick={(e) => handleAddToCart(e, product)}
+                      >
                         <div className="relative text-white p-0  rounded flex justify-around cursor-pointer bg-[var(--shopTextSecondary)] group-hover:bg-[var(--shopBGOrange)] transition-all duration-300 ease-in-out">
                           <i className="fa fa-shopping-cart z-[1] text-2xl cursor-pointer rounded text-white bg-[var(--shopBGPrimary)] group-hover:bg-[var(--shopBGOrange)] p-2 transition-all duration-300 ease-in-out"></i>
                           <span className="uppercase block font-normal text-white text-sm cursor-pointer py-[10px] px-[7px] lg:px-[17px]">
@@ -284,4 +295,4 @@ const ShopCatalog = () => {
   );
 };
 
-export default ShopCatalog;
+export default ShopMyProductPage;

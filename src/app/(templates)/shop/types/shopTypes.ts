@@ -1,21 +1,55 @@
 import type { Swiper as SwiperType } from "swiper";
 
-export type shopCatalogProduct = {
-  id: number;
+export type ShopMyProduct = {
+  id: string;
   src: string;
   title: string;
   longTitle: string;
   desc: string;
   longDesc: string;
   price: number;
+  isInCart: boolean;
+  category: string;
+  subCategory: string;
 };
 
+export interface ShopMyCartProduct {
+  product: ShopMyProduct;
+  quantity: number;
+}
 export interface ShopHomeCarouselProps {
-  data: shopCatalogProduct[];
+  data: ShopMyProduct[];
   swiperRef?: React.MutableRefObject<SwiperType | null>;
 }
 
-// My Products
+export interface ShopCurrencyType {
+  id: number;
+  currency: string;
+  sign: string;
+  coefficient: number;
+}
+
+// Context types
+
+export interface ShopContextType {
+  selectedCategory: ShopMyProductsCategory | null;
+  setSelectedCategory: (value: ShopMyProductsCategory | null) => void;
+  selectedCurrency: ShopCurrencyType | null;
+  setSelectedCurrency: (value: ShopCurrencyType | null) => void;
+  cartProducts: ShopMyCartProduct[];
+  setCartProducts: (value: ShopMyCartProduct[]) => void;
+  handleAddToCart: (
+    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
+    item: ShopMyProduct
+  ) => void;
+}
+
+export interface ShopContextProviderType {
+  children: React.ReactNode;
+}
+
+// My products
+
 export interface ShopMyProductsSubCategory {
   id: number;
   subCategory: string;
@@ -28,28 +62,9 @@ export interface ShopMyProductsCategory {
   subItem: ShopMyProductsSubCategory[];
 }
 
-// Context types
+// Cart
 
-export interface ShopContextType {
-  categoryChanged: string;
-  setCategoryChanged: (value: string) => void;
-  selectedCategory: ShopMyProductsCategory | null;
-  setSelectedCategory: (value: ShopMyProductsCategory | null) => void;
-}
-
-export interface ShopContextProviderType {
-  children: React.ReactNode;
-}
-
-// My products
-
-export type shopMyProduct = {
+export interface ShopMyProductLocalCart {
   id: string;
-  src: string;
-  title: string;
-  longDesc: string;
-  price: number;
-  isInCart: boolean;
-  category: string;
-  subCategory: string;
-};
+  quantity: number;
+}

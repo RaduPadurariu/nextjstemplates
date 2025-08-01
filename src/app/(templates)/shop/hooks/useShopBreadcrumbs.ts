@@ -26,6 +26,8 @@ export const useShopBreadcrumbs = () => {
         "/shop/contact": "Contact Us",
         "/shop/account": "Account",
         "/shop/catalog": "Catalog",
+        "/shop/myProducts": "My Products",
+        "/shop/cart": "Your Shopping Cart",
       };
 
       return {

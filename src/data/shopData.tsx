@@ -1,12 +1,9 @@
-import {
-  shopCatalogProduct,
-  shopMyProduct,
-} from "@/app/(templates)/shop/types/shopTypes";
+import { ShopMyProduct } from "@/app/(templates)/shop/types/shopTypes";
 
 export const shopCurrency = [
-  { id: 1, currency: "USD" },
-  { id: 2, currency: "EUR" },
-  { id: 3, currency: "GBP" },
+  { id: 1, currency: "USD", sign: "$", coefficient: 1.153 },
+  { id: 2, currency: "EUR", sign: "€", coefficient: 1 },
+  { id: 3, currency: "GBP", sign: "£", coefficient: 0.867 },
 ];
 
 export const shopNavLinks = [
@@ -265,113 +262,6 @@ export const shopHeroProducts = [
   },
 ];
 
-export const shopHomeProductCarousel = [
-  {
-    id: 1,
-    src: "/images/shop/Home/HomeProduct4.png",
-    title: "DEWALT Bare-Tool DW059B",
-    longTitle: "DEWALT Bare-Tool DW059B Drill Driver Kit with Extra Battery",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 170.0,
-  },
-
-  {
-    id: 2,
-    src: "/images/shop/Home/HomeProduct5.png",
-    title: "DEWALT DC970K-2 18-Volt Dri...",
-    longTitle: "DEWALT DC970K-2 18-Volt Drill Driver Kit",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 320.0,
-  },
-  {
-    id: 3,
-    src: "/images/shop/Home/HomeProduct1.png",
-    title: "Black and Decker 20V Max Li...",
-    longTitle: "Black and Decker 20V Max Lithium Ion 8-Inch Chain Saw",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-  },
-  {
-    id: 4,
-    src: "/images/shop/Home/HomeProduct2.png",
-    title: "Crescent CTK70MP 70-Piece M...",
-    longTitle: "Crescent CTK70MP 70-Piece Mechanics Tool Set with Storage Case",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 78.0,
-  },
-  {
-    id: 5,
-    src: "/images/shop/Home/HomeProduct3.png",
-    title: "Custom Leathercraft 1134 To...",
-    longTitle: "Custom Leathercraft 1134 Tool Backpack, 48-Pocket",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 420.0,
-  },
-
-  {
-    id: 6,
-    src: "/images/shop/Home/HomeProduct6.png",
-    title: "DEWALT DW1169 14-Piece Pilo...",
-    longTitle: "DEWALT DW1169 14-Piece Pilot-Point Twist Drill Bit Assortment",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-  },
-  {
-    id: 7,
-    src: "/images/shop/Home/HomeProduct7.png",
-    title: "DEWALT DW2153 Impact Ready ...",
-    longTitle: "DEWALT DW2153 Impact Ready Accessory Set",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 315.0,
-  },
-  {
-    id: 8,
-    src: "/images/shop/Home/HomeProduct8.png",
-    title: "DEWALT DW4890 15-Piece Reci...",
-    longTitle: "DEWALT DW4890 15-Piece Reciprocating Saw Blade Tough Case Set",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 459.0,
-  },
-
-  {
-    id: 9,
-    src: "/images/shop/Home/HomeProduct9.png",
-    title: "DEWALT DW715 15-Amp 12-Inch...",
-    longTitle: "DEWALT DW715 15-Amp 12-Inch Compound Miter saw",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 119.0,
-  },
-
-  {
-    id: 10,
-    src: "/images/shop/Home/HomeProduct10.png",
-    title: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
-    longTitle: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 420.0,
-  },
-];
-
 // Contact and account
 
 export const shopAccountRegistrationList = [
@@ -593,19 +483,19 @@ export const shopCatalogSidebarProducts = [
   {
     id: 1,
     title: "Black & Decker 71-91291 129...",
-    price: "361.13",
+    price: "361.00",
     src: "/images/shop/Catalog/product1.avif",
   },
   {
     id: 2,
     title: "Black & Decker BDCDMT120 20...",
-    price: "145.17",
+    price: "145.00",
     src: "/images/shop/Catalog/product2.avif",
   },
   {
     id: 3,
     title: "Black and Decker 20V Max Li...",
-    price: "227.86",
+    price: "227.00",
     src: "/images/shop/Catalog/product3.avif",
   },
 ];
@@ -636,44 +526,6 @@ export const shopCatalogProductTypes = [
   { id: 5, title: "Power Tools" },
 ];
 
-export const shopCatalogSortOptions = [
-  {
-    id: 1,
-    name: "Best Selling",
-    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
-      (a.id ?? 0) - (b.id ?? 0),
-    value: "ID",
-  },
-  {
-    id: 2,
-    name: "Name: A - Z",
-    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
-      a.title.localeCompare(b.title),
-    value: "nameAsc",
-  },
-  {
-    id: 3,
-    name: " Name: Z - A",
-    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
-      b.title.localeCompare(a.title),
-    value: "nameDesc",
-  },
-  {
-    id: 4,
-    name: "Price: low to high",
-    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
-      (Number(a.price) ?? 0) - (Number(b.price) ?? 0),
-    value: "priceAsc",
-  },
-  {
-    id: 5,
-    name: "Price: high to low",
-    sortFunction: (a: shopCatalogProduct, b: shopCatalogProduct) =>
-      (Number(b.price) ?? 0) - (Number(a.price) ?? 0),
-    value: "priceDesc",
-  },
-];
-
 export const shopItemsPerPageOptions = [
   { id: 1, value: 6, name: "6" },
   { id: 2, value: 9, name: "9" },
@@ -686,35 +538,35 @@ export const shopMyProductsSortOptions = [
   {
     id: 1,
     name: "Best Selling",
-    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+    sortFunction: (a: ShopMyProduct, b: ShopMyProduct) =>
       a.id.localeCompare(b.id),
     value: "ID",
   },
   {
     id: 2,
     name: "Name: A - Z",
-    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+    sortFunction: (a: ShopMyProduct, b: ShopMyProduct) =>
       a.title.localeCompare(b.title),
     value: "nameAsc",
   },
   {
     id: 3,
     name: " Name: Z - A",
-    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+    sortFunction: (a: ShopMyProduct, b: ShopMyProduct) =>
       b.title.localeCompare(a.title),
     value: "nameDesc",
   },
   {
     id: 4,
     name: "Price: low to high",
-    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+    sortFunction: (a: ShopMyProduct, b: ShopMyProduct) =>
       (Number(a.price) ?? 0) - (Number(b.price) ?? 0),
     value: "priceAsc",
   },
   {
     id: 5,
     name: "Price: high to low",
-    sortFunction: (a: shopMyProduct, b: shopMyProduct) =>
+    sortFunction: (a: ShopMyProduct, b: ShopMyProduct) =>
       (Number(b.price) ?? 0) - (Number(a.price) ?? 0),
     value: "priceDesc",
   },
@@ -722,9 +574,145 @@ export const shopMyProductsSortOptions = [
 
 export const shopMyProductList = [
   {
+    id: "00.00.01",
+    src: "/images/shop/Home/HomeProduct4.png",
+    title: "DEWALT Bare-Tool DW059B",
+    longTitle: "DEWALT Bare-Tool DW059B Drill Driver Kit with Extra Battery",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 170.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+
+  {
+    id: "00.00.02",
+    src: "/images/shop/Home/HomeProduct5.png",
+    title: "DEWALT DC970K-2 18-Volt Dri...",
+    longTitle: "DEWALT DC970K-2 18-Volt Drill Driver Kit",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 320.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+  {
+    id: "00.00.03",
+    src: "/images/shop/Home/HomeProduct1.png",
+    title: "Black and Decker 20V Max Li...",
+    longTitle: "Black and Decker 20V Max Lithium Ion 8-Inch Chain Saw",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+  {
+    id: "00.00.04",
+    src: "/images/shop/Home/HomeProduct2.png",
+    title: "Crescent CTK70MP 70-Piece M...",
+    longTitle: "Crescent CTK70MP 70-Piece Mechanics Tool Set with Storage Case",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 78.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+  {
+    id: "00.00.05",
+    src: "/images/shop/Home/HomeProduct3.png",
+    title: "Custom Leathercraft 1134 To...",
+    longTitle: "Custom Leathercraft 1134 Tool Backpack, 48-Pocket",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 420.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+
+  {
+    id: "00.00.06",
+    src: "/images/shop/Home/HomeProduct6.png",
+    title: "DEWALT DW1169 14-Piece Pilo...",
+    longTitle: "DEWALT DW1169 14-Piece Pilot-Point Twist Drill Bit Assortment",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+  {
+    id: "00.00.07",
+    src: "/images/shop/Home/HomeProduct7.png",
+    title: "DEWALT DW2153 Impact Ready ...",
+    longTitle: "DEWALT DW2153 Impact Ready Accessory Set",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 315.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+  {
+    id: "00.00.08",
+    src: "/images/shop/Home/HomeProduct8.png",
+    title: "DEWALT DW4890 15-Piece Reci...",
+    longTitle: "DEWALT DW4890 15-Piece Reciprocating Saw Blade Tough Case Set",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 459.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+
+  {
+    id: "00.00.09",
+    src: "/images/shop/Home/HomeProduct9.png",
+    title: "DEWALT DW715 15-Amp 12-Inch...",
+    longTitle: "DEWALT DW715 15-Amp 12-Inch Compound Miter saw",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 119.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+
+  {
+    id: "00.00.10",
+    src: "/images/shop/Home/HomeProduct10.png",
+    title: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
+    longTitle: "DEWALT DW920K-2 Screwdriver + Tool Box Kit",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut justo nec lorem...",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 420.0,
+    isInCart: false,
+    category: "Offers",
+    subCategory: "Tools",
+  },
+  {
     id: "01.01.01",
     title: "Masina de tuns gazon electrica",
     src: "/images/shop/MyProducts/01.01.01_Masina de tuns gazon electrica.avif",
+    longTitle: "",
+    desc: "",
     longDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
     price: 265.0,
@@ -736,6 +724,8 @@ export const shopMyProductList = [
     id: "01.01.02",
     title: "Motocoasa",
     src: "/images/shop/MyProducts/01.01.02_Motocoasa.avif",
+    longTitle: "",
+    desc: "",
     longDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
     price: 265.0,
@@ -743,11 +733,220 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Iarba si gazon",
   },
-
+  {
+    id: "01.01.03",
+    title: "Fir Motocoasa",
+    src: "/images/shop/MyProducts/01.01.03_Fir Motocoasa.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.04",
+    title: "Set Coasa manuala plus pila",
+    src: "/images/shop/MyProducts/01.01.04_Set Coasa manuala plus pila.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.05",
+    title: "Greblă cu dinți flexibili",
+    src: "/images/shop/MyProducts/01.01.05_Grebla cu dinti flexibili.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.06",
+    title: "Sămânță gazon",
+    src: "/images/shop/MyProducts/01.01.06_Samanta gazon.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.07",
+    title: "Furtun gradina 3 pe 4",
+    src: "/images/shop/MyProducts/01.01.07_Furtun gradina 3 pe 4.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.08",
+    title: "Aspersor",
+    src: "/images/shop/MyProducts/01.01.08_Aspersor.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.09",
+    title: "Pistol pentru stropit",
+    src: "/images/shop/MyProducts/01.01.09_Pistol pentru stropit.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.10",
+    title: "Conector furtun 3 pe 4",
+    src: "/images/shop/MyProducts/01.01.10_Conector furtun 3 pe 4.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
   {
     id: "01.02.01",
-    title: "Foarfece gradina",
-    src: "/images/shop/MyProducts/01.02.01_Foarfece gradina.avif",
+    title: "Foarfeca gradina",
+    src: "/images/shop/MyProducts/01.02.01_Foarfeca gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.02",
+    title: "Foarfeca si fierastrau crengi",
+    src: "/images/shop/MyProducts/01.02.02_Foarfeca si fierastrau crengi.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.03",
+    title: "Stropitoare",
+    src: "/images/shop/MyProducts/01.02.03_Stropitoare.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.04",
+    title: "Bordura de plastic gradina",
+    src: "/images/shop/MyProducts/01.02.04_Bordura de plastic gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.05",
+    title: "Sulfat de cupru pentru cicatrizare",
+    src: "/images/shop/MyProducts/01.02.05_Sulfat de cupru pentru cicatrizare.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.06",
+    title: "Ulei horticol si insecticid pentru pomi",
+    src: "/images/shop/MyProducts/01.02.06_Ulei horticol si insecticid pentru pomi.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.07",
+    title: "Var pasta pentru pomi",
+    src: "/images/shop/MyProducts/01.02.07_Var pasta pentru pomi.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.08",
+    title: "Topor pentru despicat",
+    src: "/images/shop/MyProducts/01.02.08_Topor pentru despicat.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.09",
+    title: "Drujba (motofierastrau)",
+    src: "/images/shop/MyProducts/01.02.09_Drujba (motofierastrau).avif",
+    longTitle: "",
+    desc: "",
     longDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
     price: 265.0,
@@ -759,6 +958,229 @@ export const shopMyProductList = [
     id: "01.03.01",
     title: "Motosapa",
     src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.02",
+    title: "Benzina Motosapa",
+    src: "/images/shop/MyProducts/01.03.02_Benzina Motosapa.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.03",
+    title: "Ulei de motor Motosapa",
+    src: "/images/shop/MyProducts/01.03.03_Ulei de motor Motosapa.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.04",
+    title: "Ulei de transmisie Motosapa",
+    src: "/images/shop/MyProducts/01.03.04_Ulei de transmisie Motosapa.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.05",
+    title: "Harlet",
+    src: "/images/shop/MyProducts/01.03.05_Harlet.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.06",
+    title: "Sapa de gradina",
+    src: "/images/shop/MyProducts/01.03.06_Sapa de gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.07",
+    title: "Sapaliga de gradina",
+    src: "/images/shop/MyProducts/01.03.07_Sapaliga de gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.08",
+    title: "Sistem de udare prin picurare",
+    src: "/images/shop/MyProducts/01.03.08_Sistem de udare prin picurare.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.09",
+    title: "Pompa de stropit",
+    src: "/images/shop/MyProducts/01.03.09_Pompa de stropit.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.10",
+    title: "Manusi de gradina",
+    src: "/images/shop/MyProducts/01.03.10_Manusi de gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.11",
+    title: "Grebla metalica",
+    src: "/images/shop/MyProducts/01.03.11_Grebla metalica.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.12",
+    title: "Ingrasamant Complex pentru fertilitate",
+    src: "/images/shop/MyProducts/01.03.12_Ingrasamant Complex pentru fertilitate.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.13",
+    title: "Seminte fructe si legume",
+    src: "/images/shop/MyProducts/01.03.13_Seminte fructe si legume.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.14",
+    title: "Ingrasamant azotat de amoniu pentru crestere",
+    src: "/images/shop/MyProducts/01.03.14_Ingrasamant azotat de amoniu pentru crestere.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.15",
+    title: "Secera",
+    src: "/images/shop/MyProducts/01.03.15_Secera.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.16",
+    title: "Calistir",
+    src: "/images/shop/MyProducts/01.03.16_Calistir.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.17",
+    title: "Lopata de gradina",
+    src: "/images/shop/MyProducts/01.03.17_Lopata de gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.18",
+    title: "Compostor de gradina",
+    src: "/images/shop/MyProducts/01.03.18_Compostor de gradina.avif",
+    longTitle: "",
+    desc: "",
     longDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
     price: 265.0,
@@ -768,46 +1190,28 @@ export const shopMyProductList = [
   },
   {
     id: "01.04.01",
-    title: "Motosapa",
-    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    title: "Hranitor pasari",
+    src: "/images/shop/MyProducts/01.04.01_Hranitor pasari.avif",
+    longTitle: "",
+    desc: "",
     longDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
     price: 265.0,
     isInCart: false,
     category: "Gradinarit",
-    subCategory: "Agricultura",
+    subCategory: "Zootehnie",
   },
   {
-    id: "01.05.01",
-    title: "Motosapa",
-    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
+    id: "01.04.02",
+    title: "Furca",
+    src: "/images/shop/MyProducts/01.04.02_Furca.avif",
+    longTitle: "",
+    desc: "",
     longDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
     price: 265.0,
     isInCart: false,
     category: "Gradinarit",
-    subCategory: "Agricultura",
-  },
-  {
-    id: "01.06.01",
-    title: "Motosapa",
-    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-    isInCart: false,
-    category: "Gradinarit",
-    subCategory: "Agricultura",
-  },
-  {
-    id: "01.07.01",
-    title: "Motosapa",
-    src: "/images/shop/MyProducts/01.03.01_Motosapa.avif",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-    isInCart: false,
-    category: "Gradinarit",
-    subCategory: "Agricultura",
+    subCategory: "Zootehnie",
   },
 ];

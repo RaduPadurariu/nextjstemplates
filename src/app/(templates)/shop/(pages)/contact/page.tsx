@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
 import { shopContactList, shopContactSocial } from "@/data/shopData";
 
-const ShopContact = () => {
+const ShopContactPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -139,4 +139,4 @@ const ShopContact = () => {
   );
 };
 
-export default ShopContact;
+export default ShopContactPage;

@@ -5,34 +5,33 @@ import {
   shopCatalogCollection,
   shopCatalogProductTypes,
   shopCatalogSidebarProducts,
-  shopCatalogSortOptions,
-  shopHomeProductCarousel,
   shopItemsPerPageOptions,
+  shopMyProductList,
+  shopMyProductsSortOptions,
 } from "@/data/shopData";
 import Image from "next/image";
-import Link from "next/link";
-import { shopCatalogProduct } from "../../types/shopTypes";
+import { useShopContext } from "../../context/useShopContext";
+import { ShopMyProduct } from "../../types/shopTypes";
 
-const ShopCatalog = () => {
+const ShopCatalogPage = () => {
+  const { selectedCurrency, handleAddToCart } = useShopContext();
   const [viewType, setViewType] = useState<"grid" | "list">("grid");
   const [categoryTitle, setCategoryTitle] = useState("Abrasives");
-  const [filteredProducts, setFilteredProducts] = useState<
-    shopCatalogProduct[]
-  >([]);
+  const [filteredProducts, setFilteredProducts] = useState<ShopMyProduct[]>([]);
   const [shopCatalogOption, setShopCatalogOption] = useState("ID");
-  const [displayProducts, setDisplayProducts] = useState<shopCatalogProduct[]>(
-    []
-  );
+  const [displayProducts, setDisplayProducts] = useState<ShopMyProduct[]>([]);
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
   useEffect(() => {
-    const sortFunction = shopCatalogSortOptions.find(
+    const sortFunction = shopMyProductsSortOptions.find(
       (el) => el.value === shopCatalogOption
     )?.sortFunction;
 
-    const sortedProducts = [...shopHomeProductCarousel].sort(sortFunction);
+    const sortedProducts = [...shopMyProductList.slice(0, 10)].sort(
+      sortFunction
+    );
     setFilteredProducts(sortedProducts);
   }, [shopCatalogOption]);
 
@@ -45,7 +44,7 @@ const ShopCatalog = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [itemsPerPage]);
+  }, [itemsPerPage, shopCatalogOption]);
 
   return (
     <div className="shop-container">
@@ -101,7 +100,7 @@ const ShopCatalog = () => {
                   onChange={(e) => setShopCatalogOption(e.target.value)}
                   className="inline-block w-auto align-top text-[var(--shopBGHeader)] border border-[var(--shopBorderPrimary)] text-sm bg-white leading-[1.43] py-1.5 px-2.5 h-[34px]"
                 >
-                  {shopCatalogSortOptions.map((option) => {
+                  {shopMyProductsSortOptions.map((option) => {
                     return (
                       <option key={option.id} value={option.value} className="">
                         {option.name}
@@ -157,10 +156,6 @@ const ShopCatalog = () => {
                         viewType == "grid" ? "lg:w-full" : "lg:w-1/4"
                       }`}
                     >
-                      <Link
-                        href="/shop/catalog"
-                        className="block relative cursor-pointer"
-                      ></Link>
                       <Image
                         src={product.src}
                         alt={`Slide ${index + 1}`}
@@ -177,9 +172,14 @@ const ShopCatalog = () => {
                         viewType == "grid" ? "lg:w-full" : "lg:w-3/4"
                       }`}
                     >
-                      <div className="flex justify-between items-center leading-[40px] border-b border-[var(--shopBorderPrimary)]">
+                      <div className="flex items-center leading-[40px] border-b border-[var(--shopBorderPrimary)]">
                         <p className="text-2xl lg:text-[40px] text-[var(--shopTextSecondary)] font-bold tracking-tighter pb-[5px]">
-                          {product.price}
+                          {selectedCurrency?.sign}
+                        </p>
+                        <p className="text-2xl lg:text-[40px] text-[var(--shopTextSecondary)] font-bold tracking-tighter pb-[5px]">
+                          {(
+                            product.price * (selectedCurrency?.coefficient ?? 1)
+                          ).toFixed(2)}
                         </p>
                       </div>
                       <div
@@ -198,7 +198,10 @@ const ShopCatalog = () => {
                       >
                         {product.longDesc}
                       </div>
-                      <div className="pt-4 flex group mt-auto">
+                      <div
+                        className="pt-4 flex group mt-auto"
+                        onClick={(e) => handleAddToCart(e, product)}
+                      >
                         <div className="relative text-white p-0  rounded flex justify-around cursor-pointer bg-[var(--shopTextSecondary)] group-hover:bg-[var(--shopBGOrange)] transition-all duration-300 ease-in-out">
                           <i className="fa fa-shopping-cart z-[1] text-2xl cursor-pointer rounded text-white bg-[var(--shopBGPrimary)] group-hover:bg-[var(--shopBGOrange)] p-2 transition-all duration-300 ease-in-out"></i>
                           <span className="uppercase block font-normal text-white text-sm cursor-pointer py-[10px] px-[7px] lg:px-[17px]">
@@ -340,9 +343,15 @@ const ShopCatalog = () => {
                             <div className="text-[var(--shopBGHeader)] text-base md:text-sm">
                               {product.title}
                             </div>
-                            <div className="mt-1">
+                            <div className="mt-1 flex items-center">
                               <span className="text-[var(--shopTextSecondary)] text-sm">
-                                {product.price}
+                                {selectedCurrency?.sign}
+                              </span>
+                              <span className="text-[var(--shopTextSecondary)] text-sm">
+                                {(
+                                  +product.price *
+                                  (selectedCurrency?.coefficient ?? 1)
+                                ).toFixed(2)}
                               </span>
                             </div>
                             <div>
@@ -365,4 +374,4 @@ const ShopCatalog = () => {
   );
 };
 
-export default ShopCatalog;
+export default ShopCatalogPage;

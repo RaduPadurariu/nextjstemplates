@@ -18,11 +18,11 @@ export const portalNavbar = [
 export const portalTemplatesList = [
   {
     id: 1,
-    title: "Fake Login",
+    title: "Login & Dashboard",
     icon: "fas fa-sign-in-alt",
     img: "/images/portal/o1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/fakelogin",
+    link: "/loginDashboard/home",
     color: "group-hover:text-[#5d58f7]",
   },
   {

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 const PortalHero = () => {
@@ -17,12 +18,16 @@ const PortalHero = () => {
           </p>
 
           <div className="flex flex-col portalHero_btns items-center">
-            <a
-              href="#portalTemplates"
-              className="py-4 px-12 bg-[var(--portalTextPrimary)] text-white cursor-pointer rounded hover:text-[var(--portalTextPrimary)] hover:bg-white border-2 border-white hover:border-[var(--portalTextPrimary)] b"
+            <button
+              onClick={() => {
+                document
+                  .getElementById("portalTemplates")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-base py-4 px-12 bg-[var(--portalTextPrimary)] text-white cursor-pointer rounded hover:text-[var(--portalTextPrimary)] hover:bg-white border-2 border-white hover:border-[var(--portalTextPrimary)] b"
             >
               Explore Templates
-            </a>
+            </button>
             <a
               href="https://radupadurariu2025.netlify.app"
               target="_blank"

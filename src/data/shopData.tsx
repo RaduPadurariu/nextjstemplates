@@ -722,6 +722,19 @@ export const shopMyProductList = [
   },
   {
     id: "01.01.02",
+    title: "Cablu electric 100m",
+    src: "/images/shop/MyProducts/01.01.01.01_Cablu electric 100m.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.03",
     title: "Motocoasa",
     src: "/images/shop/MyProducts/01.01.02_Motocoasa.avif",
     longTitle: "",
@@ -734,7 +747,7 @@ export const shopMyProductList = [
     subCategory: "Iarba si gazon",
   },
   {
-    id: "01.01.03",
+    id: "01.01.04",
     title: "Fir Motocoasa",
     src: "/images/shop/MyProducts/01.01.03_Fir Motocoasa.avif",
     longTitle: "",
@@ -747,7 +760,7 @@ export const shopMyProductList = [
     subCategory: "Iarba si gazon",
   },
   {
-    id: "01.01.04",
+    id: "01.01.05",
     title: "Set Coasa manuala plus pila",
     src: "/images/shop/MyProducts/01.01.04_Set Coasa manuala plus pila.avif",
     longTitle: "",
@@ -760,22 +773,9 @@ export const shopMyProductList = [
     subCategory: "Iarba si gazon",
   },
   {
-    id: "01.01.05",
-    title: "Greblă cu dinți flexibili",
-    src: "/images/shop/MyProducts/01.01.05_Grebla cu dinti flexibili.avif",
-    longTitle: "",
-    desc: "",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-    isInCart: false,
-    category: "Gradinarit",
-    subCategory: "Iarba si gazon",
-  },
-  {
     id: "01.01.06",
-    title: "Sămânță gazon",
-    src: "/images/shop/MyProducts/01.01.06_Samanta gazon.avif",
+    title: "Scarificator si aerator manual",
+    src: "/images/shop/MyProducts/01.01.12_Scarificator si aerator manual.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -787,6 +787,58 @@ export const shopMyProductList = [
   },
   {
     id: "01.01.07",
+    title: "Foarfeca pentru margine gazon",
+    src: "/images/shop/MyProducts/01.01.13_Foarfeca pentru margine gazon.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.08",
+    title: "Grebla cu dinti flexibili",
+    src: "/images/shop/MyProducts/01.01.05_Grebla cu dinti flexibili.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.09",
+    title: "Samanta gazon",
+    src: "/images/shop/MyProducts/01.01.06_Samanta gazon.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.10",
+    title: "Ingrasamant gazon",
+    src: "/images/shop/MyProducts/01.01.14_Ingrasamant gazon.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
+  {
+    id: "01.01.11",
     title: "Furtun gradina 3 pe 4",
     src: "/images/shop/MyProducts/01.01.07_Furtun gradina 3 pe 4.avif",
     longTitle: "",
@@ -799,7 +851,7 @@ export const shopMyProductList = [
     subCategory: "Iarba si gazon",
   },
   {
-    id: "01.01.08",
+    id: "01.01.12",
     title: "Aspersor",
     src: "/images/shop/MyProducts/01.01.08_Aspersor.avif",
     longTitle: "",
@@ -812,7 +864,7 @@ export const shopMyProductList = [
     subCategory: "Iarba si gazon",
   },
   {
-    id: "01.01.09",
+    id: "01.01.13",
     title: "Pistol pentru stropit",
     src: "/images/shop/MyProducts/01.01.09_Pistol pentru stropit.avif",
     longTitle: "",
@@ -825,7 +877,7 @@ export const shopMyProductList = [
     subCategory: "Iarba si gazon",
   },
   {
-    id: "01.01.10",
+    id: "01.01.14",
     title: "Conector furtun 3 pe 4",
     src: "/images/shop/MyProducts/01.01.10_Conector furtun 3 pe 4.avif",
     longTitle: "",
@@ -837,10 +889,24 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Iarba si gazon",
   },
+
+  {
+    id: "01.01.15",
+    title: "Bordura de plastic gradina",
+    src: "/images/shop/MyProducts/01.01.15_Bordura de plastic gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Iarba si gazon",
+  },
   {
     id: "01.02.01",
-    title: "Foarfeca gradina",
-    src: "/images/shop/MyProducts/01.02.01_Foarfeca gradina.avif",
+    title: "Foarfeca de gradina tip bypass",
+    src: "/images/shop/MyProducts/01.02.01_Foarfeca de gradina tip bypass.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -852,8 +918,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.02",
-    title: "Foarfeca si fierastrau crengi",
-    src: "/images/shop/MyProducts/01.02.02_Foarfeca si fierastrau crengi.avif",
+    title: "Foarfeca de gradina tip nicovala",
+    src: "/images/shop/MyProducts/01.02.02_Foarfeca de gradina tip nicovala.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -865,8 +931,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.03",
-    title: "Stropitoare",
-    src: "/images/shop/MyProducts/01.02.03_Stropitoare.avif",
+    title: "Foarfeca de gradina tip ghilotina",
+    src: "/images/shop/MyProducts/01.02.03_Foarfeca de gradina tip ghilotina.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -878,8 +944,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.04",
-    title: "Bordura de plastic gradina",
-    src: "/images/shop/MyProducts/01.02.04_Bordura de plastic gradina.avif",
+    title: "Foarfeca crengi telescopica",
+    src: "/images/shop/MyProducts/01.02.04_Foarfeca crengi telescopica.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -891,8 +957,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.05",
-    title: "Sulfat de cupru pentru cicatrizare",
-    src: "/images/shop/MyProducts/01.02.05_Sulfat de cupru pentru cicatrizare.avif",
+    title: "Foarfeca crengi telescopica cu clichet",
+    src: "/images/shop/MyProducts/01.02.05_Foarfeca crengi telescopica cu clichet.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -904,8 +970,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.06",
-    title: "Ulei horticol si insecticid pentru pomi",
-    src: "/images/shop/MyProducts/01.02.06_Ulei horticol si insecticid pentru pomi.avif",
+    title: "Fierestrau crengi curbat",
+    src: "/images/shop/MyProducts/01.02.06_Fierestrau crengi curbat.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -917,8 +983,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.07",
-    title: "Var pasta pentru pomi",
-    src: "/images/shop/MyProducts/01.02.07_Var pasta pentru pomi.avif",
+    title: "Fierestrau crengi telescopic",
+    src: "/images/shop/MyProducts/01.02.07_Fierestrau crengi telescopic.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -930,8 +996,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.08",
-    title: "Topor pentru despicat",
-    src: "/images/shop/MyProducts/01.02.08_Topor pentru despicat.avif",
+    title: "Drujba (motofierastrau)",
+    src: "/images/shop/MyProducts/01.02.08_Drujba (motofierastrau).avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -943,8 +1009,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.02.09",
-    title: "Drujba (motofierastrau)",
-    src: "/images/shop/MyProducts/01.02.09_Drujba (motofierastrau).avif",
+    title: "Topor pentru despicat",
+    src: "/images/shop/MyProducts/01.02.09_Topor pentru despicat.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -954,6 +1020,138 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Pomicultura",
   },
+  {
+    id: "01.02.10",
+    title: "Scara simpla din aluminiu",
+    src: "/images/shop/MyProducts/01.02.10_Scara simpla din aluminiu.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.11",
+    title: "Scara dubla din aluminiu",
+    src: "/images/shop/MyProducts/01.02.11_Scara dubla din aluminiu.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.12",
+    title: "Scara 3 tronsoane din aluminiu",
+    src: "/images/shop/MyProducts/01.02.12_Scara 3 tronsoane din aluminiu.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.21",
+    title: "Pompa de stropit",
+    src: "/images/shop/MyProducts/01.02.21_Pompa de stropit.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.22",
+    title: "Pulverizator manual cu presiune",
+    src: "/images/shop/MyProducts/01.02.22_Pulverizator manual cu presiune.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.23",
+    title: "Cutit pentru altoit",
+    src: "/images/shop/MyProducts/01.02.23_Cutit pentru altoit.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.24",
+    title: "Mastic altoire",
+    src: "/images/shop/MyProducts/01.02.24_Mastic altoire.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+
+  {
+    id: "01.02.25",
+    title: "Var pasta pentru pomi",
+    src: "/images/shop/MyProducts/01.02.25_Var pasta pentru pomi.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.26",
+    title: "Sulfat de cupru pentru cicatrizare",
+    src: "/images/shop/MyProducts/01.02.26_Sulfat de cupru pentru cicatrizare.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.27",
+    title: "Ulei horticol si insecticid pentru pomi",
+    src: "/images/shop/MyProducts/01.02.27_Ulei horticol si insecticid pentru pomi.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+
   {
     id: "01.03.01",
     title: "Motosapa",
@@ -1019,6 +1217,7 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Agricultura",
   },
+
   {
     id: "01.03.06",
     title: "Sapa de gradina",
@@ -1058,19 +1257,7 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Agricultura",
   },
-  {
-    id: "01.03.09",
-    title: "Pompa de stropit",
-    src: "/images/shop/MyProducts/01.03.09_Pompa de stropit.avif",
-    longTitle: "",
-    desc: "",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-    isInCart: false,
-    category: "Gradinarit",
-    subCategory: "Agricultura",
-  },
+
   {
     id: "01.03.10",
     title: "Manusi de gradina",
@@ -1213,5 +1400,19 @@ export const shopMyProductList = [
     isInCart: false,
     category: "Gradinarit",
     subCategory: "Zootehnie",
+  },
+
+  {
+    id: "01.05.08",
+    title: "Stropitoare",
+    src: "/images/shop/MyProducts/01.05.08_Stropitoare.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Plante si ghivece",
   },
 ];

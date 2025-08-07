@@ -28,5 +28,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div>{children}</div>;
+  return (
+    <div className="loginDashboardFamilyFont text-base antialiased font-normal dark:bg-[var(--dashboardBGDarkMode)]  leading-default text-[var(--dashboardTextPrimary)] bg-[var(--dashboardBGPrimary)]">
+      <div className="absolute w-full bg-[var(--dashboardBGSecondary)] dark:hidden min-h-75"></div>
+      {children}
+    </div>
+  );
 }

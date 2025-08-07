@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+@layer base {
+  :root {
+    /* === Dashboard Colors === */
+
+    /* Text */
+    --dashboardTextPrimary: #67748e;
+    --dashboardTextSecondary: #1e293b;
+    --dashboardTextMuted: #8392ab;
+
+    /* Background */
+    --dashboardBGPrimary: #f8f9fa;
+    --dashboardBGSecondary: #4e6cf8;
+    --dashboardBGMuted: #f1f5f9; /* slate-100 */
+    --dashboardCardBG: #ffffff;
+    --dashboardBGDarkMode: #051139;
+    --dashboardBGHover: #e9ecef;
+
+    /* Accent */
+    --dashboardAccentPrimary: #3b82f6; /* blue-500 */
+    --dashboardAccentSecondary: #6366f1; /* indigo */
+    --dashboardAccentSuccess: #22c55e; /* green-500 */
+    --dashboardAccentWarning: #f59e0b; /* amber-500 */
+    --dashboardAccentDanger: #ef4444; /* red-500 */
+
+    /* Border / Divider */
+    --dashboardBorder: #e2e8f0; /* slate-200 */
+
+    /* Optional: Icon Colors */
+    --dashboardIconOrange: #fb923c; /* orange-400 */
+    --dashboardIconGreen: #34d399; /* emerald-400 */
+    --dashboardIconRed: #f87171; /* red-400 */
+  }
+
+  .loginDashboardFamilyFont {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+@layer components {
+  /* .shop-container {
+    max-width: 2048px;
+    margin: 0 auto;
+  } */
+}
+
+@layer utilities {
+  /* .shop-subContainer {
+    margin-left: auto;
+    margin-right: auto;
+  } */
+}

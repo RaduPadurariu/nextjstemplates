@@ -720,19 +720,7 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Iarba si gazon",
   },
-  {
-    id: "01.01.02",
-    title: "Cablu electric 100m",
-    src: "/images/shop/MyProducts/01.01.01.01_Cablu electric 100m.avif",
-    longTitle: "",
-    desc: "",
-    longDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
-    price: 265.0,
-    isInCart: false,
-    category: "Gradinarit",
-    subCategory: "Iarba si gazon",
-  },
+
   {
     id: "01.01.03",
     title: "Motocoasa",
@@ -1020,8 +1008,22 @@ export const shopMyProductList = [
     category: "Gradinarit",
     subCategory: "Pomicultura",
   },
+
   {
     id: "01.02.10",
+    title: "Toporisca",
+    src: "/images/shop/MyProducts/01.02.28_Toporisca.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Pomicultura",
+  },
+  {
+    id: "01.02.11",
     title: "Scara simpla din aluminiu",
     src: "/images/shop/MyProducts/01.02.10_Scara simpla din aluminiu.avif",
     longTitle: "",
@@ -1034,7 +1036,7 @@ export const shopMyProductList = [
     subCategory: "Pomicultura",
   },
   {
-    id: "01.02.11",
+    id: "01.02.12",
     title: "Scara dubla din aluminiu",
     src: "/images/shop/MyProducts/01.02.11_Scara dubla din aluminiu.avif",
     longTitle: "",
@@ -1047,7 +1049,7 @@ export const shopMyProductList = [
     subCategory: "Pomicultura",
   },
   {
-    id: "01.02.12",
+    id: "01.02.13",
     title: "Scara 3 tronsoane din aluminiu",
     src: "/images/shop/MyProducts/01.02.12_Scara 3 tronsoane din aluminiu.avif",
     longTitle: "",
@@ -1286,8 +1288,8 @@ export const shopMyProductList = [
   },
   {
     id: "01.03.12",
-    title: "Ingrasamant Complex pentru fertilitate",
-    src: "/images/shop/MyProducts/01.03.12_Ingrasamant Complex pentru fertilitate.avif",
+    title: "Ingrasamant Complex pentru fertilizare",
+    src: "/images/shop/MyProducts/01.03.12_Ingrasamant Complex pentru fertilizare.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -1364,8 +1366,144 @@ export const shopMyProductList = [
   },
   {
     id: "01.03.18",
+    title: "Plantator manual rasaduri",
+    src: "/images/shop/MyProducts/01.03.18_Plantator manual rasaduri.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.19",
+    title: "Plantator manual",
+    src: "/images/shop/MyProducts/01.03.19_Plantator manual.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+
+  {
+    id: "01.03.20",
+    title: "Araci",
+    src: "/images/shop/MyProducts/01.03.20_Araci.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.21",
+    title: "Aparat pentru legat rosii",
+    src: "/images/shop/MyProducts/01.03.21_Aparat pentru legat rosii.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+
+  {
+    id: "01.03.22",
+    title: "Moara de cereale si fructe",
+    src: "/images/shop/MyProducts/01.03.22_Moara de cereale si fructe.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+
+  {
+    id: "01.03.40",
+    title: "Solar gradina",
+    src: "/images/shop/MyProducts/01.03.40_Solar gradina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+
+  {
+    id: "01.03.41",
+    title: "Pompa de udat electrica",
+    src: "/images/shop/MyProducts/01.03.41_Pompa de udat electrica.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+
+  {
+    id: "01.03.42",
+    title: "Rezervor IBC 1000l",
+    src: "/images/shop/MyProducts/01.03.42_Rezervor IBC 1000l.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+
+  {
+    id: "01.03.50",
+    title: "Sperietoare de pasari",
+    src: "/images/shop/MyProducts/01.03.50_Sperietoare de pasari.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.51",
+    title: "Aparat ultrasonic anti-daunatori",
+    src: "/images/shop/MyProducts/01.03.51_Aparat ultrasonic anti-daunatori.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Agricultura",
+  },
+  {
+    id: "01.03.90",
     title: "Compostor de gradina",
-    src: "/images/shop/MyProducts/01.03.18_Compostor de gradina.avif",
+    src: "/images/shop/MyProducts/01.03.90_Compostor de gradina.avif",
     longTitle: "",
     desc: "",
     longDesc:
@@ -1403,9 +1541,36 @@ export const shopMyProductList = [
   },
 
   {
-    id: "01.05.08",
+    id: "01.05.01",
     title: "Stropitoare",
-    src: "/images/shop/MyProducts/01.05.08_Stropitoare.avif",
+    src: "/images/shop/MyProducts/01.05.01_Stropitoare.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Plante si ghivece",
+  },
+  {
+    id: "01.05.02",
+    title: "Pamant flori universal",
+    src: "/images/shop/MyProducts/01.05.02_Pamant flori universal.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Gradinarit",
+    subCategory: "Plante si ghivece",
+  },
+
+  {
+    id: "01.05.03",
+    title: "Perlit pentru plante de interior",
+    src: "/images/shop/MyProducts/01.05.03_Perlit pentru plante de interior.avif",
     longTitle: "",
     desc: "",
     longDesc:

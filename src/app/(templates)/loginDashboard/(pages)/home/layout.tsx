@@ -6,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative h-full max-h-screen transition-all duration-200 ease-in-out xl:ml-68 rounded-xl">
+    <div className="relative h-full transition-all duration-200 ease-in-out xl:ml-68 rounded-xl">
       <LoginDashboardHeader />
       {children}
     </div>

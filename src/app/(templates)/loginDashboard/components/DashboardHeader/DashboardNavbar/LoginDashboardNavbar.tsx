@@ -6,6 +6,7 @@ import React from "react";
 import LoginDashboardNavbarActiveLink from "./LoginDashboardNavbarActiveLink";
 import { LoginDashboardLinkType } from "../../../types/loginDashboardTypes";
 import Image from "next/image";
+import Link from "next/link";
 
 const LoginDashboardNavbar = ({
   isNavOpen,
@@ -80,6 +81,25 @@ const LoginDashboardNavbar = ({
               />
             );
           })}
+
+          <li className="w-full mt-4">
+            <hr className="h-[1px] my-1 border-0 opacity-25 mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
+          </li>
+          <li className="mt-0.5 w-full">
+            <Link
+              className={`py-2.5 text-sm my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-[var(--dashboardTextPrimary)] transition-colors dark:text-white dark:opacity-80`}
+              href={"/"}
+            >
+              <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                <i
+                  className={`relative top-0 text-sm leading-normal text-[#5e72e4] fa-solid fa-puzzle-piece`}
+                ></i>
+              </div>
+              <span className="ml-1 duration-300 opacity-100 pointer-events-none ease">
+                Templates
+              </span>
+            </Link>
+          </li>
         </ul>
       </div>
     </aside>

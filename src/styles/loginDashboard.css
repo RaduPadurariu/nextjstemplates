@@ -7,6 +7,7 @@
     /* Text */
     --dashboardTextPrimary: #67748e;
     --dashboardTextSecondary: #1e293b;
+    --dashboardTextTitles: #344767;
     --dashboardTextMuted: #8392ab;
 
     /* Background */
@@ -18,18 +19,19 @@
     --dashboardBGHover: #e9ecef;
 
     /* Accent */
-    --dashboardAccentPrimary: #3b82f6; /* blue-500 */
-    --dashboardAccentSecondary: #6366f1; /* indigo */
+    --dashboardAccentPrimary: #5e72e4; /* blue-500 */
+    --dashboardAccentSecondary: #6366f1; /* indigo-500 */
+    --dashboardAccentViolet: #825ee4; /*violet-500 */
     --dashboardAccentSuccess: #22c55e; /* green-500 */
-    --dashboardAccentWarning: #f59e0b; /* amber-500 */
-    --dashboardAccentDanger: #ef4444; /* red-500 */
+    --dashboardAccentWarning: #fb6340; /* orange-500 */
+    --dashboardAccentDanger: #f53939; /* red-500 */
 
     /* Border / Divider */
     --dashboardBorder: #e2e8f0; /* slate-200 */
 
     /* Optional: Icon Colors */
     --dashboardIconOrange: #fb923c; /* orange-400 */
-    --dashboardIconGreen: #34d399; /* emerald-400 */
+    --dashboardIconGreen: #2dce89; /* emerald-500 */
     --dashboardIconRed: #f87171; /* red-400 */
   }
 
@@ -46,8 +48,39 @@
 }
 
 @layer utilities {
-  /* .shop-subContainer {
-    margin-left: auto;
-    margin-right: auto;
-  } */
+  #shop__dashboard_carousel {
+    margin-left: 0 !important;
+  }
+
+  #shop__dashboard_carousel .swiper-button-prev,
+  #shop__dashboard_carousel .swiper-button-next {
+    color: white !important;
+  }
+
+  #shop__dashboard_carousel .swiper-button-prev:hover,
+  #shop__dashboard_carousel .swiper-button-next:hover {
+    color: white !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #shop__dashboard_carousel .swiper-button-prev::after,
+  #shop__dashboard_carousel .swiper-button-next::after {
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+
+  #shop__dashboard_carousel .swiper-pagination-bullet {
+    background: white !important;
+    border: 2px solid white;
+    width: 17px !important;
+    height: 17px !important;
+    opacity: 1 !important;
+  }
+
+  #shop__dashboard_carousel .swiper-pagination-bullet-active {
+    background: var(--dashboardIconOrange) !important;
+    border: 2px solid var(--dashboardIconOrange);
+    width: 17px !important;
+    height: 17px !important;
+  }
 }

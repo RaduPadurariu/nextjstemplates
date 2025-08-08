@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./../../../../../../styles/shop.css";
-
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import React from "react";
 import { shopHeroCarousel, shopHeroProducts } from "@/data/shopData";

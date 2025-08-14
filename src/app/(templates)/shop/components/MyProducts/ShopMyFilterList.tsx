@@ -16,12 +16,10 @@ const ShopMyFilterList = ({
   const pathname = usePathname();
 
   useEffect(() => {
-    const encodedCategoryName = searchParams.get("category");
+    const categoryName = searchParams.get("category");
     const selectedIds = searchParams.get("selected");
 
-    if (!encodedCategoryName) return;
-
-    const categoryName = decodeURIComponent(encodedCategoryName);
+    if (!categoryName) return;
     const category = shopCategoryList.find((cat) => cat.title === categoryName);
 
     if (!category || !category.subItem) return;
@@ -37,34 +35,33 @@ const ShopMyFilterList = ({
         selected: selectedIdsArray.includes(el.id),
       })),
     });
-  }, [searchParams]);
+  }, [searchParams, setSelectedCategory]);
 
   const handleSelectChange = (id: number, isSelected: boolean) => {
     if (!selectedCategory) return;
-    const updatedSubItems = selectedCategory?.subItem.map((el) => {
-      if (id === el.id) {
-        return { ...el, selected: isSelected };
-      }
-      return el;
-    });
+    const updatedSubItems = selectedCategory.subItem.map((el) =>
+      id === el.id ? { ...el, selected: isSelected } : el
+    );
 
     const selectedSubCategories = updatedSubItems
       ?.filter((item) => item.selected)
       .map((item) => item.id)
       .join(",");
 
-    const encodedCategoryName = encodeURIComponent(selectedCategory?.title);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("category", selectedCategory.title);
+    if (selectedSubCategories) params.set("selected", selectedSubCategories);
+    else params.delete("selected");
 
-    const newQuery = `?category=${encodedCategoryName}&selected=${selectedSubCategories}`;
-    router.push(`${pathname}${newQuery}`);
+    router.replace(`${pathname}?${params.toString()}`);
     setCurrentPage(1);
   };
 
   return (
-    <div className="w-full md:w-1/4 md:order-1  relative">
+    <div className="w-full md:w-1/4 relative">
       <div className="flex flex-col">
         <div className="p-[15px] lg:p-7 mb-[30px]">
-          <h3 className="uppercase text-[var)--shopTextPrimary] m-0 text-sm font-bold tracking-widest">
+          <h3 className="uppercase text-[var(--shopTextPrimary] m-0 text-sm font-bold tracking-widest">
             {selectedCategory?.title}
           </h3>
           <ul className="mt-[15px]">

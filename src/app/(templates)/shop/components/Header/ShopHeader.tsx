@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import ShopCurrency from "./Currency/ShopCurrency";
 import Image from "next/image";
 import ShopHeaderCart from "./HeaderCart/ShopHeaderCart";
+import ShopSearchForm from "./SearchForm/ShopSearchForm";
 
 const ShopHeader = () => {
   return (
@@ -45,22 +46,9 @@ const ShopHeader = () => {
               </div>
 
               {/* Search bar */}
-              <div className="mb-2.5 lg:mb-0 order-3 lg:order-2 w-full lg:w-auto">
-                <div className="overflow-hidden shop__header_searchBar">
-                  <form
-                    action=""
-                    className="inline-block relative w-full pr-10 rounded overflow-hidden bg-white shadow-[inset_0_0_39px_1px_#00000059]"
-                  >
-                    <input
-                      type="text"
-                      className="border-0 h-[42px] w-full py-[11px] bg-transparent pl-3.5 text-[var(--shopTextPrimary)] text-sm"
-                    />
-                    <button className="absolute right-0 top-0 bottom-0 text-2xl w-11 pt-0 text-[var(--shopTextSecondary)] transition-all duration-500 ease-in-out m-0 overflow-visible font-sans leading-[1.15] ">
-                      <i className="fa fa-search"></i>
-                    </button>
-                  </form>
-                </div>
-              </div>
+              <Suspense fallback={<div>Loading filter...</div>}>
+                <ShopSearchForm />
+              </Suspense>
 
               {/* Cart */}
               <ShopHeaderCart />

@@ -64,6 +64,7 @@ const PortalNavbar = () => {
                           document
                             .getElementById(`${link.link}`)
                             ?.scrollIntoView({ behavior: "smooth" });
+                          setOpen(!open);
                         }}
                       >
                         {link.title}

@@ -4,7 +4,6 @@ import { shopCategoryList, shopNavLinks } from "@/data/shopData";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
-import { useShopContext } from "../../../context/useShopContext";
 import { useRouter } from "next/navigation";
 import { ShopMyProductsCategory } from "../../../types/shopTypes";
 
@@ -14,14 +13,12 @@ const ShopNavbar = () => {
   const [categoryOpen, setCategoryOpen] = useState(false);
   const router = useRouter();
 
-  const { setSelectedCategory } = useShopContext();
-
   const handleCategoryClick = (category: ShopMyProductsCategory) => {
-    const encodedCategory = encodeURIComponent(category.title);
+    const encodedCategory = encodeURIComponent(
+      category.title.toLowerCase().split(" ").join("-")
+    );
     const params = new URLSearchParams();
     params.set("category", encodedCategory);
-    params.set("selected", "");
-    setSelectedCategory(category);
     setIsOpen(!isOpen);
     router.push(`/shop/myProducts?${params.toString()}`);
   };

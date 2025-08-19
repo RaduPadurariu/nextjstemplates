@@ -7,15 +7,11 @@ import {
   ShopMyCartProduct,
   ShopMyProduct,
   ShopMyProductLocalCart,
-  ShopMyProductsCategory,
 } from "../types/shopTypes";
 import { ShopContext } from "./ShopContext";
 import { shopCurrency, shopMyProductList } from "@/data/shopData";
 
 export const ShopContextProvider = ({ children }: ShopContextProviderType) => {
-  const [selectedCategory, setSelectedCategory] =
-    useState<ShopMyProductsCategory | null>(null);
-
   const [selectedCurrency, setSelectedCurrency] =
     useState<ShopCurrencyType | null>(shopCurrency[1]);
 
@@ -101,8 +97,6 @@ export const ShopContextProvider = ({ children }: ShopContextProviderType) => {
   return (
     <ShopContext.Provider
       value={{
-        selectedCategory,
-        setSelectedCategory,
         selectedCurrency,
         setSelectedCurrency,
         cartProducts,

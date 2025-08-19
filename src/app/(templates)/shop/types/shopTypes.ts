@@ -32,8 +32,6 @@ export interface ShopCurrencyType {
 // Context types
 
 export interface ShopContextType {
-  selectedCategory: ShopMyProductsCategory | null;
-  setSelectedCategory: (value: ShopMyProductsCategory | null) => void;
   selectedCurrency: ShopCurrencyType | null;
   setSelectedCurrency: (value: ShopCurrencyType | null) => void;
   cartProducts: ShopMyCartProduct[];
@@ -53,12 +51,13 @@ export interface ShopContextProviderType {
 export interface ShopMyProductsSubCategory {
   id: number;
   subCategory: string;
-  selected: boolean;
+  slug: string;
 }
 
 export interface ShopMyProductsCategory {
   id: number;
   title: string;
+  slug: string;
   subItem: ShopMyProductsSubCategory[];
 }
 

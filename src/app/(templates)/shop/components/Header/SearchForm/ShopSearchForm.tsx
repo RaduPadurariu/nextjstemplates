@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
+let debounceTimer: NodeJS.Timeout;
+
 const ShopSearchForm = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -9,37 +11,32 @@ const ShopSearchForm = () => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    if (pathname.startsWith("/shop/myProducts")) {
-      setQuery(searchParams.get("q") ?? "");
-    }
-  }, [pathname, searchParams]);
+    setQuery(searchParams.get("q") ?? "");
+  }, [searchParams]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const q = query.trim();
 
-    if (pathname.startsWith("/shop/myProducts")) {
-      const params = new URLSearchParams(searchParams.toString());
-      if (q) params.set("q", q);
-      else params.delete("q");
-      router.replace(`/shop/myProducts?${params.toString()}`);
-      return;
-    }
+    const params = new URLSearchParams(searchParams.toString());
+    if (q) params.set("q", q);
+    else params.delete("q");
 
-    const qPart = q ? `?q=${encodeURIComponent(q)}` : "";
-    router.push(`/shop/myProducts${qPart}`);
+    router.replace(`/shop/myProducts?${params.toString()}`);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value;
     setQuery(v);
 
-    if (pathname.startsWith("/shop/myProducts")) {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
       const params = new URLSearchParams(searchParams.toString());
-      if (v) params.set("q", v);
+      if (v.trim()) params.set("q", v.trim());
       else params.delete("q");
-      router.replace(`/shop/myProducts?${params.toString()}`);
-    }
+
+      router.replace(`${pathname}?${params.toString()}`);
+    }, 400); // delay in ms
   };
 
   return (

@@ -333,3 +333,117 @@ export const loginDashboardTablesProjects = [
     gradient: "from-green-600 to-lime-400",
   },
 ];
+
+export const loginDashboardBillingInfo = [
+  {
+    id: 1,
+    icon: "fas fa-landmark",
+    title: "Salary",
+    desc: "Belong Interactive",
+    price: "+$2000",
+  },
+  {
+    id: 2,
+    icon: "fab fa-paypal",
+    title: "Paypal",
+    desc: "Freelance Payment",
+    price: "$455.00",
+  },
+];
+
+export const loginDashboardBillingCardsInfo = [
+  { id: 1, img: "/images/loginDashboard/logos/mastercard.png", number: "7852" },
+  { id: 2, img: "/images/loginDashboard/logos/visa.png", number: "5248" },
+];
+
+export const loginDashboardBillingInvoiceList = [
+  { id: 1, date: "March, 01, 2020", invoice: "#MS-415646", price: "$180" },
+  { id: 2, date: "February, 10, 2021", invoice: "#RV-126749", price: "$250" },
+  { id: 3, date: "April, 05, 2020", invoice: "#FB-212562", price: "$560" },
+  { id: 4, date: "June, 25, 2019", invoice: "#QW-103578", price: "$120" },
+  { id: 5, date: "March, 01, 2019", invoice: "#AR-803481", price: "$300" },
+];
+
+export const loginDashboardBillingInformation = [
+  {
+    id: 1,
+    name: "Olivier Liam",
+    company: "Viking Burrito",
+    email: "oliver@burrito.com",
+    vatNr: "FRB1235476",
+  },
+  {
+    id: 2,
+    name: "Lucas Harper",
+    company: "Stone Tech Zone",
+    email: "lucas@stone-tech.com",
+    vatNr: "FRB1235476",
+  },
+  {
+    id: 3,
+    name: "Ethan James",
+    company: "Fiber Notion",
+    email: "ethan@fiber.com",
+    vatNr: "FRB1235476",
+  },
+];
+
+export const loginDashboardBillingTransactionsNewest = [
+  {
+    id: 1,
+    title: "Netflix",
+    date: "27 March 2020, at 12:30 PM",
+    data: "- $ 2,500",
+    icon: "fas fa-arrow-down",
+    color: "text-red-600",
+    gradient: "from-red-600 to-orange-600",
+  },
+  {
+    id: 2,
+    title: "Apple",
+    date: "27 March 2020, at 04:30 AM",
+    data: "+ $ 2,000",
+    icon: "fas fa-arrow-up",
+    color: "text-emerald-500",
+    gradient: "from-green-600 to-lime-400",
+  },
+];
+
+export const loginDashboardBillingTransactionsLatest = [
+  {
+    id: 1,
+    title: "Stripe",
+    date: "26 March 2020, at 13:45 PM",
+    data: "- $ 750",
+    icon: "fas fa-arrow-up",
+    color: "text-emerald-500",
+    gradient: "from-green-600 to-lime-400",
+  },
+  {
+    id: 2,
+    title: "HubSpot",
+    date: "26 March 2020, at 12:30 PM",
+    data: "- $ 1,000",
+    icon: "fas fa-arrow-up",
+    color: "text-emerald-500",
+    gradient: "from-green-600 to-lime-400",
+  },
+  {
+    id: 3,
+    title: "Creative Tim",
+    date: "26 March 2020, at 08:30 AM",
+    data: "+ $2,500",
+    icon: "fas fa-arrow-up",
+    color: "text-emerald-500",
+    gradient: "from-green-600 to-lime-400",
+  },
+  {
+    id: 4,
+    title: "Webflow",
+    date: "26 March 2020, at 05:00 PM",
+    data: "Pending",
+    icon: "fas fa-exclamation",
+    color: "text-slate-700",
+    gradient: "from-slate-700 to-slate-600",
+  },
+];

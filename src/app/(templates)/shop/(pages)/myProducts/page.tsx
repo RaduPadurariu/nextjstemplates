@@ -1,12 +1,10 @@
 import React, { Suspense } from "react";
-import ShopMyProducts from "../../components/MyProducts/ShopMyProducts";
+import ShopMyProductsWrapper from "../../components/MyProducts/ShopMyProductsWrapper";
 
-const page = () => {
+export default function Page() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <ShopMyProducts />
+      <ShopMyProductsWrapper />
     </Suspense>
   );
-};
-
-export default page;
+}

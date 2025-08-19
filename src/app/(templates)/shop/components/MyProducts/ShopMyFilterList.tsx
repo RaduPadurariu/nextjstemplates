@@ -1,60 +1,45 @@
 "use client";
-import { shopCategoryList } from "@/data/shopData";
-import React, { useEffect } from "react";
-import { useShopContext } from "../../context/useShopContext";
+
+import React from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import {
+  ShopMyProductsCategory,
+  ShopMyProductsSubCategory,
+} from "../../types/shopTypes";
 
 const ShopMyFilterList = ({
-  setCurrentPage,
+  selectedCategory,
 }: {
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  selectedCategory: ShopMyProductsCategory | null;
 }) => {
-  const { selectedCategory, setSelectedCategory } = useShopContext();
-
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
 
-  useEffect(() => {
-    const categoryName = searchParams.get("category");
-    const selectedIds = searchParams.get("selected");
+  const selectedSubs = (searchParams.get("subCategory") ?? "")
+    .split(",")
+    .filter(Boolean);
 
-    if (!categoryName) return;
-    const category = shopCategoryList.find((cat) => cat.title === categoryName);
-
-    if (!category || !category.subItem) return;
-
-    const selectedIdsArray = selectedIds
-      ? selectedIds.split(",").map(Number)
-      : [];
-
-    setSelectedCategory({
-      ...category,
-      subItem: category.subItem.map((el) => ({
-        ...el,
-        selected: selectedIdsArray.includes(el.id),
-      })),
-    });
-  }, [searchParams, setSelectedCategory]);
-
-  const handleSelectChange = (id: number, isSelected: boolean) => {
-    if (!selectedCategory) return;
-    const updatedSubItems = selectedCategory.subItem.map((el) =>
-      id === el.id ? { ...el, selected: isSelected } : el
-    );
-
-    const selectedSubCategories = updatedSubItems
-      ?.filter((item) => item.selected)
-      .map((item) => item.id)
-      .join(",");
-
+  const handleSelectChange = (subcategory: ShopMyProductsSubCategory) => {
     const params = new URLSearchParams(searchParams.toString());
-    params.set("category", selectedCategory.title);
-    if (selectedSubCategories) params.set("selected", selectedSubCategories);
-    else params.delete("selected");
+    const selected = (searchParams.get("subCategory") ?? "")
+      .split(",")
+      .filter(Boolean);
+    const newSlug = subcategory.slug;
 
+    if (selected.includes(newSlug)) {
+      const updated = selected.filter((s) => s !== newSlug);
+      if (updated.length > 0) {
+        params.set("subCategory", updated.join(","));
+      } else {
+        params.delete("subCategory");
+      }
+    } else {
+      selected.push(newSlug);
+      params.set("subCategory", selected.join(","));
+    }
+    params.set("page", "1");
     router.replace(`${pathname}?${params.toString()}`);
-    setCurrentPage(1);
   };
 
   return (
@@ -65,23 +50,22 @@ const ShopMyFilterList = ({
             {selectedCategory?.title}
           </h3>
           <ul className="mt-[15px]">
-            {selectedCategory?.subItem.map((category) => {
-              return (
-                <li
-                  onClick={() =>
-                    handleSelectChange(category.id, !category.selected)
-                  }
-                  key={category.id}
-                  className={`${
-                    category.selected
-                      ? "text-[var(--shopBGOrange)]"
-                      : "text-[var(--shopBGHeader)]"
-                  } py-[7px] mt-[1px] text-[var(--shopBGHeader)] cursor-pointer `}
-                >
-                  {category.subCategory}
-                </li>
-              );
-            })}
+            {selectedCategory &&
+              selectedCategory?.subItem.map((subcategory) => {
+                return (
+                  <li
+                    onClick={() => handleSelectChange(subcategory)}
+                    key={subcategory.id}
+                    className={`${
+                      selectedSubs.includes(subcategory.slug)
+                        ? "text-[var(--shopBGOrange)]"
+                        : "text-[var(--shopBGHeader)]"
+                    } py-[7px] mt-[1px] text-[var(--shopBGHeader)] cursor-pointer `}
+                  >
+                    {subcategory.subCategory}
+                  </li>
+                );
+              })}
           </ul>
         </div>
       </div>

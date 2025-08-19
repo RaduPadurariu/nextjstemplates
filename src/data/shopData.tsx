@@ -18,154 +18,100 @@ export const shopCategoryList = [
   {
     id: 1,
     title: "Gradinarit",
+    slug: "gradinarit",
     subItem: [
       {
         id: 1,
         subCategory: "Iarba si gazon",
-        selected: false,
+        slug: "iarba-si-gazon",
       },
       {
         id: 2,
         subCategory: "Pomicultura",
-        selected: false,
+        slug: "pomicultura",
       },
       {
         id: 3,
         subCategory: "Agricultura",
-        selected: false,
+        slug: "agricultura",
       },
       {
         id: 4,
         subCategory: "Zootehnie",
-        selected: false,
+        slug: "zootehnie",
       },
       {
         id: 5,
         subCategory: "Plante si ghivece",
-        selected: false,
+        slug: "plante-si-ghivece",
       },
     ],
   },
   {
     id: 2,
     title: "Electronica",
+    slug: "electronica",
     subItem: [
-      {
-        id: 1,
-        subCategory: "Electrice",
-        selected: false,
-      },
-      {
-        id: 2,
-        subCategory: "Retea",
-        selected: false,
-      },
+      { id: 1, subCategory: "Electrice", slug: "electrice" },
+      { id: 2, subCategory: "Retea", slug: "retea" },
     ],
   },
   {
     id: 3,
     title: "Mecanica",
+    slug: "mecanica",
     subItem: [
-      {
-        id: 1,
-        subCategory: "Instrumente",
-        selected: false,
-      },
-      {
-        id: 2,
-        subCategory: "Accesorii",
-        selected: false,
-      },
+      { id: 1, subCategory: "Instrumente", slug: "instrumente" },
+      { id: 2, subCategory: "Accesorii", slug: "accesorii" },
     ],
   },
-
   {
     id: 4,
     title: "Constructii",
+    slug: "constructii",
     subItem: [
-      {
-        id: 1,
-        subCategory: "Betoane si zidarie",
-        selected: false,
-      },
-      {
-        id: 2,
-        subCategory: "Placi si izolatie",
-        selected: false,
-      },
-      {
-        id: 4,
-        subCategory: "Tamplarie",
-        selected: false,
-      },
-      {
-        id: 5,
-        subCategory: "Varuit",
-        selected: false,
-      },
-      {
-        id: 6,
-        subCategory: "Vopseluri",
-        selected: false,
-      },
+      { id: 1, subCategory: "Betoane si zidarie", slug: "betoane-si-zidarie" },
+      { id: 2, subCategory: "Placi si izolatie", slug: "placi-si-izolatie" },
+      { id: 4, subCategory: "Tamplarie", slug: "tamplarie" },
+      { id: 5, subCategory: "Varuit", slug: "varuit" },
+      { id: 6, subCategory: "Vopseluri", slug: "vopseluri" },
     ],
   },
   {
     id: 5,
     title: "Intretinere casa",
+    slug: "intretinere-casa",
     subItem: [
-      {
-        id: 1,
-        subCategory: "Intretinere casa",
-        selected: false,
-      },
+      { id: 1, subCategory: "Intretinere casa", slug: "intretinere-casa" },
       {
         id: 2,
         subCategory: "Siguranta si anti-daunatori",
-        selected: false,
+        slug: "siguranta-si-anti-daunatori",
       },
       {
         id: 3,
         subCategory: "Iluminat si alimentare",
-        selected: false,
+        slug: "iluminat-si-alimentare",
       },
-      {
-        id: 4,
-        subCategory: "Sanitare",
-        selected: false,
-      },
+      { id: 4, subCategory: "Sanitare", slug: "sanitare" },
     ],
   },
   {
     id: 7,
     title: "Auto",
+    slug: "auto",
     subItem: [
-      {
-        id: 1,
-        subCategory: "Consumabile",
-        selected: false,
-      },
-      {
-        id: 2,
-        subCategory: "Echipamente",
-        selected: false,
-      },
+      { id: 1, subCategory: "Consumabile", slug: "consumabile" },
+      { id: 2, subCategory: "Echipamente", slug: "echipamente" },
     ],
   },
   {
     id: 8,
     title: "Kit supravietuire",
+    slug: "kit-supravietuire",
     subItem: [
-      {
-        id: 1,
-        subCategory: "Camping",
-        selected: false,
-      },
-      {
-        id: 2,
-        subCategory: "Militare",
-        selected: false,
-      },
+      { id: 1, subCategory: "Camping", slug: "camping" },
+      { id: 2, subCategory: "Militare", slug: "militare" },
     ],
   },
 ];

@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="loginDashboardFamilyFont text-base antialiased font-normal dark:bg-[var(--dashboardBGDarkMode)]  leading-default text-[var(--dashboardTextPrimary)] bg-[var(--dashboardBGPrimary)]">
+    <div className="min-h-[100vh] loginDashboardFamilyFont text-base antialiased font-normal leading-default text-[var(--dashboardTextPrimary)] bg-[var(--dashboardBGPrimary)] dark:bg-[var(--dashboardBGDarkMode)] ">
       <div className="absolute w-full bg-[var(--dashboardBGSecondary)] dark:hidden min-h-75"></div>
       {children}
     </div>

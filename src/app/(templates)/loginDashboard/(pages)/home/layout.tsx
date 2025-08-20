@@ -1,14 +1,9 @@
 import React from "react";
-import LoginDashboardHeader from "../../components/DashboardHeader/LoginDashboardHeader";
+import LoginDashboardLayoutWrapper from "../../components/LayoutWrapper/LoginDashboardLayoutWrapper";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="relative h-full transition-all duration-200 ease-in-out xl:ml-68 rounded-xl">
-      <LoginDashboardHeader />
-      {children}
-    </div>
-  );
+  return <LoginDashboardLayoutWrapper>{children}</LoginDashboardLayoutWrapper>;
 }

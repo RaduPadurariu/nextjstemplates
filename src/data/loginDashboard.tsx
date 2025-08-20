@@ -329,7 +329,7 @@ export const loginDashboardTablesProjects = [
     budget: "$2,300",
     status: "done",
     completion: 100,
-    img: "/images/loginDashboard/small-logos/logo-adobe-xd.svg",
+    img: "/images/loginDashboard/small-logos/logo-xd.svg",
     gradient: "from-green-600 to-lime-400",
   },
 ];
@@ -446,4 +446,10 @@ export const loginDashboardBillingTransactionsLatest = [
     color: "text-slate-700",
     gradient: "from-slate-700 to-slate-600",
   },
+];
+
+export const loginDashboardProfileButtons = [
+  { id: 1, title: "App", icon: "fa-solid fa-grip" },
+  { id: 2, title: "Messages", icon: "fa-solid fa-envelope" },
+  { id: 3, title: "Settings", icon: "fa-solid fa-cog" },
 ];

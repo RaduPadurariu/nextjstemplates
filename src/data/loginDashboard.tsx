@@ -453,3 +453,19 @@ export const loginDashboardProfileButtons = [
   { id: 2, title: "Messages", icon: "fa-solid fa-envelope" },
   { id: 3, title: "Settings", icon: "fa-solid fa-cog" },
 ];
+
+export const loginDashboardAuthUserLinks = [
+  {
+    id: 1,
+    title: "Guest",
+    link: "/loginDashboard/home",
+    icon: "fa fa-user",
+  },
+  {
+    id: 2,
+    title: "Sign Up",
+    link: "/loginDashboard/auth/signUp",
+    icon: "fas fa-user-circle",
+  },
+  { id: 3, title: "Sign In", link: "/loginDashboard/auth", icon: "fas fa-key" },
+];

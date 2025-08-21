@@ -7,9 +7,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <LoginDashboardAuthNavbar />
-      {children}
+    <div className="m-0 antialiased font-normal bg-white text-start text-base leading-default text-slate-500">
+      <main className="mt-0 transition-all duration-200 ease-in-out">
+        <section>
+          <LoginDashboardAuthNavbar />
+          {children}
+        </section>
+      </main>
     </div>
   );
 }

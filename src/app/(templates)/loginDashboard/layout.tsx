@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../../../styles/loginDashboard.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import LoginDashboardAuthInitializer from "./components/Auth/LoginDashboardAuthInitializer";
 
 export const metadata: Metadata = {
   title: "Login Dashboard",
@@ -30,6 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className="min-h-[100vh] loginDashboardFamilyFont text-base antialiased font-normal leading-default text-[var(--dashboardTextPrimary)] bg-[var(--dashboardBGPrimary)] dark:bg-[var(--dashboardBGDarkMode)] ">
+      <LoginDashboardAuthInitializer />
       {children}
     </div>
   );

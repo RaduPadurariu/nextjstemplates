@@ -64,7 +64,7 @@ export const loginDashboardAuthLinks = [
   {
     id: 2,
     title: "Sign In",
-    icon: "fa-solid fa-right-to-bracket",
+    icon: "fas fa-key",
     link: "/loginDashboard/auth",
     color: "text-[#fb6340]",
   },

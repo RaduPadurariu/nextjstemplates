@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import LoginDashboardAuthSideSection from "../../../components/AuthSideSection/LoginDashboardAuthSideSection";
+import LoginDashboardSignUpForm from "../../../components/Auth/LoginDashboardSignUpForm";
 
 const LoginDashboardSingUpPage = () => {
   return (
@@ -18,53 +19,7 @@ const LoginDashboardSingUpPage = () => {
                 </p>
               </div>
               <div className="flex-auto p-6">
-                <form role="form">
-                  <div className="mb-4">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="focus:shadow-primary-outline dark:bg-gray-950 dark:placeholder:text-white/80 dark:text-white/80 text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding p-3 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="focus:shadow-primary-outline dark:bg-gray-950 dark:placeholder:text-white/80 dark:text-white/80 text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding p-3 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      className="focus:shadow-primary-outline dark:bg-gray-950 dark:placeholder:text-white/80 dark:text-white/80 text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding p-3 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none"
-                    />
-                  </div>
-                  <div className="flex items-center mb-0.5 text-left min-h-6">
-                    <input
-                      id="flexCheckDefault"
-                      type="checkbox"
-                      className="w-5 h-5 mr-2 cursor-pointer appearance-none border border-slate-300 rounded-md checked:bg-[var(--dashboardBGSecondary)] checked:border-transparent transition-all"
-                    />
-                    <label
-                      htmlFor="flexCheckDefault"
-                      className="ml-1 text-sm text-slate-700 cursor-pointer"
-                    >
-                      I agree the{" "}
-                      <button className="font-bold text-slate-700">
-                        Terms and Conditions
-                      </button>
-                    </label>
-                  </div>
-                  <div className="text-center">
-                    <button
-                      type="button"
-                      className="inline-block w-full px-16 py-3.5 mt-6 mb-0 font-bold leading-normal text-center text-white align-middle transition-all bg-[var(--dashboardBGSecondary)] border-0 rounded-lg cursor-pointer hover:-translate-y-px active:opacity-85 hover:shadow-xs text-sm ease-in tracking-tight-rem shadow-md bg-150 bg-x-25"
-                    >
-                      Sign Up
-                    </button>
-                  </div>
-                </form>
+                <LoginDashboardSignUpForm />
               </div>
               <div className="border-black/12.5 rounded-b-2xl border-t-0 border-solid p-6 text-center pt-0 px-1 sm:px-6">
                 <p className="mx-auto mb-6 leading-normal text-sm">

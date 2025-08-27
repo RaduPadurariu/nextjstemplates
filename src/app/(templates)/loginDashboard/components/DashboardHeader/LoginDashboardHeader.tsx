@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import LoginDashboardNavbar from "./DashboardNavbar/LoginDashboardNavbar";
+import useAuthStore from "../../store/useAuthStore";
 
 const LoginDashboardHeader = () => {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [activeTitle, setActiveTitle] = useState("Dashboard");
+  const { isAuthenticated, logout, isInitialized } = useAuthStore();
   return (
     <nav
       className="relative flex items-center justify-between px-0 py-2 mx-6 transition-all ease-in shadow-none duration-250 rounded-2xl lg:flex-nowrap lg:justify-start"
@@ -35,15 +37,40 @@ const LoginDashboardHeader = () => {
           {/* Navbar */}
           <ul className="flex flex-row justify-end pl-2 mb-0 list-none md-max:w-full">
             {/* Sign In */}
-            <li className="flex items-center">
-              <Link
-                href="/loginDashboard/auth"
-                className="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand"
-              >
-                <i className="fa fa-user sm:mr-1"></i>
-                <span className="hidden sm:inline">Sign In</span>
-              </Link>
-            </li>
+            {!isInitialized ? (
+              // loader (până verificăm auth)
+              <li className="flex items-center sm:w-[62px] justify-center">
+                {/* <Image
+                  src="/images/loginDashboard/loginDashboard_loader.svg"
+                  alt="Loading..."
+                  width={20}
+                  height={20}
+                /> */}
+              </li>
+            ) : isAuthenticated ? (
+              // log out
+              <li className="flex items-center">
+                <Link
+                  href="/loginDashboard/auth"
+                  onClick={logout}
+                  className="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand"
+                >
+                  <i className="fa fa-sign-out-alt sm:mr-1"></i>
+                  <span className="hidden sm:inline">Log out</span>
+                </Link>
+              </li>
+            ) : (
+              // sign in
+              <li className="flex items-center">
+                <Link
+                  href="/loginDashboard/auth"
+                  className="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand"
+                >
+                  <i className="fa fa-user sm:mr-1"></i>
+                  <span className="hidden sm:inline">Sign In</span>
+                </Link>
+              </li>
+            )}
 
             {/* Burger button */}
             <li className="flex items-center pl-4 xl:hidden">

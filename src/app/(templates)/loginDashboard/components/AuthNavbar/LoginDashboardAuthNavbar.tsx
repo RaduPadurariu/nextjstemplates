@@ -16,10 +16,13 @@ const LoginDashboardAuthNavbar = () => {
             } overflow-hidden transition-all duration-300 ease-in-out mx-auto absolute top-0 right-0 flex left-0 z-30 px-4 py-2 my-6 mb-0 shadow-sm rounded-xl bg-white/80 backdrop-blur-2xl backdrop-saturate-200 lg:flex-nowrap lg:justify-start`}
           >
             <div className={`w-full flex p-0 px-6 items-start lg:items-center`}>
-              <button className="py-1.75 text-sm mr-4 ml-4 whitespace-nowrap font-bold text-slate-700 lg:ml-0">
+              <Link
+                href="/loginDashboard/home"
+                className="py-1.75 text-sm mr-4 ml-4 whitespace-nowrap font-bold text-slate-700 lg:ml-0"
+              >
                 {" "}
                 Argon Dashboard 2{" "}
-              </button>
+              </Link>
 
               <div className="items-center flex-grow transition-all duration-500 lg-max:overflow-hidden ease lg-max:max-h-0 basis-full lg:flex lg:basis-auto">
                 <ul

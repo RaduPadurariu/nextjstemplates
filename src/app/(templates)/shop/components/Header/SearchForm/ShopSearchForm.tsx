@@ -34,7 +34,7 @@ const ShopSearchForm = () => {
       const params = new URLSearchParams(searchParams.toString());
       if (v.trim()) params.set("q", v.trim());
       else params.delete("q");
-
+      params.set("page", "1");
       router.replace(`${pathname}?${params.toString()}`);
     }, 400); // delay in ms
   };

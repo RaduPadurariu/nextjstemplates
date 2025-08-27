@@ -7,6 +7,7 @@ import LoginDashboardNavbarActiveLink from "./LoginDashboardNavbarActiveLink";
 import { LoginDashboardLinkType } from "../../../types/loginDashboardTypes";
 import Image from "next/image";
 import Link from "next/link";
+import useAuthStore from "../../../store/useAuthStore";
 
 const LoginDashboardNavbar = ({
   isNavOpen,
@@ -17,6 +18,7 @@ const LoginDashboardNavbar = ({
   setIsNavOpen: (value: boolean) => void;
   setActiveTitle: (value: string) => void;
 }) => {
+  const { isAuthenticated, logout, isInitialized } = useAuthStore();
   return (
     <aside
       className={`fixed inset-y-0 block w-full p-0 my-4 overflow-y-auto antialiased transition-transform duration-200 ${
@@ -72,15 +74,49 @@ const LoginDashboardNavbar = ({
             </h6>
           </li>
 
-          {loginDashboardAuthLinks.map((link) => {
-            return (
-              <LoginDashboardNavbarActiveLink
-                key={link.id}
-                link={link}
-                setActiveTitle={setActiveTitle}
-              />
-            );
-          })}
+          {!isInitialized ? (
+            <li className="mt-0.5 w-full flex justify-center items-center">
+              {/* <Image
+                src="/images/loginDashboard/loginDashboard_loader.svg"
+                alt="Loading..."
+                width={20}
+                height={20}
+              /> */}
+            </li>
+          ) : isAuthenticated ? (
+            <>
+              {loginDashboardAuthLinks.slice(0, 1).map((link) => (
+                <LoginDashboardNavbarActiveLink
+                  key={link.id}
+                  link={link}
+                  setActiveTitle={setActiveTitle}
+                />
+              ))}
+
+              <li className="mt-0.5 w-full">
+                <Link
+                  onClick={logout}
+                  className="py-2.5 text-sm my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-[var(--dashboardTextPrimary)] transition-colors dark:text-white dark:opacity-80"
+                  href="/loginDashboard/auth"
+                >
+                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center text-center xl:p-2.5">
+                    <i className="fa-solid fa-arrow-right-from-bracket text-[#fb6340]" />
+                  </div>
+                  <span className="ml-1">Log Out</span>
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              {loginDashboardAuthLinks.map((link) => (
+                <LoginDashboardNavbarActiveLink
+                  key={link.id}
+                  link={link}
+                  setActiveTitle={setActiveTitle}
+                />
+              ))}
+            </>
+          )}
 
           <li className="w-full mt-4">
             <hr className="h-[1px] my-1 border-0 opacity-25 mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />

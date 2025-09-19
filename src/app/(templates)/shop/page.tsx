@@ -1,9 +1,9 @@
-import ShopFeatures from "./components/HomeSections/Features/ShopFeatures";
-import ShopHero from "./components/HomeSections/Hero/ShopHero";
-import ShopHomeBlog from "./components/HomeSections/HomeBlog/ShopHomeBlog";
-import ShopNewsletter from "./components/HomeSections/Newsletter/ShopNewsletter";
-import ShopProducts from "./components/HomeSections/Products/ShopProducts";
-import ShopWelcome from "./components/HomeSections/Wellcome/ShopWelcome";
+import ShopFeatures from "@/templates/Shop/components/HomeSections/Features/ShopFeatures";
+import ShopHero from "@/templates/Shop/components/HomeSections/Hero/ShopHero";
+import ShopHomeBlog from "@/templates/Shop/components/HomeSections/HomeBlog/ShopHomeBlog";
+import ShopNewsletter from "@/templates/Shop/components/HomeSections/Newsletter/ShopNewsletter";
+import ShopProducts from "@/templates/Shop/components/HomeSections/Products/ShopProducts";
+import ShopWelcome from "@/templates/Shop/components/HomeSections/Wellcome/ShopWelcome";
 
 const page = () => {
   return (

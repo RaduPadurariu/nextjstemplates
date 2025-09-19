@@ -1,4 +1,4 @@
-import { ShopMyProduct } from "@/app/(templates)/shop/types/shopTypes";
+import { ShopMyProduct } from "@/templates/Shop/types/shopTypes";
 
 export const shopCurrency = [
   { id: 1, currency: "USD", sign: "$", coefficient: 1.153 },
@@ -61,7 +61,7 @@ export const shopCategoryList = [
     title: "Mecanica",
     slug: "mecanica",
     subItem: [
-      { id: 1, subCategory: "Instrumente", slug: "instrumente" },
+      { id: 1, subCategory: "Materiale", slug: "materiale" },
       { id: 2, subCategory: "Accesorii", slug: "accesorii" },
     ],
   },
@@ -1959,8 +1959,88 @@ export const shopMyProductList = [
     subCategory: "Retea",
   },
 
-  // Constructii
+  // Mecanica
 
+  {
+    id: "03.01.01",
+    title: "Menghina",
+    src: "/images/shop/MyProducts/03.01.01_Menghina.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Mecanica",
+    subCategory: "Materiale",
+  },
+
+  {
+    id: "03.01.02",
+    title: "Trusa de scule",
+    src: "/images/shop/MyProducts/03.01.02_Trusa de scule.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Mecanica",
+    subCategory: "Materiale",
+  },
+  {
+    id: "03.01.03",
+    title: "Cutter universal",
+    src: "/images/shop/MyProducts/03.01.03_Cutter universal.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Mecanica",
+    subCategory: "Materiale",
+  },
+  {
+    id: "03.01.04",
+    title: "Banda teflon",
+    src: "/images/shop/MyProducts/03.01.04_Banda teflon.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Mecanica",
+    subCategory: "Materiale",
+  },
+  {
+    id: "03.01.05",
+    title: "Banda adeziva",
+    src: "/images/shop/MyProducts/03.01.05_Banda adeziva.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Mecanica",
+    subCategory: "Materiale",
+  },
+  {
+    id: "03.01.06",
+    title: "Smirghel",
+    src: "/images/shop/MyProducts/03.01.06_Smirghel.avif",
+    longTitle: "",
+    desc: "",
+    longDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, vivamus tempus enim et erat tincidunt ac sollicitudin nulla mattis, facile est hodie in fraudem incidere, haec consuetudo late patet et etiam notissimarum societatum fama laedi potest, sed venditores et artifices nostri summam qualitatem praestant, nulla est dubitatio quin nos in hoc campo principatum teneamus, tantum res notatae et sigillis probatae a nobis offeruntur.",
+    price: 265.0,
+    isInCart: false,
+    category: "Mecanica",
+    subCategory: "Materiale",
+  },
+  // Constructii
   {
     id: "04.01.01",
     title: "Betoniera",
@@ -1987,6 +2067,7 @@ export const shopMyProductList = [
     category: "Constructii",
     subCategory: "Betoane si zidarie",
   },
+
   {
     id: "04.01.03",
     title: "Galeata constructii",

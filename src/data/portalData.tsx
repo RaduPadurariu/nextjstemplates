@@ -1,11 +1,7 @@
 // Portal Next.js
 
-import {
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiJest,
-} from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiJest } from "react-icons/si";
+import { GiBearFace } from "react-icons/gi";
 import { JSX } from "react";
 
 export const portalNavbar = [
@@ -37,7 +33,7 @@ export const portalTemplatesList = [
 
   {
     id: 3,
-    title: "Travel",
+    title: "Travel (in progress)",
     icon: "fas fa-plane-departure",
     img: "/images/portal/o3.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
@@ -46,7 +42,7 @@ export const portalTemplatesList = [
   },
   {
     id: 4,
-    title: "User Posts",
+    title: "User Posts (to be done)",
     icon: "fas fa-file-alt",
     img: "/images/portal/o2.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
@@ -71,8 +67,8 @@ export const portalTechnologiesList: TechnologyItem[] = [
   },
   {
     id: 2,
-    title: "TypeScript",
-    icon: <SiTypescript size={50} color="#3178C6" />,
+    title: "Zustand",
+    icon: <GiBearFace size={50} color="#5C4033" />,
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
   },
   {

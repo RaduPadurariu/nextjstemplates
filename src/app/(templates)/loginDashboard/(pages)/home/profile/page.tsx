@@ -1,14 +1,14 @@
+import LoginDashboardProfileData from "@/templates/LoginDashboard/components/Profile/LoginDashboardProfileData";
+import LoginDashboardProfileTitle from "@/templates/LoginDashboard/components/Profile/LoginDashboardProfileTitle";
 import Image from "next/image";
 import React from "react";
-import LoginDashboardProfileTitle from "../../../components/Profile/LoginDashboardProfileTitle";
-import LoginDashboardProfileData from "../../../components/Profile/LoginDashboardProfileData";
 
 const LoginDashboardProfilePage = () => {
   return (
     <>
       {" "}
       <div className="relative w-full mx-auto mt-44">
-        <div className="relative flex flex-col flex-auto min-w-0 p-4 mx-6 overflow-hidden break-words bg-white border-0 dark:bg-slate-850 dark:shadow-dark-xl shadow-2xl rounded-2xl bg-clip-border">
+        <div className="relative flex flex-col flex-auto min-w-0 p-4 mx-6 overflow-hidden break-words bg-white border-0  shadow-2xl rounded-2xl bg-clip-border">
           <LoginDashboardProfileTitle />
         </div>
       </div>
@@ -18,7 +18,7 @@ const LoginDashboardProfilePage = () => {
             <LoginDashboardProfileData />
           </div>
           <div className="w-full max-w-full px-3 mt-6 md:mt-0 shrink-0 md:w-4/12">
-            <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+            <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-xl  rounded-2xl bg-clip-border">
               <Image
                 width={2000}
                 height={1000}
@@ -74,26 +74,20 @@ const LoginDashboardProfilePage = () => {
                   <div className="w-full max-w-full px-3 flex-1-0">
                     <div className="flex justify-center">
                       <div className="grid text-center">
-                        <span className="font-bold dark:text-white text-lg">
-                          22
-                        </span>
-                        <span className="leading-normal dark:text-white text-sm opacity-80">
+                        <span className="font-bold  text-lg">22</span>
+                        <span className="leading-normal text-sm opacity-80">
                           Friends
                         </span>
                       </div>
                       <div className="grid mx-6 text-center">
-                        <span className="font-bold dark:text-white text-lg">
-                          10
-                        </span>
-                        <span className="leading-normal dark:text-white text-sm opacity-80">
+                        <span className="font-bold  text-lg">10</span>
+                        <span className="leading-normal  text-sm opacity-80">
                           Photos
                         </span>
                       </div>
                       <div className="grid text-center">
-                        <span className="font-bold dark:text-white text-lg">
-                          89
-                        </span>
-                        <span className="leading-normal dark:text-white text-sm opacity-80">
+                        <span className="font-bold  text-lg">89</span>
+                        <span className="leading-normal text-sm opacity-80">
                           Comments
                         </span>
                       </div>
@@ -101,20 +95,20 @@ const LoginDashboardProfilePage = () => {
                   </div>
                 </div>
                 <div className="mt-6 text-center">
-                  <h5 className="dark:text-white font-semibold text-[var(--dashboardTextTitles)] text-xl mb-2">
+                  <h5 className="font-semibold text-[var(--dashboardTextTitles)] text-xl mb-2">
                     Mark Davis
                     <span className="font-light">, 35</span>
                   </h5>
-                  <div className="mb-2 font-semibold leading-relaxed text-base dark:text-white/80 text-slate-700">
-                    <i className="mr-2 dark:text-white fa-solid fa-map-marker-alt"></i>
+                  <div className="mb-2 font-semibold leading-relaxed text-base  text-slate-700">
+                    <i className="mr-2  fa-solid fa-map-marker-alt"></i>
                     Bucharest, Romania
                   </div>
-                  <div className="mt-6 mb-2 font-semibold leading-relaxed text-base dark:text-white/80 text-slate-700">
-                    <i className="mr-2 dark:text-white fa-solid fa-briefcase"></i>
+                  <div className="mt-6 mb-2 font-semibold leading-relaxed text-base  text-slate-700">
+                    <i className="mr-2  fa-solid fa-briefcase"></i>
                     Solution Manager - Creative Tim Officer
                   </div>
-                  <div className="dark:text-white/80">
-                    <i className="mr-2 dark:text-white fa-solid fa-graduation-cap"></i>
+                  <div className="">
+                    <i className="mr-2  fa-solid fa-graduation-cap"></i>
                     University of Computer Science
                   </div>
                 </div>

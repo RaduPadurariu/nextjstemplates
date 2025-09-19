@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "../../../styles/shop.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import ShopHeader from "./components/Header/ShopHeader";
-import ShopNavbar from "./components/Header/Navbar/ShopNavbar";
-import ShopFooter from "./components/Footer/ShopFooter";
-import { ShopContextProvider } from "./context/ShopContextProvider";
+import { ShopContextProvider } from "@/templates/Shop/context/ShopContextProvider";
+import ShopHeader from "@/templates/Shop/components/Header/ShopHeader";
+import ShopNavbar from "@/templates/Shop/components/Header/Navbar/ShopNavbar";
+import ShopFooter from "@/templates/Shop/components/Footer/ShopFooter";
 
 export const metadata: Metadata = {
   title: "Tools Shop",

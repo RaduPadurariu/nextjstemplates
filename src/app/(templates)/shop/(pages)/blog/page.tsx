@@ -1,9 +1,11 @@
 import React from "react";
-import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
+
 import { shopBlogData } from "@/data/shopData";
 import Link from "next/link";
 import Image from "next/image";
-import ShopRecentArticles from "../../components/Blog/ShopRecentArticles";
+
+import ShopRecentArticles from "@/templates/Shop/components/Blog/ShopRecentArticles";
+import ShopBreadcrumbs from "@/templates/Shop/components/Breadcrumbs/ShopBreadcrumbs";
 
 const ShopBlogPage = () => {
   return (

@@ -11,7 +11,7 @@ const PortalHero = () => {
             with Tailwind CSS
           </h1>
           <p className="my-[40px] text-base md:text-xl opacity-50 font-normal">
-            In this project, my challenge was to manage four different templates
+            In this project, my challenge was to manage five different templates
             within a single website, where I practiced implementing login and
             dashboard functionality, as well as cart management in a shop
             interface.

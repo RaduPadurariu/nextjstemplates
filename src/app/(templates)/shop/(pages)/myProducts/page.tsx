@@ -1,5 +1,5 @@
+import ShopMyProductsWrapper from "@/templates/Shop/components/MyProducts/ShopMyProductsWrapper";
 import React, { Suspense } from "react";
-import ShopMyProductsWrapper from "../../components/MyProducts/ShopMyProductsWrapper";
 
 export default function Page() {
   return (

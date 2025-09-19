@@ -1,7 +1,7 @@
+import LoginDashboardSignInForm from "@/templates/LoginDashboard/components/Auth/LoginDashboardSignInForm";
+import LoginDashboardAuthSideSection from "@/templates/LoginDashboard/components/AuthSideSection/LoginDashboardAuthSideSection";
 import Link from "next/link";
 import React from "react";
-import LoginDashboardAuthSideSection from "../../components/AuthSideSection/LoginDashboardAuthSideSection";
-import LoginDashboardSignInForm from "../../components/Auth/LoginDashboardSignInForm";
 
 const page = () => {
   return (
@@ -9,7 +9,7 @@ const page = () => {
       <div className="w-full mx-auto px-6 max-w-[1024px] xl:max-w-[1280px] z-1">
         <div className="flex flex-wrap -mx-3">
           <div className="flex flex-col w-full max-w-full px-3 mx-auto lg:mx-0 shrink-0 md:w-7/12 lg:w-5/12 xl:w-4/12">
-            <div className="relative flex flex-col min-w-0 break-words bg-transparent border-0 shadow-none lg:py4 dark:bg-gray-950 rounded-2xl bg-clip-border">
+            <div className="relative flex flex-col min-w-0 break-words bg-transparent border-0 shadow-none lg:py4  rounded-2xl bg-clip-border">
               <div className="p-6 pb-0 mb-0">
                 <h4 className="font-bold text-[var(--dashboardTextTitles)] text-2xl">
                   Sign In

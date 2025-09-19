@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
+
 import { shopContactList, shopContactSocial } from "@/data/shopData";
+import ShopBreadcrumbs from "@/templates/Shop/components/Breadcrumbs/ShopBreadcrumbs";
 
 const ShopContactPage = () => {
   const [name, setName] = useState("");

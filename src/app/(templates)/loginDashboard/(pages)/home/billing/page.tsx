@@ -24,7 +24,7 @@ const LoginDashboardBillingPage = () => {
                       "url('/images/loginDashboard/card-visa-bg.jpg')",
                   }}
                 >
-                  <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-zinc-900 to-zinc-800 dark:bg-gradient-to-tl dark:from-slate-750 dark:to-gray-850 opacity-80"></span>
+                  <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-zinc-900 to-zinc-800 "></span>
                   <div className="relative z-10 flex-auto p-4">
                     <i className="p-2 text-white fas fa-wifi"></i>
                     <h5 className="pb-2 mt-6 mb-12 text-white font-semibold text-2xl">
@@ -71,7 +71,7 @@ const LoginDashboardBillingPage = () => {
                       key={info.id}
                       className="w-full max-w-full px-3 md:w-1/2 md:flex-none mb-5 md:mb-0"
                     >
-                      <div className="relative flex flex-col min-w-0 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+                      <div className="relative flex flex-col min-w-0 break-words bg-white border-0 border-transparent border-solid shadow-xl rounded-2xl bg-clip-border">
                         <div className="p-4 mb-0 text-center border-b-0 border-b-solid rounded-t-2xl border-b-transparent mx-auto">
                           <div className="w-16 h-16 text-center shadow-sm icon bg-gradient-to-tl from-blue-500 to-violet-500 rounded-xl">
                             <i
@@ -80,14 +80,14 @@ const LoginDashboardBillingPage = () => {
                           </div>
                         </div>
                         <div className="flex-auto p-4 pt-0 text-center">
-                          <h6 className="mb-0 text-center dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                          <h6 className="mb-0 text-center  font-semibold text-[var(--dashboardTextTitles)]">
                             {info.title}
                           </h6>
-                          <span className="text-xs leading-tight dark:text-white dark:opacity-80">
+                          <span className="text-xs leading-tight ">
                             {info.desc}
                           </span>
-                          <hr className="h-px my-4 border-0 opacity-25 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
-                          <h5 className="mb-0 dark:text-white text-[var(--dashboardTextTitles)] font-semibold text-xl">
+                          <hr className="h-px my-4 border-0 opacity-25 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent " />
+                          <h5 className="mb-0  text-[var(--dashboardTextTitles)] font-semibold text-xl">
                             {info.price}
                           </h5>
                         </div>
@@ -98,16 +98,16 @@ const LoginDashboardBillingPage = () => {
               </ul>
             </div>
             <div className="max-w-full px-3 mb-6 lg:mb-0 lg:w-full lg:flex-none">
-              <div className="relative flex flex-col min-w-0 mt-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <div className="relative flex flex-col min-w-0 mt-6 break-words bg-white border-0 border-transparent border-solid shadow-xl  rounded-2xl bg-clip-border">
                 <div className="p-4 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                   <div className="flex flex-wrap -mx-3">
                     <div className="flex items-center flex-none w-1/2 max-w-full px-3">
-                      <h6 className="mb-0 dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                      <h6 className="mb-0 font-semibold text-[var(--dashboardTextTitles)]">
                         Payment Method
                       </h6>
                     </div>
                     <div className="flex-none w-1/2 max-w-full px-3 text-right">
-                      <button className="inline-block px-5 py-2.5 font-bold leading-normal text-center text-white align-middle transition-all bg-transparent rounded-lg cursor-pointer text-sm ease-in shadow-md bg-150 bg-gradient-to-tl from-zinc-900 to-zinc-800 dark:bg-gradient-to-tl dark:from-slate-750 dark:to-gray-850 hover:shadow-xs active:opacity-85 hover:-translate-y-px tracking-tight-rem bg-x-25">
+                      <button className="inline-block px-5 py-2.5 font-bold leading-normal text-center text-white align-middle transition-all bg-transparent rounded-lg cursor-pointer text-sm ease-in shadow-md bg-150 bg-gradient-to-tl from-zinc-900 to-zinc-800  hover:shadow-xs active:opacity-85 hover:-translate-y-px tracking-tight-rem bg-x-25">
                         {" "}
                         <i className="fas fa-plus"> </i>&nbsp;&nbsp;Add New Card
                       </button>
@@ -122,15 +122,15 @@ const LoginDashboardBillingPage = () => {
                           key={card.id}
                           className="max-w-full px-3 mb-6 md:mb-0 md:w-1/2 md:flex-none"
                         >
-                          <div className="relative flex flex-row items-center flex-auto min-w-0 p-6 break-words bg-transparent border border-solid shadow-none md-max:overflow-auto rounded-xl border-slate-200 dark:border-slate-700 bg-clip-border">
+                          <div className="relative flex flex-row items-center flex-auto min-w-0 p-6 break-words bg-transparent border border-solid shadow-none md-max:overflow-auto rounded-xl border-slate-200  bg-clip-border">
                             <Image
-                              className="mb-0 mr-4 w-1/10"
+                              className="mb-0 mr-4 w-[30px]"
                               src={card.img}
                               alt="logo"
                               width={30}
                               height={30}
                             />
-                            <h6 className="mb-0 dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                            <h6 className="mb-0 font-semibold text-[var(--dashboardTextTitles)] text-xs sm:text-base">
                               ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;
                               {card.number}
                             </h6>
@@ -160,11 +160,11 @@ const LoginDashboardBillingPage = () => {
           </div>
         </div>
         <div className="w-full max-w-full px-3 lg:w-1/3 lg:flex-none">
-          <div className="relative flex flex-col h-full min-w-0 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+          <div className="relative flex flex-col h-full min-w-0 break-words bg-white border-0 border-transparent border-solid shadow-xl  rounded-2xl bg-clip-border">
             <div className="p-4 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
               <div className="flex flex-wrap -mx-3">
                 <div className="flex items-center flex-none w-1/2 max-w-full px-3">
-                  <h6 className="mb-0 dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                  <h6 className="mb-0  font-semibold text-[var(--dashboardTextTitles)]">
                     Invoices
                   </h6>
                 </div>
@@ -184,16 +184,16 @@ const LoginDashboardBillingPage = () => {
                       className="relative flex justify-between px-4 py-2 pl-0 mb-2 border-0 rounded-t-inherit text-inherit rounded-xl"
                     >
                       <div className="flex flex-col">
-                        <h6 className="mb-1 text-sm font-semibold leading-normal dark:text-white text-slate-700">
+                        <h6 className="mb-1 text-sm font-semibold leading-normal  text-slate-700">
                           {invoice.date}
                         </h6>
-                        <span className="text-xs leading-tight dark:text-white dark:opacity-80">
+                        <span className="text-xs leading-tight ">
                           {invoice.invoice}
                         </span>
                       </div>
-                      <div className="flex items-center text-sm leading-normal dark:text-white/80">
+                      <div className="flex items-center text-sm leading-normal ">
                         {invoice.price}
-                        <button className="dark:text-white inline-block px-0 py-2.5 mb-0 ml-6 font-bold leading-normal text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer ease-in bg-150 text-sm active:opacity-85 hover:-translate-y-px tracking-tight-rem bg-x-25 text-slate-700">
+                        <button className="inline-block px-0 py-2.5 mb-0 ml-6 font-bold leading-normal text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer ease-in bg-150 text-sm active:opacity-85 hover:-translate-y-px tracking-tight-rem bg-x-25 text-slate-700">
                           <i className="mr-1 text-lg leading-none fas fa-file-pdf"></i>{" "}
                           PDF
                         </button>
@@ -208,9 +208,9 @@ const LoginDashboardBillingPage = () => {
       </div>
       <div className="flex flex-wrap -mx-3">
         <div className="w-full max-w-full px-3 mt-6 md:w-7/12 md:flex-none">
-          <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+          <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-xl  rounded-2xl bg-clip-border">
             <div className="p-6 px-4 pb-0 mb-0 border-b-0 rounded-t-2xl">
-              <h6 className="mb-0 dark:text-white font-semibold text-[var(--dashboardTextTitles)] ">
+              <h6 className="mb-0  font-semibold text-[var(--dashboardTextTitles)] ">
                 Billing Information
               </h6>
             </div>
@@ -220,27 +220,27 @@ const LoginDashboardBillingPage = () => {
                   return (
                     <li
                       key={info.id}
-                      className="relative flex p-6 mb-2 border-0 rounded-t-inherit rounded-xl bg-gray-50 dark:bg-slate-850"
+                      className="relative flex p-6 mb-2 border-0 rounded-t-inherit rounded-xl bg-gray-50 "
                     >
                       <div className="flex flex-col">
-                        <h6 className="mb-4 text-sm leading-normal dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                        <h6 className="mb-4 text-sm leading-normal  font-semibold text-[var(--dashboardTextTitles)]">
                           {info.name}
                         </h6>
-                        <span className="mb-2 text-xs leading-tight dark:text-white/80">
+                        <span className="mb-2 text-xs leading-tight ">
                           Company Name:{" "}
-                          <span className="font-semibold text-slate-700 dark:text-white sm:ml-2">
+                          <span className="font-semibold text-slate-700  sm:ml-2">
                             {info.company}
                           </span>
                         </span>
-                        <span className="mb-2 text-xs leading-tight dark:text-white/80">
+                        <span className="mb-2 text-xs leading-tight ">
                           Email Address:{" "}
-                          <span className="font-semibold text-slate-700 dark:text-white sm:ml-2">
+                          <span className="font-semibold text-slate-700  sm:ml-2">
                             {info.email}
                           </span>
                         </span>
-                        <span className="text-xs leading-tight dark:text-white/80">
+                        <span className="text-xs leading-tight ">
                           VAT Number:{" "}
-                          <span className="font-semibold text-slate-700 dark:text-white sm:ml-2">
+                          <span className="font-semibold text-slate-700  sm:ml-2">
                             {info.vatNr}
                           </span>
                         </span>
@@ -250,7 +250,7 @@ const LoginDashboardBillingPage = () => {
                           <i className="mr-2 far fa-trash-alt bg-150 bg-gradient-to-tl from-red-600 to-orange-600 bg-x-25 bg-clip-text"></i>
                           Delete
                         </button>
-                        <button className="inline-block dark:text-white px-4 py-2.5 mb-0 font-bold text-center align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-normal text-sm ease-in bg-150 hover:-translate-y-px active:opacity-85 bg-x-25 text-slate-700">
+                        <button className="inline-block  px-4 py-2.5 mb-0 font-bold text-center align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-normal text-sm ease-in bg-150 hover:-translate-y-px active:opacity-85 bg-x-25 text-slate-700">
                           <i
                             className="mr-2 fas fa-pencil-alt text-slate-700"
                             aria-hidden="true"
@@ -266,22 +266,22 @@ const LoginDashboardBillingPage = () => {
           </div>
         </div>
         <div className="w-full max-w-full px-3 mt-6 md:w-5/12 md:flex-none">
-          <div className="relative flex flex-col h-full min-w-0 mb-6 break-words bg-white border-0 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+          <div className="relative flex flex-col h-full min-w-0 mb-6 break-words bg-white border-0 shadow-xl  rounded-2xl bg-clip-border">
             <div className="p-6 px-4 pb-0 mb-0 border-b-0 rounded-t-2xl">
               <div className="flex flex-wrap -mx-3">
                 <div className="max-w-full px-3 md:w-1/2 md:flex-none">
-                  <h6 className="mb-0 dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                  <h6 className="mb-0  font-semibold text-[var(--dashboardTextTitles)]">
                     Your Transactions
                   </h6>
                 </div>
-                <div className="flex items-center justify-end max-w-full px-3 dark:text-white/80 md:w-1/2 md:flex-none">
+                <div className="flex items-center justify-end max-w-full px-3  md:w-1/2 md:flex-none">
                   <i className="mr-2 far fa-calendar-alt"></i>
                   <small>23 - 30 March 2020</small>
                 </div>
               </div>
             </div>
             <div className="flex-auto p-4 pt-6">
-              <h6 className="mb-4 text-xs font-bold leading-tight uppercase dark:text-white text-slate-500">
+              <h6 className="mb-4 text-xs font-bold leading-tight uppercase  text-slate-500">
                 Newest
               </h6>
               <ul className="flex flex-col pl-0 mb-0 rounded-lg">
@@ -301,10 +301,10 @@ const LoginDashboardBillingPage = () => {
                           ></i>
                         </button>
                         <div className="flex flex-col">
-                          <h6 className="mb-1 text-sm leading-normal dark:text-white text-slate-700 font-semibold">
+                          <h6 className="mb-1 text-sm leading-normal  text-slate-700 font-semibold">
                             {transaction.title}
                           </h6>
-                          <span className="text-xs leading-tight dark:text-white/80 mr-2">
+                          <span className="text-xs leading-tight  mr-2">
                             {transaction.date}
                           </span>
                         </div>
@@ -320,7 +320,7 @@ const LoginDashboardBillingPage = () => {
                   );
                 })}
               </ul>
-              <h6 className="my-4 text-xs font-bold leading-tight uppercase dark:text-white text-slate-500">
+              <h6 className="my-4 text-xs font-bold leading-tight uppercase  text-slate-500">
                 Yesterday
               </h6>
               <ul className="flex flex-col pl-0 mb-0 rounded-lg">
@@ -340,10 +340,10 @@ const LoginDashboardBillingPage = () => {
                           ></i>
                         </button>
                         <div className="flex flex-col">
-                          <h6 className="mb-1 text-sm leading-normal dark:text-white text-slate-700 font-semibold">
+                          <h6 className="mb-1 text-sm leading-normal  text-slate-700 font-semibold">
                             {transaction.title}
                           </h6>
-                          <span className="text-xs leading-tight dark:text-white/80 mr-2">
+                          <span className="text-xs leading-tight  mr-2">
                             {transaction.date}
                           </span>
                         </div>

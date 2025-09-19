@@ -1,10 +1,11 @@
 import { shopBlogData } from "@/data/shopData";
 import { notFound } from "next/navigation";
 import React from "react";
-import ShopBreadcrumbs from "../../../components/Breadcrumbs/ShopBreadcrumbs";
-import ShopRecentArticles from "../../../components/Blog/ShopRecentArticles";
+
 import Link from "next/link";
-import ShopSingleBlogForm from "../../../components/Blog/ShopSingleBlogForm";
+import ShopBreadcrumbs from "@/templates/Shop/components/Breadcrumbs/ShopBreadcrumbs";
+import ShopSingleBlogForm from "@/templates/Shop/components/Blog/ShopSingleBlogForm";
+import ShopRecentArticles from "@/templates/Shop/components/Blog/ShopRecentArticles";
 
 const BlogSinglePage = async ({
   params,

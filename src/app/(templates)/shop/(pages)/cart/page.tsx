@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { useShopContext } from "../../context/useShopContext";
-import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
+
 import Link from "next/link";
-import ShopCartProduct from "../../components/Cart/ShopCartProduct";
+import { useShopContext } from "@/templates/Shop/context/useShopContext";
+import ShopBreadcrumbs from "@/templates/Shop/components/Breadcrumbs/ShopBreadcrumbs";
+import ShopCartProduct from "@/templates/Shop/components/Cart/ShopCartProduct";
 
 const ShopCartPage = () => {
   const { cartProducts, selectedCurrency, setCartProducts } = useShopContext();

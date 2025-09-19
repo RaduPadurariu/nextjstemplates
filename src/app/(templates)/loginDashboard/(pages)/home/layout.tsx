@@ -1,6 +1,7 @@
+import LoginDashboardFooter from "@/templates/LoginDashboard/components/Footer/LoginDashboardFooter";
+import LoginDashboardLayoutWrapper from "@/templates/LoginDashboard/components/LayoutWrapper/LoginDashboardLayoutWrapper";
 import React from "react";
-import LoginDashboardLayoutWrapper from "../../components/LayoutWrapper/LoginDashboardLayoutWrapper";
-import LoginDashboardFooter from "../../components/Footer/LoginDashboardFooter";
+
 export default function RootLayout({
   children,
 }: Readonly<{

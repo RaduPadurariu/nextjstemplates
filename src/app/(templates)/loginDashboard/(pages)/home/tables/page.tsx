@@ -10,29 +10,29 @@ const LoginDashboardTablesPage = () => {
     <div className="w-full px-6 py-6 mx-auto">
       <div className="flex flex-wrap -mx-3">
         <div className="flex-none w-full max-w-full px-3">
-          <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+          <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl  rounded-2xl bg-clip-border">
             <div className="p-6 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-              <h6 className=" font-semibold text-[var(--dashboardTextTitles)] dark:text-white">
+              <h6 className=" font-semibold text-[var(--dashboardTextTitles)] ">
                 Authors table
               </h6>
             </div>
             <div className="flex-auto px-0 pt-0 pb-2">
               <div className="p-0 overflow-x-auto">
-                <div className="w-full mb-0 align-top border-collapse dark:border-white/40 text-slate-500">
+                <div className="w-full mb-0 align-top border-collapse  text-slate-500">
                   <div className="align-bottom flex w-full justify-between border-b border-b-gray-200 text-[10px]">
-                    <div className="min-w-[250px] flex-5 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white  tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[250px] flex-5 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none  tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Author
                     </div>
-                    <div className="min-w-[100px] flex-2 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[100px] flex-2 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Function
                     </div>
-                    <div className="min-w-[100px] flex-2 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[100px] flex-2 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none  tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Status
                     </div>
-                    <div className="min-w-[100px] flex-2 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white  tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[100px] flex-2 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none   tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Employed
                     </div>
-                    <div className="flex-1 px-6 py-3 font-semibold capitalize align-middle bg-transparent border-solid shadow-none dark:border-white/40 dark:text-white tracking-none whitespace-nowrap text-slate-400 opacity-70"></div>
+                    <div className="flex-1 px-6 py-3 font-semibold capitalize align-middle bg-transparent border-solid shadow-none tracking-none whitespace-nowrap text-slate-400 opacity-70"></div>
                   </div>
                   <ul className="w-full">
                     {loginDashboardTablesAuthors.map((author) => {
@@ -41,7 +41,7 @@ const LoginDashboardTablesPage = () => {
                           key={author.id}
                           className="flex w-full justify-between border-b border-b-gray-200 items-center"
                         >
-                          <div className="min-w-[250px] flex-5 px-6 py-3 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
+                          <div className="min-w-[250px] flex-5 px-6 py-3 align-middle bg-transparent   whitespace-nowrap shadow-transparent">
                             <div className="flex  py-1">
                               <div>
                                 <Image
@@ -53,24 +53,24 @@ const LoginDashboardTablesPage = () => {
                                 />
                               </div>
                               <div className="flex flex-col justify-center">
-                                <h6 className="mb-0 text-sm leading-normal dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+                                <h6 className="mb-0 text-sm leading-normal  font-semibold text-[var(--dashboardTextTitles)]">
                                   {author.author}
                                 </h6>
-                                <p className="mb-0 text-xs leading-tight dark:text-white dark:opacity-80 text-slate-400">
+                                <p className="mb-0 text-xs leading-tight  text-slate-400">
                                   {author.email}
                                 </p>
                               </div>
                             </div>
                           </div>
-                          <div className="min-w-[100px] flex-2 px-6 py-3 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
-                            <p className="mb-0 text-xs font-semibold leading-tight dark:text-white dark:opacity-80">
+                          <div className="min-w-[100px] flex-2 px-6 py-3 align-middle bg-transparent  whitespace-nowrap shadow-transparent">
+                            <p className="mb-0 text-xs font-semibold leading-tight ">
                               {author.position}
                             </p>
-                            <p className="mb-0 text-xs leading-tight dark:text-white dark:opacity-80 text-slate-400">
+                            <p className="mb-0 text-xs leading-tight  text-slate-400">
                               {author.department}
                             </p>
                           </div>
-                          <div className="min-w-[100px] flex-2 px-6 py-3 text-sm leading-normal text-center align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
+                          <div className="min-w-[100px] flex-2 px-6 py-3 text-sm leading-normal text-center align-middle bg-transparent   whitespace-nowrap shadow-transparent">
                             <span
                               className={`bg-gradient-to-tl ${
                                 author.status == "Online"
@@ -81,15 +81,15 @@ const LoginDashboardTablesPage = () => {
                               {author.status}
                             </span>
                           </div>
-                          <div className="min-w-[100px] flex-2 px-6 py-3 text-center align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
-                            <span className="text-xs font-semibold leading-tight dark:text-white dark:opacity-80 text-slate-400">
+                          <div className="min-w-[100px] flex-2 px-6 py-3 text-center align-middle bg-transparent   whitespace-nowrap shadow-transparent">
+                            <span className="text-xs font-semibold leading-tight  text-slate-400">
                               {author.joinDate}
                             </span>
                           </div>
-                          <div className="flex-1 px-6 py-3 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
+                          <div className="flex-1 px-6 py-3 align-middle bg-transparent   whitespace-nowrap shadow-transparent">
                             <a
                               href="javascript:;"
-                              className="text-xs font-semibold leading-tight dark:text-white dark:opacity-80 text-slate-400"
+                              className="text-xs font-semibold leading-tight  text-slate-400"
                             >
                               {" "}
                               Edit{" "}
@@ -108,26 +108,26 @@ const LoginDashboardTablesPage = () => {
 
       <div className="flex flex-wrap -mx-3">
         <div className="flex-none w-full max-w-full px-3">
-          <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+          <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl  rounded-2xl bg-clip-border">
             <div className="p-6 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-              <h6 className="dark:text-white font-semibold text-[var(--dashboardTextTitles)]">
+              <h6 className=" font-semibold text-[var(--dashboardTextTitles)]">
                 Projects table
               </h6>
             </div>
             <div className="flex-auto px-0 pt-0 pb-2">
               <div className="p-0 overflow-x-auto">
-                <div className="items-center justify-center w-full mb-0 align-top border-collapse dark:border-white/40 text-slate-500">
+                <div className="items-center justify-center w-full mb-0 align-top border-collapse  text-slate-500">
                   <div className="align-bottom flex w-full justify-between border-b border-b-gray-200 text-[10px]">
-                    <div className="min-w-[150px] flex-2 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white  tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[150px] flex-2 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none   tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Project
                     </div>
-                    <div className="min-w-[100px] flex-1 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[100px] flex-1 px-6 py-3 font-bold text-left uppercase align-middle bg-transparent  shadow-none  tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Budget
                     </div>
-                    <div className="min-w-[100px] flex-1 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[100px] flex-1 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Status
                     </div>
-                    <div className="min-w-[200px] flex-4 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none dark:border-white/40 dark:text-white  tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                    <div className="min-w-[200px] flex-4 px-6 py-3 font-bold text-center uppercase align-middle bg-transparent  shadow-none   tracking-none whitespace-nowrap text-slate-400 opacity-70">
                       Completion
                     </div>
                   </div>
@@ -138,7 +138,7 @@ const LoginDashboardTablesPage = () => {
                           key={project.id}
                           className="flex w-full justify-between border-b border-b-gray-200 items-center"
                         >
-                          <div className="min-w-[150px] flex-2 px-6 py-2 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
+                          <div className="min-w-[150px] flex-2 px-6 py-2 align-middle bg-transparent   whitespace-nowrap shadow-transparent">
                             <div className="flex ">
                               <div>
                                 <Image
@@ -150,25 +150,25 @@ const LoginDashboardTablesPage = () => {
                                 />
                               </div>
                               <div className="my-auto">
-                                <h6 className="mb-0 text-sm leading-normal text-[var(--dashboardTextTitles)] font-semibold dark:text-white">
+                                <h6 className="mb-0 text-sm leading-normal text-[var(--dashboardTextTitles)] font-semibold ">
                                   {project.project}
                                 </h6>
                               </div>
                             </div>
                           </div>
-                          <div className="min-w-[100px] flex-1 px-6 py-2 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
-                            <p className="mb-0 text-sm font-semibold leading-tight dark:text-white dark:opacity-80">
+                          <div className="min-w-[100px] flex-1 px-6 py-2 align-middle bg-transparent   whitespace-nowrap shadow-transparent">
+                            <p className="mb-0 text-sm font-semibold leading-tight ">
                               {project.budget}
                             </p>
                           </div>
-                          <div className="min-w-[100px] text-center flex-1 px-6 py-2 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
-                            <span className="mb-0 text-xs font-semibold leading-tight dark:text-white dark:opacity-80">
+                          <div className="min-w-[100px] text-center flex-1 px-6 py-2 align-middle bg-transparent   whitespace-nowrap shadow-transparent">
+                            <span className="mb-0 text-xs font-semibold leading-tight ">
                               {project.status}
                             </span>
                           </div>
-                          <div className="min-w-[200px] flex-4 px-6 py-2 align-middle bg-transparent  dark:border-white/40 whitespace-nowrap shadow-transparent">
+                          <div className="min-w-[200px] flex-4 px-6 py-2 align-middle bg-transparent   whitespace-nowrap shadow-transparent">
                             <div className="flex items-center justify-center">
-                              <span className="mr-2 text-xs font-semibold leading-tight dark:text-white dark:opacity-60">
+                              <span className="mr-2 text-xs font-semibold leading-tight ">
                                 {project.completion.toString()}%
                               </span>
                               <div>

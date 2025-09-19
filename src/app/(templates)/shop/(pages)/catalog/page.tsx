@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ShopBreadcrumbs from "../../components/Breadcrumbs/ShopBreadcrumbs";
+
 import {
   shopCatalogCollection,
   shopCatalogProductTypes,
@@ -10,8 +10,10 @@ import {
   shopMyProductsSortOptions,
 } from "@/data/shopData";
 import Image from "next/image";
-import { useShopContext } from "../../context/useShopContext";
-import { ShopMyProduct } from "../../types/shopTypes";
+
+import { ShopMyProduct } from "../../../../../templates/Shop/types/shopTypes";
+import { useShopContext } from "@/templates/Shop/context/useShopContext";
+import ShopBreadcrumbs from "@/templates/Shop/components/Breadcrumbs/ShopBreadcrumbs";
 
 const ShopCatalogPage = () => {
   const { selectedCurrency, handleAddToCart } = useShopContext();

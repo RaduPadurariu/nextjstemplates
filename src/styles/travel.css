@@ -1,0 +1,47 @@
+@layer base {
+  :root {
+    /* Colors */
+    --travelTextPrimary: #777777;
+    --travelTextSecondary: #f8b600;
+    --travelBGPrimary: #232323;
+    --travelBGSecondary: #313131;
+    --shopBorderPrimary: #dcdbdb;
+  }
+
+  .travelFamily {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--travelTextPrimary);
+  }
+}
+
+@layer components {
+  .travel-container {
+    padding-inline: 15px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 540px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .travel-container {
+      max-width: 720px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .travel-container {
+      max-width: 960px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .travel-container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@layer utilities {
+  /* Responsive Shop*/
+}

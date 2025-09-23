@@ -5,7 +5,7 @@ import TravelHeader from "@/templates/Travel/components/common/Header/TravelHead
 import TravelFooter from "@/templates/Travel/components/common/Footer/TravelFooter";
 
 export const metadata: Metadata = {
-  title: "Travelista",
+  title: "Travel",
   description:
     "A traveling website created with Next.js, typescript, jest and tailwind css. ",
   keywords: [
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="shopFamily">
+    <div className="travelFamily">
       <TravelHeader />
       {children}
       <TravelFooter />

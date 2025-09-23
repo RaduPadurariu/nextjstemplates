@@ -1,7 +1,7 @@
 import React from "react";
 
 const TravelAbout = () => {
-  return <div>TravelAbbout</div>;
+  return <div>TravelAbout</div>;
 };
 
 export default TravelAbout;

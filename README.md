@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Templates (2025)
 
-## Getting Started
+This website contains 5 responsive templates built with Next.js, TypeScript, Zustand, Tailwind CSS and Jest. The project was developed to practice advanced React patterns, Next.js routing and data fetching, type safety, testing with Jest, and utility-first styling with Tailwind CSS. My challenge was to manage multiple templates in a single Next.js application. Some templates include personal pages where I implemented real-life utilities to organize my daily activities.
 
-First, run the development server:
+The website contains the following templates:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔑 Portal
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Access Portal Template
+   A responsive landing page, including a sticky navbar, hero section, external links, and footer. Designed as the entry point for my Next.js templates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📂 Templates
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. User Login-Dashboard Template
+   A dashboard layout with sections for managing user information and activities. It includes a fake login system using localStorage and cookies, allowing multiple accounts to be created and saved for testing purposes.
 
-## Learn More
+3. Shop Template
+   An online shop layout with product cards, filtering, sorting, and pagination.
+   On the personal page I track inventory for when I will have my own workshop in the yard.
 
-To learn more about Next.js, take a look at the following resources:
+4. Travel Template
+   A responsive travel website layout inspired by Travelista. It includes sections for destinations, tours, and booking, with a modern design suitable for travel agencies or personal travel blogs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. User Posts template
+   A template that demonstrates data fetching with Next.js. It displays users along with their posts and todos, simulating a simple social feed with asynchronous data loading.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   Can be found on https://radunextjstemplates.vercel.app
 
-## Deploy on Vercel
+Technologies used: Next.js, TypeScript, Zustand, Tailwind CSS, Jest
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All rights reserved - Radu Padurariu 2025

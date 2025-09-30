@@ -157,7 +157,7 @@ const ShopMyProducts = () => {
               </div>
 
               {/* Sort */}
-              <div className="mt-2.5 ml-0 md:ml-2.5  flex">
+              <div className="mt-2.5 ml-0 md:ml-2.5 flex">
                 <label
                   htmlFor="shop-sortCatalog"
                   className="leading-[34px] text-sm text-[var(--shopBGCart)] inline-block max-w-full whitespace-nowrap"

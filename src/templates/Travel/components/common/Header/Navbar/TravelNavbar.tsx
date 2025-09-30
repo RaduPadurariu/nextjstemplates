@@ -16,7 +16,7 @@ const TravelNavbar = () => {
               width={145}
               height={30}
               alt="no-logo"
-              src="/images/Travel/logo.png"
+              src="/images/travel/logo.png"
               priority
             />
           </Link>

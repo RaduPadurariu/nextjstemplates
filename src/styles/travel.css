@@ -3,7 +3,9 @@
     /* Colors */
     --travelTextPrimary: #777777;
     --travelTextSecondary: #f8b600;
+    --travelTextHeading: #222222;
     --travelBGPrimary: #232323;
+
     --travelBGSecondary: #313131;
     --travelBGFooter: #04091e;
     --shopBorderPrimary: #dcdbdb;
@@ -12,7 +14,6 @@
   .travelFamily {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-    font-weight: 300;
     line-height: 1.5;
     color: var(--travelTextPrimary);
   }
@@ -24,6 +25,28 @@
     width: 100%;
     margin: 0 auto;
     max-width: 540px;
+  }
+
+  /* Travel Home Carousel */
+
+  #travel__home_carousel .swiper-pagination-bullet {
+    background-color: #ffe27a !important;
+    width: 10px !important;
+    height: 10px !important;
+    opacity: 0.75 !important;
+    border-radius: 0 !important;
+  }
+
+  #travel__home_carousel .swiper-pagination-bullet-active {
+    background-color: var(--travelTextSecondary) !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  #travel__home_carousel .swiper-pagination {
+    margin-top: 25px;
+    position: relative !important;
+    bottom: auto !important;
   }
 
   @media screen and (min-width: 768px) {
@@ -44,5 +67,15 @@
 }
 
 @layer utilities {
-  /* Responsive Shop*/
+  .travel__navSticky {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222222e6;
+    transition: 0.5s;
+    height: 80px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+  }
 }

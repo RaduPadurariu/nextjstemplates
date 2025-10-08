@@ -129,6 +129,7 @@ const LoginDashboardSignUpForm = () => {
           type="password"
           placeholder="Password"
           value={state.password}
+          autoComplete="off"
           onChange={(e) =>
             dispatch({ type: "SET_PASSWORD", payload: e.target.value })
           }

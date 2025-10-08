@@ -85,8 +85,8 @@ const TravelFooter = () => {
           </div>
         </div>
         <hr className="text-[#333] mt-8 mb-10 mx-[-15px]" />
-        <div className=" w-full flex flex-col lg:flex-row justify-between lg:items-center text-[var(--travelTextPrimary)]">
-          <p className="mb-6">
+        <div className=" w-full flex flex-col  lg:flex-row justify-between lg:items-center text-[var(--travelTextPrimary)]">
+          <p className="mb-6 lg:mb-0">
             Copyright &copy; All rights reserved | This template is made with{" "}
             <i
               className="fa-regular fa-heart text-[var(--travelTextSecondary)]"

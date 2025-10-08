@@ -36,7 +36,8 @@ export const travelNavLinks = [
   { id: 5, title: "Insurance", link: "/travel/insurance" },
   { id: 6, title: "Blog", link: "/travel/blog" },
   { id: 7, title: "Contact", link: "/travel/contact" },
-  { id: 8, title: "Templates", link: "/" },
+  { id: 8, title: "Personal", link: "/travel/myLocations" },
+  { id: 9, title: "Templates", link: "/" },
 ];
 
 export const travelFooterLinksCol1 = [
@@ -62,4 +63,152 @@ export const travelFooterImages = [
   { id: 6, src: "/images/travel/footer/i6.jpg" },
   { id: 7, src: "/images/travel/footer/i7.jpg" },
   { id: 8, src: "/images/travel/footer/i8.jpg" },
+];
+
+export const travelOtherIssues = [
+  {
+    id: 1,
+    src: "/images/travel/home/o1.jpg",
+    title: "Rent a Car",
+    desc: "The preservation of human life is the ultimate value, a pillar of ethics and the foundation.",
+  },
+  {
+    id: 2,
+    src: "/images/travel/home/o2.jpg",
+    title: "Cruise Booking",
+    desc: "I was always somebody who felt quite sorry for myself, what I had not got compared.",
+  },
+  {
+    id: 3,
+    src: "/images/travel/home/o3.jpg",
+    title: "To Do List",
+    desc: " The following article covers a topic that has recently moved to stage–at least it seems.",
+  },
+  {
+    id: 4,
+    src: "/images/travel/home/o4.jpg",
+    title: "Food Features",
+    desc: "There are many kinds of narratives and organizing principles. Science is driven by evidence.",
+  },
+];
+
+export const travelPopularDestinations = [
+  {
+    id: 1,
+    title: "Mountain River",
+    src: "/images/travel/home/d1.jpg",
+    location: "Paraguay",
+    price: "$150",
+  },
+  {
+    id: 2,
+    title: "Dream City",
+    src: "/images/travel/home/d2.jpg",
+    location: "Paris",
+    price: "$250",
+  },
+  {
+    id: 3,
+    title: "Cloud Mountain",
+    src: "/images/travel/home/d3.jpg",
+    location: "Sri Lanka",
+    price: "$350",
+  },
+];
+
+export const travelPricesList = [
+  { id: 1, title: "Cheap Packages" },
+  { id: 2, title: "Luxury Packages" },
+  { id: 3, title: "Camping Packages" },
+];
+
+export const travelPricesListLocations = [
+  { id: 1, location: "New York", price: "$1500" },
+  { id: 2, location: "Maldives", price: "$2000" },
+  { id: 3, location: "Sri Lanka", price: "$800" },
+  { id: 4, location: "Nepal", price: "$600" },
+  { id: 5, location: "Thailand", price: "1000" },
+  { id: 6, location: "Singapore", price: "$1800" },
+];
+
+export const travelTestimonialCarousel = [
+  {
+    id: 1,
+    title: "Carolyn Craig",
+    src: "/images/travel/home/user2.png",
+    stars: "3",
+    desc: "A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.",
+  },
+  {
+    id: 2,
+    title: "Harriet Maxwell",
+    src: "/images/travel/home/user1.png",
+    stars: "4",
+    desc: "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.",
+  },
+  {
+    id: 3,
+    title: "Sophie Williams",
+    src: "/images/travel/home/user2.png",
+    stars: "3",
+    desc: "A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.",
+  },
+  {
+    id: 4,
+    title: "Emily Parker",
+    src: "/images/travel/home/user1.png",
+    stars: "4",
+    desc: "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.",
+  },
+];
+
+export const travelLatestBlogCarousel = [
+  {
+    id: 1,
+    title: "Low Cost Advertising",
+    src: "/images/travel/home/b1.jpg",
+    date: "31st January, 2018",
+    desc: "Acres of Diamonds… you’ve read the famous story, or at least heard it once. A farmer discovers value in the simplest ideas.",
+  },
+  {
+    id: 2,
+    title: "Creative Outdoor Ads",
+    src: "/images/travel/home/b2.jpg",
+    date: "12th March, 2019",
+    desc: "Design that turns streets into stories. Outdoor campaigns that breathe life into every corner of the city.",
+  },
+  {
+    id: 3,
+    title: "It's Classified How To Utilize Free",
+    src: "/images/travel/home/b3.jpg",
+    date: "25th July, 2020",
+    desc: "Unlock the hidden potential of free resources. Strategy and timing can transform simplicity into success.",
+  },
+  {
+    id: 4,
+    title: "The Power of Minimal Travel",
+    src: "/images/travel/home/b1.jpg",
+    date: "10th February, 2021",
+    desc: "Travel light, feel more. Discover how minimalism turns every trip into a mindful, lasting experience full of clarity and balance.",
+  },
+  {
+    id: 5,
+    title: "Visual Identity Beyond Borders",
+    src: "/images/travel/home/b2.jpg",
+    date: "3rd November, 2022",
+    desc: "A design journey that crosses cultures. Creativity speaks every language when visuals lead the way.",
+  },
+  {
+    id: 6,
+    title: "Future Trends in Creative Media",
+    src: "/images/travel/home/b3.jpg",
+    date: "18th April, 2023",
+    desc: "From AI-driven design to virtual storytelling, see how the future of media is built on imagination and data.",
+  },
+];
+
+export const travelHeroBookingTabs = [
+  { id: "flights", title: "flights" },
+  { id: "hotels", title: "hotels" },
+  { id: "holidays", title: "holidays" },
 ];

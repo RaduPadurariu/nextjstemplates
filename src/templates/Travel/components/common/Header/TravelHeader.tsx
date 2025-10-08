@@ -1,11 +1,28 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import TravelNavbar from "./Navbar/TravelNavbar";
 import { travelHeaderLinks, travelSocialIcons } from "@/data/travel";
 
 const TravelHeader = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
   return (
-    <header className="w-full fixed">
-      <div className="w-full">
+    <header className="w-full fixed z-1000">
+      <div className={`w-full ${isSticky ? "hidden" : ""}`}>
         <div className="travel-container flex justify-between">
           <ul className="flex items-center py-1.5">
             {travelHeaderLinks.map((link) => {
@@ -32,7 +49,7 @@ const TravelHeader = () => {
           </ul>
         </div>
       </div>
-      <TravelNavbar />
+      <TravelNavbar isSticky={isSticky} />
     </header>
   );
 };

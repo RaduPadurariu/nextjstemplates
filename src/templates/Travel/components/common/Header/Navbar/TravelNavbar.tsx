@@ -28,8 +28,10 @@ const TravelNavbar = ({ isSticky }: { isSticky: boolean }) => {
         </div>
         <nav>
           <ul
-            className={`flex pt-5 lg:pt-0 flex-col lg:flex-row bg-[#000000E0] lg:bg-transparent z-[998] top-0 left-0 fixed lg:static bottom-0 w-[260px] lg:w-full overflow-y-auto duration-300 ease-in-out transform ${
-              navOpen ? "translate-x-0" : "-translate-x-full"
+            className={`flex pt-5 lg:pt-0 flex-col lg:flex-row bg-[#000000E0] lg:bg-transparent z-[998] top-0 left-0 fixed lg:static bottom-0 w-[260px] lg:w-full overflow-y-auto transform ${
+              navOpen
+                ? "translate-x-0 duration-300 ease-in-out"
+                : "-translate-x-full"
             } lg:translate-x-0`}
           >
             {travelNavLinks.map((link) => {

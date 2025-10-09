@@ -30,9 +30,7 @@ export const travelSocialIcons = [
 
 export const travelNavLinks = [
   { id: 1, title: "Home", link: "/travel" },
-  { id: 2, title: "About", link: "/travel/about" },
   { id: 3, title: "Packages", link: "/travel/packages" },
-  { id: 4, title: "Hotels", link: "/travel/hotels" },
   { id: 5, title: "Insurance", link: "/travel/insurance" },
   { id: 6, title: "Blog", link: "/travel/blog" },
   { id: 7, title: "Contact", link: "/travel/contact" },
@@ -211,4 +209,148 @@ export const travelHeroBookingTabs = [
   { id: "flights", title: "flights" },
   { id: "hotels", title: "hotels" },
   { id: "holidays", title: "holidays" },
+];
+
+export const travelPackagesCarousel = [
+  {
+    id: 1,
+    title: "Ancient Architecture",
+    src: "/images/travel/packages/hot-deal.jpg",
+    price: "$350",
+    location: "Cairo, Egypt",
+  },
+  {
+    id: 2,
+    title: "Ancient Architecture",
+    src: "/images/travel/packages/hot-deal.jpg",
+    price: "$450",
+    location: "Athens, Greece",
+  },
+  {
+    id: 3,
+    title: "Ancient Architecture",
+    src: "/images/travel/packages/hot-deal.jpg",
+    price: "$650",
+    location: "Rome, Italy",
+  },
+];
+
+export const travelOurPackagesList = [
+  {
+    id: 1,
+    title: "New York City Lights",
+    location: "New York, United States",
+    src: "/images/travel/packages/d1.jpg",
+    subList: [
+      { id: 10, name: "Duration", value: "06 days and 7 nights" },
+      { id: 20, name: "Date", value: "18.04.2018" },
+      { id: 30, name: "Airport", value: "JFK" },
+      { id: 40, name: "Extras", value: "All Inclusive" },
+    ],
+    price: "#300",
+  },
+  {
+    id: 2,
+    title: "Golden Gate Viewpoint",
+    location: "San Francisco, United States",
+    src: "/images/travel/packages/d2.jpg",
+    subList: [
+      { id: 10, name: "Duration", value: "06 days and 7 nights" },
+      { id: 20, name: "Date", value: "18.04.2018" },
+      { id: 30, name: "Airport", value: "SFO" },
+      { id: 40, name: "Extras", value: "All Inclusive" },
+    ],
+    price: "$400",
+  },
+  {
+    id: 3,
+    title: "Ha Long Bay Cruise",
+    location: "Ha Long Bay, Vietnam",
+    src: "/images/travel/packages/d3.jpg",
+    subList: [
+      { id: 10, name: "Duration", value: "06 days and 7 nights" },
+      { id: 20, name: "Date", value: "18.04.2018" },
+      { id: 30, name: "Airport", value: "Noi Bai International" },
+      { id: 40, name: "Extras", value: "All Inclusive" },
+    ],
+    price: "$350",
+  },
+  {
+    id: 4,
+    title: "Clock Tower of Prague",
+    location: "Prague, Czech Republic",
+    src: "/images/travel/packages/d4.jpg",
+    subList: [
+      { id: 10, name: "Duration", value: "06 days and 7 nights" },
+      { id: 20, name: "Date", value: "18.04.2018" },
+      { id: 30, name: "Airport", value: "Václav Havel" },
+      { id: 40, name: "Extras", value: "All Inclusive" },
+    ],
+    price: "$250",
+  },
+  {
+    id: 5,
+    title: "Santorini Cliff Escape",
+    location: "Santorini, Greece",
+    src: "/images/travel/packages/d5.jpg",
+    subList: [
+      { id: 10, name: "Duration", value: "06 days and 7 nights" },
+      { id: 20, name: "Date", value: "18.04.2018" },
+      { id: 30, name: "Airport", value: "Santorini (Thira)" },
+      { id: 40, name: "Extras", value: "All Inclusive" },
+    ],
+    price: "$350",
+  },
+  {
+    id: 6,
+    title: "Tokyo City Adventure",
+    location: "Tokyo, Japan",
+    src: "/images/travel/packages/d6.jpg",
+    subList: [
+      { id: 10, name: "Duration", value: "06 days and 7 nights" },
+      { id: 20, name: "Date", value: "18.04.2018" },
+      { id: 30, name: "Airport", value: "Haneda" },
+      { id: 40, name: "Extras", value: "All Inclusive" },
+    ],
+    price: "$200",
+  },
+];
+
+export const travelInsurance = [
+  {
+    id: 1,
+    title: "Insurance for journey",
+    order: "first",
+    src: "/images/travel/insurance/i1.jpg",
+    list: [
+      { id: 10, text: "Strategic approach towards redesigning brand." },
+      {
+        id: 20,
+        text: "logo design strategy ensures a perfectly crafted logo for your business.",
+      },
+      { id: 30, text: "Branding that stands out in the crowd." },
+      { id: 40, text: "Modern and evergreen logo for your business." },
+    ],
+  },
+  {
+    id: 2,
+    title: "Vehicle insurance made simple",
+    order: "second",
+    src: "/images/travel/insurance/i2.jpg",
+    list: [
+      {
+        id: 10,
+        text: "Comprehensive coverage for your vehicle and passengers.",
+      },
+      {
+        id: 20,
+        text: "Fast and reliable claim support when you need it most.",
+      },
+      { id: 30, text: "Flexible plans that adapt to your driving habits." },
+      {
+        id: 40,
+        text: "Protect your car from theft, damage, and unexpected events.",
+      },
+    ],
+  },
 ];

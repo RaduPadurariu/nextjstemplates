@@ -38,7 +38,7 @@ const TravelLatestBlog = () => {
             },
           }}
           className="w-full"
-          id="travel__home_carousel"
+          id="travel__home_carousel2"
         >
           {travelLatestBlogCarousel.map((item, index) => (
             <SwiperSlide key={index} className="bg-white">

@@ -1,7 +1,12 @@
+import TravelBreadcrumbs from "@/templates/Travel/components/common/Breadcrumbs/TravelBreadcrumbs";
 import React from "react";
 
 const TravelContact = () => {
-  return <div>TravelContact</div>;
+  return (
+    <div>
+      <TravelBreadcrumbs /> TravelContact
+    </div>
+  );
 };
 
 export default TravelContact;

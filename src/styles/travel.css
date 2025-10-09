@@ -29,7 +29,9 @@
 
   /* Travel Home Carousel */
 
-  #travel__home_carousel .swiper-pagination-bullet {
+  #travel__home_carousel .swiper-pagination-bullet,
+  #travel__home_carousel2 .swiper-pagination-bullet,
+  #travel__packages_carousel .swiper-pagination-bullet {
     background-color: #ffe27a !important;
     width: 10px !important;
     height: 10px !important;
@@ -37,13 +39,17 @@
     border-radius: 0 !important;
   }
 
-  #travel__home_carousel .swiper-pagination-bullet-active {
+  #travel__home_carousel .swiper-pagination-bullet-active,
+  #travel__home_carousel2 .swiper-pagination-bullet-active,
+  #travel__packages_carousel .swiper-pagination-bullet-active {
     background-color: var(--travelTextSecondary) !important;
     width: 10px !important;
     height: 10px !important;
   }
 
-  #travel__home_carousel .swiper-pagination {
+  #travel__home_carousel .swiper-pagination,
+  #travel__home_carousel2 .swiper-pagination,
+  #travel__packages_carousel .swiper-pagination {
     margin-top: 25px;
     position: relative !important;
     bottom: auto !important;

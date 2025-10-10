@@ -354,3 +354,24 @@ export const travelInsurance = [
     ],
   },
 ];
+
+export const travelContactAddressesList = [
+  {
+    id: 1,
+    title: "Binghamton, New York",
+    icon: "fa fa-house",
+    desc: "4343 Hinkle Deegan Lake Road",
+  },
+  {
+    id: 2,
+    title: "00 (958) 9865 562",
+    icon: "fa fa-phone",
+    desc: "Mon to Fri 9am to 6 pm",
+  },
+  {
+    id: 3,
+    title: "support@colorlib.com",
+    icon: "fa fa-envelope",
+    desc: "Send us your query anytime!",
+  },
+];

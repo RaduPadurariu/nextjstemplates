@@ -12,7 +12,9 @@ const TravelBreadcrumbs = () => {
         <div className="flex items-center justify-center">
           <div className="mt-[70px] py-[90px] relative">
             <h1 className="text-5xl text-white font-bold z-0">
-              {breadcrumbs[1].label}
+              {breadcrumbs[1].label === "Blog"
+                ? "Blog Details Page"
+                : breadcrumbs[1].label}
             </h1>
             <ul className="mt-2.5 flex justify-center items-center">
               {breadcrumbs.map((crumb, i) => {

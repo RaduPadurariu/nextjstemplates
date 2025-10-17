@@ -23,7 +23,7 @@ export const useTravelBreadcrumbs = () => {
 
       const defaultLabels: Record<string, string> = {
         "/travel": "Home",
-        "/travel/blog": "",
+        "/travel/blog": "Blog",
         "/travel/contact": "Contact Us",
         "/travel/packages": "Tour Packages",
         "/travel/insurance": "Insurance",

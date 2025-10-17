@@ -375,3 +375,139 @@ export const travelContactAddressesList = [
     desc: "Send us your query anytime!",
   },
 ];
+
+export const travelBlogHomeCategoryList = [
+  {
+    id: 1,
+    src: "/images/travel/blog/cat-widget1.jpg",
+    title: "Social life",
+    desc: "Enjoy your social life together",
+  },
+  {
+    id: 2,
+    src: "/images/travel/blog/cat-widget2.jpg",
+    title: "Politics",
+    desc: "Be a part of politics",
+  },
+  {
+    id: 3,
+    src: "/images/travel/blog/cat-widget3.jpg",
+    title: "Food",
+    desc: "Let the food be finished",
+  },
+];
+
+export const travelBlogHomeBlogList = [
+  {
+    id: 1,
+    title: "Astronomy Binoculars A Great Alternative",
+    slug: "astronomy-binoculars-a-great-alternative",
+    desc: "Exploring the night sky doesn’t always require expensive telescopes. Binoculars can be a great starting point for beginner stargazers.",
+    src: "/images/travel/blog/feature-img1.jpg",
+    tags: ["Astronomy", "Technology", "Lifestyle"],
+    author: "Mark Wiens",
+    views: "1.2M",
+    date: "12 Dec, 2017",
+    comments: 6,
+  },
+  {
+    id: 2,
+    title: "The Basics Of Buying A Telescope",
+    slug: "the-basics-of-buying-a-telescope",
+    desc: "Before investing in your first telescope, it’s important to understand aperture, magnification, and portability to make the right choice.",
+    src: "/images/travel/blog/feature-img2.jpg",
+    tags: ["Science", "Technology", "Gear"],
+    author: "Sarah Bloom",
+    views: "982K",
+    date: "10 Dec, 2017",
+    comments: 8,
+  },
+  {
+    id: 3,
+    title: "The Glossary Of Telescopes",
+    slug: "the-glossary-of-telescopes",
+    desc: "From refractors to reflectors, this glossary breaks down the key terms every beginner should know before diving into astronomy.",
+    src: "/images/travel/blog/feature-img3.jpg",
+    tags: ["Education", "Astronomy", "Reference"],
+    author: "Alex Carter",
+    views: "745K",
+    date: "15 Dec, 2017",
+    comments: 4,
+  },
+  {
+    id: 4,
+    title: "The Night Sky",
+    slug: "the-night-sky",
+    desc: "Each season brings a unique set of constellations and deep-sky objects. Discover what you can see this winter with just your eyes.",
+    src: "/images/travel/blog/feature-img4.jpg",
+    tags: ["Nature", "Astronomy", "Photography"],
+    author: "Lara Stevens",
+    views: "2.1M",
+    date: "18 Dec, 2017",
+    comments: 10,
+  },
+  {
+    id: 5,
+    title: "Telescopes 101",
+    slug: "telescopes-101",
+    desc: "Learn how telescopes gather light and magnify distant objects, and what features matter most when buying your first one.",
+    src: "/images/travel/blog/feature-img5.jpg",
+    tags: ["Science", "Beginner", "Technology"],
+    author: "Mark Wiens",
+    views: "1.4M",
+    date: "20 Dec, 2017",
+    comments: 5,
+  },
+];
+
+export const travelPopularPostsList = [
+  {
+    id: 1,
+    title: "Space The Final Frontier",
+    date: "1 Hours ago",
+    src: "/images/travel/blog/pp1.jpg",
+  },
+  {
+    id: 2,
+    title: "The Amazing Hubble",
+    date: "2 Hours ago",
+    src: "/images/travel/blog/pp2.jpg",
+  },
+  {
+    id: 3,
+    title: "Astronomy or Astrology",
+    date: "4 Hours ago",
+    src: "/images/travel/blog/pp3.jpg",
+  },
+  {
+    id: 4,
+    title: "Asteroids Telescope",
+    date: "6 Hours ago",
+    src: "/images/travel/blog/pp4.jpg",
+  },
+];
+
+export const travelBlogPostCategoryList = [
+  { id: 1, title: "Technology", value: 37 },
+  { id: 2, title: "Lifestyle", value: 24 },
+  { id: 3, title: "Fashion", value: 59 },
+  { id: 4, title: "Art", value: 29 },
+  { id: 5, title: "Food", value: 15 },
+  { id: 6, title: "Architecture", value: 9 },
+  { id: 7, title: "Adventure", value: 44 },
+];
+
+export const travelBlogTagCloudsList = [
+  { id: 1, title: "Technology" },
+  { id: 2, title: "Fashion" },
+  { id: 3, title: "Architecture" },
+  { id: 4, title: "Fashion" },
+  { id: 5, title: "Food" },
+  { id: 6, title: "Technology" },
+  { id: 7, title: "Lifestyle" },
+  { id: 8, title: "Art" },
+  { id: 9, title: "Adventure" },
+  { id: 10, title: "Food" },
+  { id: 11, title: "Lifestyle" },
+  { id: 12, title: "Adventure" },
+];

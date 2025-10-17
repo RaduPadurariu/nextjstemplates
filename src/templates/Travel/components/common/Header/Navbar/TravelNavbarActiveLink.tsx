@@ -1,5 +1,5 @@
 "use client";
-import { travelLinkType } from "@/templates/Travel/types/types";
+import { TravelLinkType } from "@/templates/Travel/types/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -8,7 +8,7 @@ const TravelNavbarActiveLink = ({
   link,
   setNavOpen,
 }: {
-  link: travelLinkType;
+  link: TravelLinkType;
   setNavOpen: (value: boolean) => void;
 }) => {
   const pathname = usePathname();

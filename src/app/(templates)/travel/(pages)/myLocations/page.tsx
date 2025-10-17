@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <TravelBreadcrumbs />
-      page
+      In Progress (with FETCH)
     </div>
   );
 };

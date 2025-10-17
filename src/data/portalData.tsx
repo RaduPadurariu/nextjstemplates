@@ -33,7 +33,7 @@ export const portalTemplatesList = [
 
   {
     id: 3,
-    title: "Travel (in progress)",
+    title: "Travel",
     icon: "fas fa-plane-departure",
     img: "/images/portal/o3.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
@@ -42,11 +42,11 @@ export const portalTemplatesList = [
   },
   {
     id: 4,
-    title: "User Posts (to be done)",
+    title: "Fashion (in progress)",
     icon: "fas fa-file-alt",
     img: "/images/portal/o2.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit, dignissimos nihil tempora officiis, laudantium fuga.",
-    link: "/userposts",
+    link: "/fashion",
     color: "group-hover:text-[#ef4444] ",
   },
 ];

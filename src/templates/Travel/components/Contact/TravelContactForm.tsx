@@ -1,7 +1,11 @@
+"use client";
 import { travelContactAddressesList } from "@/data/travel";
 import React from "react";
 
 const TravelContactForm = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
   return (
     <section className="pb-[120px]">
       <div className="travel-container">
@@ -26,7 +30,7 @@ const TravelContactForm = () => {
             })}
           </ul>
           <div className="w-full lg:w-2/3">
-            <form className="" id="myForm">
+            <form className="" id="myForm" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-col w-full lg:w-1/2 px-0 lg:px-[15px] mb-4">
@@ -35,6 +39,7 @@ const TravelContactForm = () => {
                       placeholder="Enter your name"
                       className="w-full leading-[1.5] border border-[#ced4da] text-black bg-white p-[15px] text-[13px] mb-5 block"
                       type="text"
+                      required
                     />
 
                     <input
@@ -43,6 +48,7 @@ const TravelContactForm = () => {
                       pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                       className="w-full leading-[1.5] border border-[#ced4da] text-black bg-white p-[15px] text-[13px] mb-5 block"
                       type="email"
+                      required
                     />
 
                     <input
@@ -50,6 +56,7 @@ const TravelContactForm = () => {
                       placeholder="Enter subject"
                       className="w-full leading-[1.5] border border-[#ced4da] text-black bg-white p-[15px] text-[13px] mb-5 block"
                       type="text"
+                      required
                     />
                   </div>
                   <div className="w-full lg:w-1/2 px-0 lg:px-[15px] mb-9">
@@ -57,13 +64,17 @@ const TravelContactForm = () => {
                       className="w-full leading-[1.5] border border-[#ced4da] text-black bg-white p-[15px] text-[13px] mb-5 block min-h-[200px] lg:min-h-auto h-full"
                       name="message"
                       placeholder="Enter Messege"
+                      required
                     ></textarea>
                   </div>
                 </div>
 
                 <div className="w-full flex justify-end px-0 lg:px-[15px]">
                   {/* <div className="alert-msg"></div> */}
-                  <button className="uppercase text-sm leading-[40px] px-[30px] font-medium text-white bg-[var(--travelTextSecondary)] border border-[bg-[var(--travelTextSecondary)]] cursor-pointer hover:text-[var(--travelTextSecondary)] hover:bg-white transition-all duration-300 ease-in-out">
+                  <button
+                    type="submit"
+                    className="uppercase text-sm leading-[40px] px-[30px] font-medium text-white bg-[var(--travelTextSecondary)] border border-[bg-[var(--travelTextSecondary)]] cursor-pointer hover:text-[var(--travelTextSecondary)] hover:bg-white transition-all duration-300 ease-in-out"
+                  >
                     Send Message
                   </button>
                 </div>

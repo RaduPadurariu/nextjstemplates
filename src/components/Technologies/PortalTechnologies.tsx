@@ -11,7 +11,7 @@ const PortalTechnologies = () => {
         <div>
           <h1 className="font-normal text-center text-4xl">Technologies</h1>
           <p className="text-center my-5 font-normal opacity-50">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit luctus turpis
+            Core technologies used to build and optimize this project.
           </p>
         </div>
 

@@ -34,7 +34,7 @@ export const travelNavLinks = [
   { id: 5, title: "Insurance", link: "/travel/insurance" },
   { id: 6, title: "Blog", link: "/travel/blog" },
   { id: 7, title: "Contact", link: "/travel/contact" },
-  { id: 8, title: "Personal", link: "/travel/myLocations" },
+  { id: 8, title: "Personal", link: "/travel/countries" },
   { id: 9, title: "Templates", link: "/" },
 ];
 

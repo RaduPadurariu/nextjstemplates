@@ -16,3 +16,11 @@ export interface TravelSingleBlogType {
   date: string;
   comments: number;
 }
+
+export interface TravelCountriesType {
+  name: { common: string };
+  region: string;
+  flags: { png: string; svg: string };
+  population: number;
+  area: number;
+}

@@ -19,10 +19,10 @@ The website contains the following templates:
    On the personal page I track inventory for when I will have my own workshop in the yard.
 
 4. Travel Template
-   A responsive travel website layout inspired by Travelista. It includes sections for destinations, tours, and booking, with a modern design suitable for travel agencies or personal travel blogs.
+   A responsive travel website layout inspired by Travelista. It includes sections for destinations, tours, and booking, with a modern design suitable for travel agencies or personal travel blogs. On Personal page this template demonstrates data fetching with Next.js.
 
-5. User Posts template
-   A template that demonstrates data fetching with Next.js. It displays users along with their posts and todos, simulating a simple social feed with asynchronous data loading.
+5. Fashion template
+   A modern and elegant fashion store layout inspired by Alice’s Lingerie Store. On the Personal page, this template includes a complex data filtering system showcasing Victoria’s Secret information as a fan — such as shows, models, and fantasy bras — demonstrating advanced data organization and UI filtering logic in Next.js.
 
    Can be found on https://radunextjstemplates.vercel.app
 

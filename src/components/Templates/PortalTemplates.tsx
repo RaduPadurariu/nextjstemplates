@@ -12,7 +12,8 @@ const PortalTemplates = () => {
         <div>
           <h1 className="text-center font-normal text-4xl">Templates</h1>
           <p className="font-normal text-center my-5 mx-0 opacity-50">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem.
+            A collection of responsive Next.js templates showcasing different
+            layouts and features.
           </p>
         </div>
 

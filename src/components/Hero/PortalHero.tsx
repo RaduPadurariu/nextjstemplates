@@ -29,9 +29,10 @@ const PortalHero = () => {
               Explore Templates
             </button>
             <a
-              href="https://radupadurariu2025.netlify.app"
+              href="https://radupadurariu.netlify.app"
               target="_blank"
               className="text-gray-500 ml-5 py-3 px-8 text-base hover:text-[var(--portalTextPrimary)]"
+              rel="noopener noreferrer"
             >
               Visit Portfolio
             </a>

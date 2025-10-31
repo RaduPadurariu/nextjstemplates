@@ -27,7 +27,7 @@ export const useTravelBreadcrumbs = () => {
         "/travel/contact": "Contact Us",
         "/travel/packages": "Tour Packages",
         "/travel/insurance": "Insurance",
-        "/travel/myLocations": "My Locations",
+        "/travel/countries": "Countries Stats",
       };
 
       return {

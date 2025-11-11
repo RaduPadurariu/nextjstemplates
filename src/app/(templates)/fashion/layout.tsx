@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import "../../../styles/travel.css";
+import "../../../styles/fashion.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import TravelHeader from "@/templates/Travel/components/common/Header/TravelHeader";
-import TravelFooter from "@/templates/Travel/components/common/Footer/TravelFooter";
+import FashionHeader from "@/templates/Fashion/components/common/Header/FashionHeader";
+import FashionFooter from "@/templates/Fashion/components/common/Footer/FashionFooter";
 
 export const metadata: Metadata = {
-  title: "Travel",
+  title: "Fashion",
   description:
-    "A traveling website created with Next.js, typescript, jest and tailwind css. ",
+    "A fashion website created with Next.js, typescript, jest and tailwind css. ",
   keywords: [
     "nextjs",
     "react",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     { name: "Radu Padurariu", url: "https://radupadurariu.netlify.app" },
   ],
   icons: {
-    icon: "/images/travel/favicon.ico",
+    icon: "/images/fashion/lingerie.png",
   },
 };
 
@@ -31,10 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="travelFamily">
-      <TravelHeader />
+    <div className="fashionFamily">
+      <FashionHeader />
       {children}
-      <TravelFooter />
+      <FashionFooter />
     </div>
   );
 }

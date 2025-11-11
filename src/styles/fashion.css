@@ -1,0 +1,62 @@
+@layer base {
+  :root {
+    /* Colors */
+    --fashionTextPrimary: #777777;
+    --fashionTextSecondary: #fe7799;
+    --fashionTextHeading: #141414;
+    --fashionBGPrimary: #f5f5f5;
+    --fashionBGSecondary: #111114;
+  }
+
+  .fashionFamily {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--travelTextPrimary);
+    background-color: white;
+  }
+}
+
+@layer components {
+  /* Travel Home Carousel */
+
+  /* #travel__home_carousel .swiper-pagination-bullet,
+  #travel__home_carousel2 .swiper-pagination-bullet,
+  #travel__packages_carousel .swiper-pagination-bullet {
+    background-color: #ffe27a !important;
+    width: 10px !important;
+    height: 10px !important;
+    opacity: 0.75 !important;
+    border-radius: 0 !important;
+  }
+
+  #travel__home_carousel .swiper-pagination-bullet-active,
+  #travel__home_carousel2 .swiper-pagination-bullet-active,
+  #travel__packages_carousel .swiper-pagination-bullet-active {
+    background-color: var(--travelTextSecondary) !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  #travel__home_carousel .swiper-pagination,
+  #travel__home_carousel2 .swiper-pagination,
+  #travel__packages_carousel .swiper-pagination {
+    margin-top: 25px;
+    position: relative !important;
+    bottom: auto !important;
+  } */
+}
+
+@layer utilities {
+  .fashion__navSticky {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222222e6;
+    transition: 0.5s;
+    height: 80px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+  }
+}

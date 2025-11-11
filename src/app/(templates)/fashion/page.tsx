@@ -1,10 +1,5 @@
 const page = () => {
-  return (
-    <div>
-      Fashion Template
-      <p>template to use from Figma</p>
-    </div>
-  );
+  return <div>Fashion Home Page</div>;
 };
 
 export default page;

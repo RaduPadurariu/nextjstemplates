@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "portfolio",
   ],
   authors: [
-    { name: "Radu Padurariu", url: "https://radupadurariu2025.netlify.app" },
+    { name: "Radu Padurariu", url: "https://radupadurariu.netlify.app" },
   ],
   icons: {
     icon: "/images/loginDashboard/favicon.ico",

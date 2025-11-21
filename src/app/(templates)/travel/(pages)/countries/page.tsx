@@ -3,10 +3,9 @@ import TravelCountriesStats from "@/templates/Travel/components/Countries/Travel
 import React from "react";
 
 const page = async () => {
-  const res = await fetch(
-    "https://restcountries.com/v3.1/all?fields=name,flags,region,population,area"
-  );
+  const res = await fetch("https://www.apicountries.com/countries");
   const countries = await res.json();
+  console.log(countries);
   return (
     <div>
       <TravelBreadcrumbs />

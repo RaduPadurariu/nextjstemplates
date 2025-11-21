@@ -16,15 +16,15 @@ const TravelCountriesStats = ({
 
   const filteredCountries = countries
     .filter((country) =>
-      country.name.common.toLowerCase().includes(search.toLowerCase())
+      country.name.toLowerCase().includes(search.toLowerCase())
     )
     .filter((country) => region === "All" || country.region === region)
     .sort((a, b) => {
       switch (sort) {
         case "name-asc":
-          return a.name.common.localeCompare(b.name.common);
+          return a.name.localeCompare(b.name);
         case "name-desc":
-          return b.name.common.localeCompare(a.name.common);
+          return b.name.localeCompare(a.name);
         case "population-asc":
           return a.population - b.population;
         case "population-desc":
@@ -97,20 +97,32 @@ const TravelCountriesStats = ({
                   </div>
                   <div className="p-5 bg-white">
                     <h4 className="text-lg font-semibold text-[var(--travelTextHeading)] mb-2.5">
-                      {item.name.common}
+                      {item.name}
                     </h4>
                     <p className="mb-4">{item.region}</p>
                     <ul className="mt-[30px]">
                       <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
                         <span className="text-sm">Area:</span>
                         <span className="text-base font-medium text-[var(--travelTextHeading)]">
-                          {item.area.toLocaleString("ro-RO")}
+                          {item.area}
                         </span>
                       </li>
                       <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
                         <span className="text-sm">Population:</span>
                         <span className="text-base font-medium text-[var(--travelTextHeading)]">
-                          {item.population.toLocaleString("ro-RO")}
+                          {item.population}
+                        </span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
+                        <span className="text-sm">Capital:</span>
+                        <span className="text-base font-medium text-[var(--travelTextHeading)]">
+                          {item.capital}
+                        </span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
+                        <span className="text-sm">Currency:</span>
+                        <span className="text-base font-medium text-[var(--travelTextHeading)]">
+                          {item.currencies?.[0]?.name ?? "N/A"}
                         </span>
                       </li>
                     </ul>

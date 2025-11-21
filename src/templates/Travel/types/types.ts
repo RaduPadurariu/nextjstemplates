@@ -18,9 +18,17 @@ export interface TravelSingleBlogType {
 }
 
 export interface TravelCountriesType {
-  name: { common: string };
+  name: string;
   region: string;
   flags: { png: string; svg: string };
   population: number;
   area: number;
+  capital: string;
+  currencies: TravelCurrenciesType[];
+}
+
+export interface TravelCurrenciesType {
+  code: string;
+  name: string;
+  symbol: string;
 }

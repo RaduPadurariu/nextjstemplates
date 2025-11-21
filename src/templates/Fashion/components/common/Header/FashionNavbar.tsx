@@ -1,10 +1,10 @@
 "use client";
 
-import { fashionNavLinks } from "@/data/fashion";
 import Link from "next/link";
 import React, { useState } from "react";
-import FashionActiveLink from "./FashionActiveLink";
+
 import Image from "next/image";
+import FashionNavList from "./FashionNavList";
 
 const FashionNavbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -46,17 +46,7 @@ const FashionNavbar = () => {
             <i className="fa fa-times"></i>
           </div>
         </div>
-        <ul className="flex flex-col md:flex-row">
-          {fashionNavLinks.map((link) => {
-            return (
-              <FashionActiveLink
-                key={link.id}
-                link={link}
-                setNavOpen={setNavOpen}
-              />
-            );
-          })}
-        </ul>
+        <FashionNavList setNavOpen={setNavOpen} variant="header" />
         <div></div>
       </div>
     </nav>

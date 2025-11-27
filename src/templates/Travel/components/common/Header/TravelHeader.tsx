@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import TravelNavbar from "./Navbar/TravelNavbar";
-import { travelHeaderLinks, travelSocialIcons } from "@/data/travel";
+import { travelHeaderLinks, travelSocialIcons } from "@/data/travelData";
 
 const TravelHeader = () => {
   const [isSticky, setIsSticky] = useState(false);

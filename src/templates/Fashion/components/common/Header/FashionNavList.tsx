@@ -1,4 +1,4 @@
-import { fashionNavLinks } from "@/data/fashion";
+import { fashionNavLinks } from "@/data/fashionData";
 import React from "react";
 import FashionActiveLink from "./FashionActiveLink";
 

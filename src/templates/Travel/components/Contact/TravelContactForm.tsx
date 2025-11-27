@@ -1,5 +1,5 @@
 "use client";
-import { travelContactAddressesList } from "@/data/travel";
+import { travelContactAddressesList } from "@/data/travelData";
 import React from "react";
 
 const TravelContactForm = () => {

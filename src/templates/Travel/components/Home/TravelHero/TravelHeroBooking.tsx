@@ -1,6 +1,6 @@
 "use client";
 
-import { travelHeroBookingTabs } from "@/data/travel";
+import { travelHeroBookingTabs } from "@/data/travelData";
 import React, { useState } from "react";
 
 const TravelHeroBooking = () => {

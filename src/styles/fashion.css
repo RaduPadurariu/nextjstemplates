@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+
 @layer base {
   :root {
     /* Colors */
@@ -21,6 +22,17 @@
     color: var(--fashionTextPrimary);
     background-color: white;
   }
+
+  @font-face {
+    font-family: "Arkana";
+    src: url("/fonts/arkanaScript.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .fashionArkanaFamily {
+    font-family: "Arkana", cursive;
+  }
 }
 
 @layer components {
@@ -32,37 +44,38 @@
   }
   /* Travel Home Carousel */
 
-  /* #travel__home_carousel .swiper-pagination-bullet,
-  #travel__home_carousel2 .swiper-pagination-bullet,
-  #travel__packages_carousel .swiper-pagination-bullet {
-    background-color: #ffe27a !important;
+  #fashion__home_carousel .swiper-pagination-bullet {
+    background-color: white !important;
     width: 10px !important;
     height: 10px !important;
-    opacity: 0.75 !important;
-    border-radius: 0 !important;
+    opacity: 1 !important ;
   }
 
-  #travel__home_carousel .swiper-pagination-bullet-active,
-  #travel__home_carousel2 .swiper-pagination-bullet-active,
-  #travel__packages_carousel .swiper-pagination-bullet-active {
-    background-color: var(--travelTextSecondary) !important;
+  #fashion__home_carousel .swiper-pagination-bullet-active {
+    background-color: var(--fashionTextSecondary) !important;
     width: 10px !important;
     height: 10px !important;
   }
 
-  #travel__home_carousel .swiper-pagination,
-  #travel__home_carousel2 .swiper-pagination,
-  #travel__packages_carousel .swiper-pagination {
-    margin-top: 25px;
-    position: relative !important;
-    bottom: auto !important;
-  } */
+  #fashion__home_carousel .swiper-pagination {
+    position: absolute !important;
+  }
 
   /* Responsive */
 
   @media (min-width: 640px) {
     .fashion-container {
       max-width: 600px;
+    }
+
+    #fashion__home_carousel .swiper-pagination-bullet {
+      width: 15px !important;
+      height: 15px !important;
+    }
+
+    #fashion__home_carousel .swiper-pagination-bullet-active {
+      width: 15px !important;
+      height: 15px !important;
     }
   }
 

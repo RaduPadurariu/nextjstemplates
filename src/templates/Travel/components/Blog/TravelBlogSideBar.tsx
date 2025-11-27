@@ -5,7 +5,7 @@ import {
   travelBlogTagCloudsList,
   travelPopularPostsList,
   travelSocialIcons,
-} from "@/data/travel";
+} from "@/data/travelData";
 import Image from "next/image";
 import React from "react";
 

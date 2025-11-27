@@ -1,4 +1,4 @@
-import { travelOtherIssues } from "@/data/travel";
+import { travelOtherIssues } from "@/data/travelData";
 import Image from "next/image";
 import React from "react";
 import TravelHeadTitle from "../HeadTitle/TravelHeadTitle";

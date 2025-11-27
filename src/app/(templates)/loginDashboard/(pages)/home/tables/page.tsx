@@ -1,7 +1,7 @@
 import {
   loginDashboardTablesAuthors,
   loginDashboardTablesProjects,
-} from "@/data/loginDashboard";
+} from "@/data/loginDashboardData";
 import Image from "next/image";
 import React from "react";
 

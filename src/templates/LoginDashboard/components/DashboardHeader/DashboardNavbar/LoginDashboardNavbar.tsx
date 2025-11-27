@@ -1,7 +1,7 @@
 import {
   loginDashboardAuthLinks,
   loginDashboardPagesLinks,
-} from "@/data/loginDashboard";
+} from "@/data/loginDashboardData";
 import React from "react";
 import LoginDashboardNavbarActiveLink from "./LoginDashboardNavbarActiveLink";
 import { LoginDashboardLinkType } from "../../../types/loginDashboardTypes";

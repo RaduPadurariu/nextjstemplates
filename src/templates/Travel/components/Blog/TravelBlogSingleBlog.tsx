@@ -2,7 +2,7 @@ import React from "react";
 import TravelBlogSideBar from "./TravelBlogSideBar";
 import Image from "next/image";
 import { TravelSingleBlogType } from "../../types/types";
-import { travelSocialIcons } from "@/data/travel";
+import { travelSocialIcons } from "@/data/travelData";
 
 const TravelBlogSingleBlog = ({
   singleBlog,

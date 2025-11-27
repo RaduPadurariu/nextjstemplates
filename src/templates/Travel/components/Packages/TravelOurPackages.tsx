@@ -1,6 +1,6 @@
 import React from "react";
 import TravelHeadTitle from "../HeadTitle/TravelHeadTitle";
-import { travelOurPackagesList } from "@/data/travel";
+import { travelOurPackagesList } from "@/data/travelData";
 import Image from "next/image";
 
 const TravelOurPackages = () => {

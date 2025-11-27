@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import TravelHeadTitle from "../HeadTitle/TravelHeadTitle";
 
-import { travelTestimonialCarousel } from "@/data/travel";
+import { travelTestimonialCarousel } from "@/data/travelData";
 import Image from "next/image";
 
 const TravelTestimonials = () => {

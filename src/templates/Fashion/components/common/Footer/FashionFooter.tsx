@@ -31,7 +31,7 @@ const FashionFooter = () => {
       </div>
 
       <div className="fashion-container text-sm my-6 text-center">
-        Radu Padurariu © 2025. All rights reserved. Inspired by &nbsp;
+        Radu Padurariu © 2025. All rights reserved. Inspired by&nbsp;
         <a
           href="https://preview.themeforest.net/item/alices-lingerie-store-and-fashion-boutique/full_screen_preview/19274651"
           target="_blank"

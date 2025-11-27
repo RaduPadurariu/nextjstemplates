@@ -1,4 +1,4 @@
-import { travelBlogHomeBlogList } from "@/data/travel";
+import { travelBlogHomeBlogList } from "@/data/travelData";
 import TravelBlogSingleBlog from "@/templates/Travel/components/Blog/TravelBlogSingleBlog";
 import TravelBreadcrumbs from "@/templates/Travel/components/common/Breadcrumbs/TravelBreadcrumbs";
 import { notFound } from "next/navigation";

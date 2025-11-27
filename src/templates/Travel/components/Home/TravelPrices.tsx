@@ -1,6 +1,6 @@
 import React from "react";
 import TravelHeadTitle from "../HeadTitle/TravelHeadTitle";
-import { travelPricesList, travelPricesListLocations } from "@/data/travel";
+import { travelPricesList, travelPricesListLocations } from "@/data/travelData";
 
 const TravelPrices = () => {
   return (

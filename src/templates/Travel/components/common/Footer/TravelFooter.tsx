@@ -3,7 +3,7 @@ import {
   travelFooterLinksCol1,
   travelFooterLinksCol2,
   travelSocialIcons,
-} from "@/data/travel";
+} from "@/data/travelData";
 import React from "react";
 import { TravelFooterForm } from "./TravelFooterForm";
 import Image from "next/image";

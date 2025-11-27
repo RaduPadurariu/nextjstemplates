@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { loginDashboardProfileButtons } from "@/data/loginDashboard";
+import { loginDashboardProfileButtons } from "@/data/loginDashboardData";
 
 const LoginDashboardProfileBtns = () => {
   const [active, setActive] = useState(1);

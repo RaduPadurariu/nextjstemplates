@@ -5,7 +5,7 @@ import {
   loginDashboardBillingInvoiceList,
   loginDashboardBillingTransactionsLatest,
   loginDashboardBillingTransactionsNewest,
-} from "@/data/loginDashboard";
+} from "@/data/loginDashboardData";
 import Image from "next/image";
 import React from "react";
 

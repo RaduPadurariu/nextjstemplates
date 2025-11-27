@@ -5,7 +5,7 @@ import {
   loginDashboardCategoriesData,
   loginDashboardHomeCarousel,
   loginDashboardSalesData,
-} from "@/data/loginDashboard";
+} from "@/data/loginDashboardData";
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";

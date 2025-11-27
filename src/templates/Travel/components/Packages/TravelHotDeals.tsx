@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { travelPackagesCarousel } from "@/data/travel";
+import { travelPackagesCarousel } from "@/data/travelData";
 import Image from "next/image";
 
 const TravelHotDeals = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { loginDashboardAuthUserLinks } from "@/data/loginDashboard";
+import { loginDashboardAuthUserLinks } from "@/data/loginDashboardData";
 import Link from "next/link";
 import React, { useState } from "react";
 

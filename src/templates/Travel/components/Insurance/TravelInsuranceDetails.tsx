@@ -1,4 +1,4 @@
-import { travelInsurance } from "@/data/travel";
+import { travelInsurance } from "@/data/travelData";
 import Image from "next/image";
 import React from "react";
 

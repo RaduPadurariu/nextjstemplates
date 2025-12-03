@@ -108,3 +108,15 @@ export const fashionHomeCarousel = [
     text: "Sexy Little Things",
   },
 ];
+
+export const fashionContactInfo = [
+  { id: 1, title: "Address:", text: "Chicago, IL 60606, 123, New Lenox" },
+  { id: 2, title: "Phone:", text: "123-456-7890" },
+  { id: 3, title: "E-mail:", text: "info@example.com" },
+];
+
+export const fashionContactSocialIcons = [
+  { id: 1, title: "X", src: "fa-brands fa-x-twitter" },
+  { id: 2, title: "Facebook", src: "fa-brands fa-facebook-f" },
+  { id: 3, title: "Instagram", src: "fa-brands fa-instagram" },
+];

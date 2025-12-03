@@ -9,7 +9,7 @@ import FashionNavList from "./FashionNavList";
 const FashionNavbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <nav className="py-5">
+    <nav className="py-5 z-1000">
       <div
         onClick={() => setNavOpen(!navOpen)}
         className={` text-black text-center block md:hidden cursor-pointer text-lg hover:text-[var(--fashionTextSecondary)] transition-all

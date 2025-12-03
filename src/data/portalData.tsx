@@ -42,7 +42,7 @@ export const portalTemplatesList = [
   },
   {
     id: 4,
-    title: "Fashion (in progress)",
+    title: "Fashion",
     icon: "fas fa-file-alt",
     img: "/images/portal/o2.png",
     desc: "Modern boutique design with upcoming advanced data filters.",

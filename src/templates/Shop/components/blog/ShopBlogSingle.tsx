@@ -1,5 +1,4 @@
 import { shopBlogData } from "@/data/shopData";
-import { notFound } from "next/navigation";
 import React from "react";
 
 import Link from "next/link";
@@ -7,15 +6,15 @@ import Link from "next/link";
 import ShopSingleBlogForm from "@/templates/Shop/components/blog/ShopSingleBlogForm";
 import ShopRecentArticles from "@/templates/Shop/components/blog/ShopRecentArticles";
 import ShopBreadcrumbs from "../breadcrumbs/ShopBreadcrumbs";
+import { ShopSingleBlogType } from "../../types/shopTypes";
 
-const ShopBlogSingle = ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
-  const singleBlog = shopBlogData.find((blog) => blog.slug == slug);
-  const singleBlogIndex = shopBlogData.findIndex((blog) => blog.slug == slug);
-  if (!singleBlog) {
-    notFound();
-  }
-
+const ShopBlogSingle = ({
+  singleBlog,
+  singleBlogIndex,
+}: {
+  singleBlog: ShopSingleBlogType;
+  singleBlogIndex: number;
+}) => {
   return (
     <section className="shop-container">
       <ShopBreadcrumbs />

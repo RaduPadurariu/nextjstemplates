@@ -67,3 +67,23 @@ export interface ShopMyProductLocalCart {
   id: string;
   quantity: number;
 }
+
+export interface ShopSingleBlogTags {
+  id: number;
+  name: string;
+}
+
+export interface ShopSingleBlogComment {
+  id: number;
+  author: string;
+  date: string;
+  comment: string;
+}
+export interface ShopSingleBlogType {
+  slug: string;
+  imgSrc: string;
+  heading: string;
+  blogContent: string;
+  tags: ShopSingleBlogTags[];
+  comments: ShopSingleBlogComment[];
+}

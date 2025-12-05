@@ -1,4 +1,4 @@
-import LoginDashboardSignIn from "@/templates/LoginDashboard/components/auth/LoginDashboardSignIn";
+import LoginDashboardSignIn from "@/templates/LoginDashboard/components/authentication/LoginDashboardSignIn";
 import React from "react";
 
 const page = () => {

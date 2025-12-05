@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../../../styles/loginDashboard.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import LoginDashboardAuthInitializer from "@/templates/LoginDashboard/components/auth/LoginDashboardAuthInitializer";
+import LoginDashboardAuthInitializer from "@/templates/LoginDashboard/components/authentication/LoginDashboardAuthInitializer";
 
 export const metadata: Metadata = {
   title: "Login Dashboard",

@@ -1,10 +1,10 @@
 import TravelBreadcrumbs from "@/templates/Travel/components/common/Breadcrumbs/TravelBreadcrumbs";
 import TravelCountriesStats from "@/templates/Travel/components/Countries/TravelCountriesStats";
-import React from "react";
 
-const page = async () => {
+const Page = async () => {
   const res = await fetch("https://www.apicountries.com/countries");
   const countries = await res.json();
+
   return (
     <div>
       <TravelBreadcrumbs />
@@ -13,4 +13,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;

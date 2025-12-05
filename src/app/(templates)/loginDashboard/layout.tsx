@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
 import "../../../styles/loginDashboard.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import LoginDashboardAuthInitializer from "@/templates/LoginDashboard/components/Auth/LoginDashboardAuthInitializer";
+import LoginDashboardAuthInitializer from "@/templates/LoginDashboard/components/auth/LoginDashboardAuthInitializer";
 
 export const metadata: Metadata = {
   title: "Login Dashboard",
   description:
-    "A Login with Dashboard created with Next.js, typescript, jest and tailwind css. ",
-  keywords: [
-    "nextjs",
-    "react",
-    "typescript",
-    "tailwind css",
-    "jest",
-    "radu padurariu",
-    "portfolio",
-  ],
+    "A Login with Dashboard created with Next.js, typescript, zustand, jest and tailwind css. ",
   authors: [
     { name: "Radu Padurariu", url: "https://radupadurariu.netlify.app" },
   ],

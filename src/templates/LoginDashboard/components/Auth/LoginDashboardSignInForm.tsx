@@ -3,8 +3,9 @@
 import { useRouter } from "next/navigation";
 import React, { useMemo } from "react";
 import { useSignIn } from "../../hooks/useSignIn";
-import { checkEmailSignIn, checkPasswordSignIn } from "./ErrorsValidators";
+
 import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
+import { checkEmailSignIn, checkPasswordSignIn } from "./ErrorsValidators";
 
 const LoginDashboardSignInForm = () => {
   const router = useRouter();

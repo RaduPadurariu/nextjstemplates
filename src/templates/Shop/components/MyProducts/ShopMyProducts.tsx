@@ -10,10 +10,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ShopMyFilterList from "./ShopMyFilterList";
-import ShopBreadcrumbs from "../Breadcrumbs/ShopBreadcrumbs";
 import { useShopContext } from "../../context/useShopContext";
 import { ShopMyProductsCategory } from "../../types/shopTypes";
 import ShopPagination from "../Pagination/ShopPagination";
+import ShopBreadcrumbs from "../breadcrumbs/ShopBreadcrumbs";
 
 const ShopMyProducts = () => {
   const [viewType, setViewType] = useState<"grid" | "list">("grid");

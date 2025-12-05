@@ -40,13 +40,6 @@
 }
 
 @layer components {
-  /* .shop-container {
-    max-width: 2048px;
-    margin: 0 auto;
-  } */
-}
-
-@layer utilities {
   #shop__dashboard_carousel {
     margin-left: 0 !important;
   }
@@ -82,4 +75,7 @@
     width: 17px !important;
     height: 17px !important;
   }
+}
+
+@layer utilities {
 }

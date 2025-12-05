@@ -29,9 +29,7 @@
     max-width: 2048px;
     margin: 0 auto;
   }
-}
 
-@layer utilities {
   .shop-subContainer {
     margin-left: auto;
     margin-right: auto;
@@ -154,4 +152,7 @@
       text-align: left;
     }
   }
+}
+
+@layer utilities {
 }

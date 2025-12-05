@@ -1,14 +1,14 @@
 "use client";
 import React, { useMemo } from "react";
 import { useSignUp } from "../../hooks/useSignUp";
+import { useRouter } from "next/navigation";
+import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
 import {
   checkEmailSignUp,
   checkNameSignUp,
   checkPasswordSignUp,
   checkTermsSignUp,
 } from "./ErrorsValidators";
-import { useRouter } from "next/navigation";
-import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
 
 const LoginDashboardSignUpForm = () => {
   const router = useRouter();

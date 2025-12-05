@@ -1,4 +1,4 @@
-import LoginDashboardAuthNavbar from "@/templates/LoginDashboard/components/AuthNavbar/LoginDashboardAuthNavbar";
+import LoginDashboardAuthNavbar from "@/templates/LoginDashboard/components/layout/AuthNavbar/LoginDashboardAuthNavbar";
 import React from "react";
 
 export default function RootLayout({

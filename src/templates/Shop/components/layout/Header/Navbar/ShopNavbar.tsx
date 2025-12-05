@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { ShopMyProductsCategory } from "../../../types/shopTypes";
+import { ShopMyProductsCategory } from "@/templates/Shop/types/shopTypes";
 
 const ShopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);

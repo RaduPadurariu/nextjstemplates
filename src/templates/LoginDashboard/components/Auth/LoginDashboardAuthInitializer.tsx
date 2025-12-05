@@ -1,6 +1,7 @@
 "use client";
-import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
+
 import { useEffect } from "react";
+import useAuthStore from "../../store/useAuthStore";
 
 interface DashboardUser {
   fullName: string;

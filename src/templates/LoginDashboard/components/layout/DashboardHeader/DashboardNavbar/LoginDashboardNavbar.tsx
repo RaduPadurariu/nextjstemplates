@@ -4,10 +4,11 @@ import {
 } from "@/data/loginDashboardData";
 import React from "react";
 import LoginDashboardNavbarActiveLink from "./LoginDashboardNavbarActiveLink";
-import { LoginDashboardLinkType } from "../../../types/loginDashboardTypes";
+
 import Image from "next/image";
 import Link from "next/link";
 import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
+import { LoginDashboardLinkType } from "@/templates/LoginDashboard/types/loginDashboardTypes";
 
 const LoginDashboardNavbar = ({
   isNavOpen,

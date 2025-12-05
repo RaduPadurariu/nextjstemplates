@@ -5,7 +5,6 @@ import React from "react";
 const page = async () => {
   const res = await fetch("https://www.apicountries.com/countries");
   const countries = await res.json();
-  console.log(countries);
   return (
     <div>
       <TravelBreadcrumbs />

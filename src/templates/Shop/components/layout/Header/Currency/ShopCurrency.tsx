@@ -3,7 +3,7 @@ import { FaAngleDown } from "react-icons/fa";
 
 import { shopCurrency } from "@/data/shopData";
 import React, { useState } from "react";
-import { useShopContext } from "../../../context/useShopContext";
+import { useShopContext } from "@/templates/Shop/context/useShopContext";
 
 const ShopCurrency = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

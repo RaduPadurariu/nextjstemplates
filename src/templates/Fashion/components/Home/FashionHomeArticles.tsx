@@ -1,4 +1,3 @@
-"use client";
 import { fashionHomeArticles } from "@/data/fashionData";
 import React from "react";
 

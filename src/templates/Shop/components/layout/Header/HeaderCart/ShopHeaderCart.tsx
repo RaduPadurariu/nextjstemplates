@@ -1,7 +1,7 @@
 "use client";
+import { useShopContext } from "@/templates/Shop/context/useShopContext";
 import Link from "next/link";
 import React from "react";
-import { useShopContext } from "../../../context/useShopContext";
 
 const ShopHeaderCart = () => {
   const { cartProducts } = useShopContext();

@@ -63,23 +63,24 @@ const FashionContact = () => {
             <FashionContactForm />
           </div>
         </div>
-      </div>
-      <div className="py-12">
-        <Image
-          src="/images/fashion/contact.png"
-          width={1920}
-          height={909}
-          alt="no-contact-img"
-        />
-      </div>
-      <div className="w-full h-[750px] py-12">
-        <iframe
-          src="https://www.google.com/maps/embed?origin=mfe&pb=!1m4!2m1!1s40.74863094328997,-73.985667!5e0!6i16"
-          className="w-full h-full border-0"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div className="pt-12">
+          <Image
+            src="/images/fashion/contact.png"
+            width={1920}
+            height={909}
+            alt="no-contact-img"
+            className="mx-auto"
+          />
+        </div>
+        <div className="w-full h-[500px]">
+          <iframe
+            src="https://www.google.com/maps/embed?origin=mfe&pb=!1m4!2m1!1s40.74863094328997,-73.985667!5e0!6i16"
+            className="w-full h-full border-0"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
   );

@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: "Travel",
   description:
     "A traveling website created with Next.js, typescript, jest and tailwind css. ",
-  keywords: [
-    "nextjs",
-    "react",
-    "typescript",
-    "tailwind css",
-    "jest",
-    "radu padurariu",
-    "portfolio",
-  ],
   authors: [
     { name: "Radu Padurariu", url: "https://radupadurariu.netlify.app" },
   ],

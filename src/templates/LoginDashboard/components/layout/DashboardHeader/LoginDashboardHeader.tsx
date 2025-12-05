@@ -3,8 +3,9 @@ import { loginDashboardNotificationList } from "@/data/loginDashboardData";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import LoginDashboardNavbar from "./DashboardNavbar/LoginDashboardNavbar";
+
 import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
+import LoginDashboardNavbar from "./DashboardNavbar/LoginDashboardNavbar";
 
 const LoginDashboardHeader = () => {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);

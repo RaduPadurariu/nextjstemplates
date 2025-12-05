@@ -1,9 +1,9 @@
 "use client";
 
+import { LoginDashboardLinkType } from "@/templates/LoginDashboard/types/loginDashboardTypes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { LoginDashboardLinkType } from "../../../types/loginDashboardTypes";
 
 const LoginDashboardNavbarActiveLink = ({
   link,

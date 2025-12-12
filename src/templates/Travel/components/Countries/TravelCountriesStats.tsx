@@ -20,6 +20,8 @@ const TravelCountriesStats = ({
     )
     .filter((country) => region === "All" || country.region === region)
     .sort((a, b) => {
+      const densityA = a.area ? Math.round(a.population / a.area) : 0;
+      const densityB = b.area ? Math.round(b.population / b.area) : 0;
       switch (sort) {
         case "name-asc":
           return a.name.localeCompare(b.name);
@@ -33,6 +35,11 @@ const TravelCountriesStats = ({
           return a.area - b.area;
         case "area-desc":
           return b.area - a.area;
+        case "density-asc":
+          return densityA - densityB;
+        case "density-desc":
+          return densityB - densityA;
+
         default:
           return 0;
       }
@@ -78,6 +85,8 @@ const TravelCountriesStats = ({
               <option value="population-desc">Population ↓</option>
               <option value="area-asc">Area ↑</option>
               <option value="area-desc">Area ↓</option>
+              <option value="density-asc">Density ↑</option>
+              <option value="density-desc">Density ↓</option>
             </select>
           </div>
         </div>
@@ -102,15 +111,23 @@ const TravelCountriesStats = ({
                     <p className="mb-4">{item.region}</p>
                     <ul className="mt-[30px]">
                       <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
-                        <span className="text-sm">Area:</span>
+                        <span className="text-sm">Population:</span>
                         <span className="text-base font-medium text-[--travelTextHeading]">
-                          {item.area}
+                          {Number(item.population).toLocaleString("ro-RO")}
                         </span>
                       </li>
                       <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
-                        <span className="text-sm">Population:</span>
+                        <span className="text-sm">Area:</span>
                         <span className="text-base font-medium text-[--travelTextHeading]">
-                          {item.population}
+                          {Number(item.area).toLocaleString("ro-RO")}
+                        </span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">
+                        <span className="text-sm">Density:</span>
+                        <span className="text-base font-medium text-[--travelTextHeading]">
+                          {Math.round(
+                            Number(item.population) / Number(item.area)
+                          ).toLocaleString("ro-RO")}
                         </span>
                       </li>
                       <li className="flex justify-between items-center border-b border-b-[#eee] mb-[15px] pb-[15px]">

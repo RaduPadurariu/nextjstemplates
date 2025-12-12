@@ -20,7 +20,7 @@ const ShopFooter = () => {
                       </h3>
                       {tab?.desc ? (
                         <div className="text-xs lg:text-sm pt-5">
-                          <p className="text-[var(shopTextPrimary)] m-0">
+                          <p className="text-[var(--shopTextPrimary)] m-0">
                             {tab?.desc}
                           </p>
                         </div>

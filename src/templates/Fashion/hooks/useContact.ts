@@ -1,30 +1,32 @@
-"use client";
 import { useReducer } from "react";
 
 type State = {
   name: string;
   email: string;
-  password: string;
+  subject: string;
+  message: string;
   isAfterSubmit: boolean;
+  submitStatus: boolean;
   hasAcceptedTerms: boolean;
-  formError: string | null;
 };
 
 type Action =
   | { type: "SET_NAME"; payload: string }
   | { type: "SET_EMAIL"; payload: string }
-  | { type: "SET_PASSWORD"; payload: string }
+  | { type: "SET_SUBJECT"; payload: string }
+  | { type: "SET_MESSAGE"; payload: string }
   | { type: "IS_AFTER_SUBMIT"; payload: boolean }
-  | { type: "HAS_ACCEPTED_TERMS"; payload: boolean }
-  | { type: "SET_FORM_ERROR"; payload: string | null };
+  | { type: "SUBMIT_STATUS"; payload: boolean }
+  | { type: "HAS_ACCEPTED_TERMS"; payload: boolean };
 
-const initialState: State = {
+const initialValue: State = {
   name: "",
   email: "",
-  password: "",
+  subject: "",
+  message: "",
   isAfterSubmit: false,
+  submitStatus: false,
   hasAcceptedTerms: false,
-  formError: null,
 };
 
 function reducer(state: State, action: Action): State {
@@ -33,21 +35,23 @@ function reducer(state: State, action: Action): State {
       return { ...state, name: action.payload };
     case "SET_EMAIL":
       return { ...state, email: action.payload };
-    case "SET_PASSWORD":
-      return { ...state, password: action.payload };
+    case "SET_SUBJECT":
+      return { ...state, subject: action.payload };
+    case "SET_MESSAGE":
+      return { ...state, message: action.payload };
     case "IS_AFTER_SUBMIT":
       return { ...state, isAfterSubmit: action.payload };
+    case "SUBMIT_STATUS":
+      return { ...state, submitStatus: action.payload };
     case "HAS_ACCEPTED_TERMS":
       return { ...state, hasAcceptedTerms: action.payload };
-    case "SET_FORM_ERROR":
-      return { ...state, formError: action.payload };
     default:
       return state;
   }
 }
 
-export function useSignUp() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+export function useContact() {
+  const [state, dispatch] = useReducer(reducer, initialValue);
 
   return { state, dispatch };
 }

@@ -1,16 +1,16 @@
 import TravelBreadcrumbs from "@/templates/Travel/components/common/Breadcrumbs/TravelBreadcrumbs";
+import TravelContact from "@/templates/Travel/components/Contact/TravelContact";
 import TravelContactAbout from "@/templates/Travel/components/Contact/TravelContactAbout";
-import TravelContactForm from "@/templates/Travel/components/Contact/TravelContactForm";
 import React from "react";
 
-const TravelContact = () => {
+const TravelContactPage = () => {
   return (
     <div>
       <TravelBreadcrumbs />
       <TravelContactAbout />
-      <TravelContactForm />
+      <TravelContact />
     </div>
   );
 };
 
-export default TravelContact;
+export default TravelContactPage;

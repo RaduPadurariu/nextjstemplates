@@ -4,27 +4,24 @@ import { useReducer } from "react";
 type State = {
   name: string;
   email: string;
-  password: string;
+  message: string;
   isAfterSubmit: boolean;
-  hasAcceptedTerms: boolean;
-  formError: string | null;
+  submitStatus: boolean;
 };
 
 type Action =
   | { type: "SET_NAME"; payload: string }
   | { type: "SET_EMAIL"; payload: string }
-  | { type: "SET_PASSWORD"; payload: string }
+  | { type: "SET_MESSAGE"; payload: string }
   | { type: "IS_AFTER_SUBMIT"; payload: boolean }
-  | { type: "HAS_ACCEPTED_TERMS"; payload: boolean }
-  | { type: "SET_FORM_ERROR"; payload: string | null };
+  | { type: "SUBMIT_STATUS"; payload: boolean };
 
 const initialState: State = {
   name: "",
   email: "",
-  password: "",
+  message: "",
   isAfterSubmit: false,
-  hasAcceptedTerms: false,
-  formError: null,
+  submitStatus: false,
 };
 
 function reducer(state: State, action: Action): State {
@@ -33,20 +30,18 @@ function reducer(state: State, action: Action): State {
       return { ...state, name: action.payload };
     case "SET_EMAIL":
       return { ...state, email: action.payload };
-    case "SET_PASSWORD":
-      return { ...state, password: action.payload };
+    case "SET_MESSAGE":
+      return { ...state, message: action.payload };
     case "IS_AFTER_SUBMIT":
       return { ...state, isAfterSubmit: action.payload };
-    case "HAS_ACCEPTED_TERMS":
-      return { ...state, hasAcceptedTerms: action.payload };
-    case "SET_FORM_ERROR":
-      return { ...state, formError: action.payload };
+    case "SUBMIT_STATUS":
+      return { ...state, submitStatus: action.payload };
     default:
       return state;
   }
 }
 
-export function useSignUp() {
+export function useContact() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return { state, dispatch };

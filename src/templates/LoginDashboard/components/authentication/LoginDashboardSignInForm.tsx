@@ -5,13 +5,14 @@ import React, { useMemo } from "react";
 import { useSignIn } from "../../hooks/useSignIn";
 
 import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
-import { checkEmailSignIn, checkPasswordSignIn } from "./ErrorsValidators";
+import { checkEmailSignIn, checkPasswordSignIn } from "./ValidationErrors";
 
 const LoginDashboardSignInForm = () => {
   const router = useRouter();
   const { state, dispatch } = useSignIn();
   const { login } = useAuthStore();
 
+  // useMemo is just to learn, not necessarily
   const emailErrors = useMemo(() => {
     return state.isAfterSubmit ? checkEmailSignIn(state.email) : [];
   }, [state.isAfterSubmit, state.email]);
@@ -70,7 +71,7 @@ const LoginDashboardSignInForm = () => {
           }
           className="focus:shadow-primary-outline  text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding p-3 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none"
         />
-        <div className="text-xs text-red-400 mt-1 ml-1 h-1">
+        <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
           {emailErrors.length > 0 &&
             emailErrors.map((err, i) => <span key={i}>{err}</span>)}
         </div>
@@ -87,7 +88,7 @@ const LoginDashboardSignInForm = () => {
           placeholder="Password"
           className="focus:shadow-primary-outline  text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding p-3 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none"
         />
-        <div className="text-xs text-red-400 mt-1 ml-1 h-1">
+        <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
           {passwordErrors.length > 0 &&
             passwordErrors.map((err, i) => <span key={i}>{err}</span>)}
         </div>

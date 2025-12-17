@@ -35,7 +35,7 @@ export function checkPasswordSignUp(password: string) {
     !/[0-9]/.test(password)
   ) {
     errors.push(
-      "Password must be at least 8 characters and include upper, lower, and number"
+      "At least 8 characters, with uppercase, lowercase and a number."
     );
   }
 

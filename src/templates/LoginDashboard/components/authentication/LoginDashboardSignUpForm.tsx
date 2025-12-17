@@ -8,13 +8,14 @@ import {
   checkNameSignUp,
   checkPasswordSignUp,
   checkTermsSignUp,
-} from "./ErrorsValidators";
+} from "./ValidationErrors";
 
 const LoginDashboardSignUpForm = () => {
   const router = useRouter();
   const { state, dispatch } = useSignUp();
   const { login } = useAuthStore();
 
+  // useMemo is just to learn, not necessarily
   const nameErrors = useMemo(() => {
     return state.isAfterSubmit ? checkNameSignUp(state.name) : [];
   }, [state.isAfterSubmit, state.name]);
@@ -28,8 +29,8 @@ const LoginDashboardSignUpForm = () => {
   }, [state.isAfterSubmit, state.password]);
 
   const termsErrors = useMemo(() => {
-    return state.isAfterSubmit ? checkTermsSignUp(state.terms) : [];
-  }, [state.isAfterSubmit, state.terms]);
+    return state.isAfterSubmit ? checkTermsSignUp(state.hasAcceptedTerms) : [];
+  }, [state.isAfterSubmit, state.hasAcceptedTerms]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +39,7 @@ const LoginDashboardSignUpForm = () => {
     const nameErrors = checkNameSignUp(state.name);
     const emailErrors = checkEmailSignUp(state.email);
     const passwordErrors = checkPasswordSignUp(state.password);
-    const termsErrors = checkTermsSignUp(state.terms);
+    const termsErrors = checkTermsSignUp(state.hasAcceptedTerms);
 
     if (
       nameErrors.length > 0 ||
@@ -146,9 +147,12 @@ const LoginDashboardSignUpForm = () => {
           <input
             id="loginDashboard_checkTerms"
             type="checkbox"
-            checked={state.terms}
+            checked={state.hasAcceptedTerms}
             onChange={(e) =>
-              dispatch({ type: "SET_TERMS", payload: e.target.checked })
+              dispatch({
+                type: "HAS_ACCEPTED_TERMS",
+                payload: e.target.checked,
+              })
             }
             className="w-5 h-5 mr-2 cursor-pointer appearance-none border border-slate-300 rounded-md checked:bg-[var(--dashboardBGSecondary)] checked:border-transparent transition-all"
           />
@@ -176,7 +180,7 @@ const LoginDashboardSignUpForm = () => {
           Sign Up
         </button>
         <div className="text-xs text-red-400 mt-1 ml-1 h-1">
-          {state.formError && state.formError}
+          {state.formError}
         </div>
       </div>
     </form>

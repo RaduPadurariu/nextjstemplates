@@ -12,11 +12,11 @@ export function checkEmail(email: string) {
   const errors: string[] = [];
 
   if (email.trim().length === 0) {
-    errors.push("Email is required");
+    errors.push("Email required.");
   } else {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      errors.push("Please enter a valid email address");
+      errors.push("Please enter a valid email address.");
     }
   }
 
@@ -47,7 +47,7 @@ export function checkTerms(terms: boolean) {
   const errors = [];
 
   if (!terms) {
-    errors.push("You must agree to the terms and conditions");
+    errors.push("You must agree to the terms and conditions.");
   }
 
   return errors;

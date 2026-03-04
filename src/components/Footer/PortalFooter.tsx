@@ -25,7 +25,7 @@ const PortalFooter = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
           </p>
           <p className="font-medium py-5 px-0 opacity-50">
-            &copy; All rights reserved - Radu Padurariu inspired by{" "}
+            © 2025 Radu Padurariu. Inspired by{" "}
             <a
               href="https://www.youtube.com/watch?v=KlnOAIxfZGw"
               target="_blank"

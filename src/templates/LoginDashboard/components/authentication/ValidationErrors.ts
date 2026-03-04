@@ -1,10 +1,10 @@
 // Sign Up
 
-export function checkNameSignUp(name: string) {
+export function checkUsernameSignUp(name: string) {
   const errors = [];
 
   if (name.trim().length === 0) {
-    errors.push("Name is required");
+    errors.push("Username is required");
   }
 
   return errors;
@@ -35,8 +35,21 @@ export function checkPasswordSignUp(password: string) {
     !/[0-9]/.test(password)
   ) {
     errors.push(
-      "At least 8 characters, with uppercase, lowercase and a number."
+      "At least 8 characters, with uppercase, lowercase and a number",
     );
+  }
+
+  return errors;
+}
+
+export function checkConfirmPasswordSignUp(
+  password: string,
+  confirmPassword: string,
+) {
+  const errors = [];
+
+  if (password !== confirmPassword) {
+    errors.push("Passwords do not match");
   }
 
   return errors;
@@ -46,16 +59,6 @@ export function checkTermsSignUp(terms: boolean) {
   const errors = [];
 
   if (!terms) {
-    errors.push("You must agree to the terms and conditions");
-  }
-
-  return errors;
-}
-
-export function checkFormErrorSignUp(formError: string | null) {
-  const errors = [];
-
-  if (formError) {
     errors.push("You must agree to the terms and conditions");
   }
 

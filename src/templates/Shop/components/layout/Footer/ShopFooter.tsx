@@ -49,7 +49,7 @@ const ShopFooter = () => {
           <div className="shop-subContainer px-6 md:px-0 w-100% md:w-[750px] lg:w-[970px] xl:w-[1170px]">
             <div className="flex justify-between items-center text-[var(--shopBGHeader)]">
               <div className="w-full text-left py-[15px] text-[var(--shopTextPrimary)]">
-                &copy; All rights reserved - Radu Padurariu inspired by{" "}
+                © 2025 Radu Padurariu. Inspired by{" "}
                 <a
                   href="https://theme157-tools.myshopify.com/"
                   target="_blank"

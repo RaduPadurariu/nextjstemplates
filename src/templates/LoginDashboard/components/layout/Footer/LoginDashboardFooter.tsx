@@ -7,8 +7,7 @@ const LoginDashboardFooter = () => {
         <div className="flex flex-wrap items-center -mx-3 lg:justify-between">
           <div className="w-full max-w-full px-3 mt-0 mb-6 shrink-0 lg:mb-0 lg:w-1/2 lg:flex-none">
             <div className="text-sm leading-normal text-center text-slate-500 lg:text-left">
-              Made with <i className="fa fa-heart"></i> by Radu Padurariu
-              inspired by{" "}
+              © 2025 Radu Padurariu. Inspired by{" "}
               <a
                 href="https://www.creative-tim.com"
                 className="font-semibold text-slate-700 "

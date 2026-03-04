@@ -24,7 +24,7 @@ export const ShopContextProvider = ({ children }: ShopContextProviderType) => {
       const storedCurrency = localStorage.getItem("shopCurrency");
       if (storedCurrency) {
         const found = shopCurrency.find(
-          (c) => c.currency === JSON.parse(storedCurrency)
+          (c) => c.currency === JSON.parse(storedCurrency),
         );
         setSelectedCurrency(found || shopCurrency[1]);
       } else {
@@ -68,21 +68,16 @@ export const ShopContextProvider = ({ children }: ShopContextProviderType) => {
   }, [cartProducts, isCartInitialized]);
 
   // Add a product to shopping cart
-  const handleAddToCart = (
-    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
-    item: ShopMyProduct
-  ) => {
-    e.preventDefault();
-
+  const handleAddToCart = (item: ShopMyProduct) => {
     const existingItem = cartProducts?.find(
-      (entry) => entry.product.id === item.id
+      (entry) => entry.product.id === item.id,
     );
 
     if (existingItem) {
       const updatedCart = cartProducts?.map((entry) =>
         entry.product.id === item.id
           ? { ...entry, quantity: entry.quantity + 1 }
-          : entry
+          : entry,
       );
       setCartProducts(updatedCart);
     } else {

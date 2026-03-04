@@ -36,10 +36,7 @@ export interface ShopContextType {
   setSelectedCurrency: (value: ShopCurrencyType | null) => void;
   cartProducts: ShopMyCartProduct[];
   setCartProducts: (value: ShopMyCartProduct[]) => void;
-  handleAddToCart: (
-    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>,
-    item: ShopMyProduct
-  ) => void;
+  handleAddToCart: (item: ShopMyProduct) => void;
 }
 
 export interface ShopContextProviderType {

@@ -15,6 +15,7 @@ import { useShopContext } from "@/templates/Shop/context/useShopContext";
 
 import { ShopMyProduct } from "../../types/shopTypes";
 import ShopBreadcrumbs from "../breadcrumbs/ShopBreadcrumbs";
+import ShopCatalogAddButton from "./ShopCatalogAddButton";
 
 const ShopCatalog = () => {
   const { selectedCurrency, handleAddToCart } = useShopContext();
@@ -29,11 +30,11 @@ const ShopCatalog = () => {
 
   useEffect(() => {
     const sortFunction = shopMyProductsSortOptions.find(
-      (el) => el.value === shopCatalogOption
+      (el) => el.value === shopCatalogOption,
     )?.sortFunction;
 
     const sortedProducts = [...shopMyProductList.slice(0, 10)].sort(
-      sortFunction
+      sortFunction,
     );
     setFilteredProducts(sortedProducts);
   }, [shopCatalogOption]);
@@ -201,17 +202,10 @@ const ShopCatalog = () => {
                       >
                         {product.longDesc}
                       </div>
-                      <div
-                        className="pt-4 flex group mt-auto"
-                        onClick={(e) => handleAddToCart(e, product)}
-                      >
-                        <div className="relative text-white p-0  rounded flex justify-around cursor-pointer bg-[var(--shopTextSecondary)] group-hover:bg-[var(--shopBGOrange)] transition-all duration-300 ease-in-out">
-                          <i className="fa fa-shopping-cart z-[1] text-2xl cursor-pointer rounded text-white bg-[var(--shopBGPrimary)] group-hover:bg-[var(--shopBGOrange)] p-2 transition-all duration-300 ease-in-out"></i>
-                          <span className="uppercase block font-normal text-white text-sm cursor-pointer py-[10px] px-[7px] lg:px-[17px]">
-                            Add to cart
-                          </span>
-                        </div>
-                      </div>
+                      <ShopCatalogAddButton
+                        product={product}
+                        handleAddToCart={handleAddToCart}
+                      />
                     </div>
                   </li>
                 );
@@ -253,7 +247,7 @@ const ShopCatalog = () => {
                         {page}
                       </button>
                     </li>
-                  )
+                  ),
                 )}
                 <li>
                   <button

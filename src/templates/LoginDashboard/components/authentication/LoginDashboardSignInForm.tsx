@@ -38,12 +38,12 @@ const LoginDashboardSignInForm = () => {
     };
 
     const existingUsers = JSON.parse(
-      localStorage.getItem("loginDashboardUsers") || "[]"
+      localStorage.getItem("loginDashboardUsers") || "[]",
     );
 
     const userExists = existingUsers.some(
       (user: { email: string; password: string }) =>
-        user.email === newUser.email && user.password == newUser.password
+        user.email === newUser.email && user.password == newUser.password,
     );
 
     if (!userExists) {
@@ -55,15 +55,16 @@ const LoginDashboardSignInForm = () => {
     }
     login(newUser.email);
 
-    router.push("/loginDashboard/home");
+    router.replace("/loginDashboard/home");
   };
 
   return (
     <form role="form" onSubmit={handleSubmit}>
       <div className="mb-4">
+        <label htmlFor="loginDashboardLoginEmail">Email</label>
         <input
+          id="loginDashboardLoginEmail"
           type="email"
-          required
           value={state.email}
           placeholder="Email"
           onChange={(e) =>
@@ -77,9 +78,10 @@ const LoginDashboardSignInForm = () => {
         </div>
       </div>
       <div className="mb-4">
+        <label htmlFor="loginDashboardLoginPassword">Password</label>
         <input
+          id="loginDashboardLoginPassword"
           type="password"
-          required
           value={state.password}
           onChange={(e) =>
             dispatch({ type: "SET_PASSWORD", payload: e.target.value })

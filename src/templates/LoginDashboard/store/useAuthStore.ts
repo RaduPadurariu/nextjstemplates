@@ -1,8 +1,9 @@
 import { create } from "zustand";
 
 const guestUser = {
-  fullName: "Sayo Kravits",
-  userName: "lucky.jesse",
+  email: "",
+  password: "",
+  username: "jesse.lucky",
   firstName: "Jesse",
   lastName: "Lucky",
   address: "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09",
@@ -12,11 +13,10 @@ const guestUser = {
   aboutMe: "Browsing in guest mode. Sign in to edit your profile data.",
 };
 
-interface DashboardUser {
-  fullName: string;
+export interface DashboardUser {
   email: string;
   password: string;
-  userName: string;
+  username: string;
   firstName: string;
   lastName: string;
   address: string;
@@ -32,7 +32,7 @@ interface AuthState {
   login: (email: string) => void;
   logout: () => void;
   isInitialized: boolean;
-  user: typeof guestUser;
+  user: DashboardUser;
 }
 
 const useAuthStore = create<AuthState>((set) => ({
@@ -43,7 +43,7 @@ const useAuthStore = create<AuthState>((set) => ({
 
   login: (value) => {
     const users = JSON.parse(
-      localStorage.getItem("loginDashboardUsers") || "[]"
+      localStorage.getItem("loginDashboardUsers") || "[]",
     );
     const foundUser = users.find((u: DashboardUser) => u.email === value);
     if (!foundUser) return;

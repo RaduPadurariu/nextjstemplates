@@ -4,10 +4,9 @@ import { useEffect } from "react";
 import useAuthStore from "../../store/useAuthStore";
 
 interface DashboardUser {
-  fullName: string;
   email: string;
   password: string;
-  userName: string;
+  username: string;
   firstName: string;
   lastName: string;
   address: string;
@@ -26,10 +25,10 @@ const LoginDashboardAuthInitializer = () => {
 
     if (loggedInEmail) {
       const users = JSON.parse(
-        localStorage.getItem("loginDashboardUsers") || "[]"
+        localStorage.getItem("loginDashboardUsers") || "[]",
       );
       const foundUser = users.find(
-        (u: DashboardUser) => u.email === loggedInEmail
+        (u: DashboardUser) => u.email === loggedInEmail,
       );
 
       if (foundUser) {

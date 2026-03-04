@@ -2,25 +2,33 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { ShopMyCartProduct } from "../../types/shopTypes";
-import { useShopContext } from "../../context/useShopContext";
+import { ShopCurrencyType, ShopMyCartProduct } from "../../types/shopTypes";
 
-const ShopCartProduct = ({ item }: { item: ShopMyCartProduct }) => {
-  const { cartProducts, setCartProducts, selectedCurrency } = useShopContext();
+const ShopCartProduct = ({
+  cartProducts,
+  setCartProducts,
+  selectedCurrency,
+  item,
+}: {
+  cartProducts: ShopMyCartProduct[];
+  setCartProducts: (value: ShopMyCartProduct[]) => void;
+  selectedCurrency: ShopCurrencyType | null;
+  item: ShopMyCartProduct;
+}) => {
   const [localQty, setLocalQty] = useState(item.quantity);
 
   const updateQuantity = () => {
     const updatedCart = cartProducts.map((entry) =>
       entry.product.id === item.product.id
         ? { ...entry, quantity: localQty }
-        : entry
+        : entry,
     );
     setCartProducts(updatedCart);
   };
 
   const handleRemoveProduct = () => {
     const updatedCart = cartProducts.filter(
-      (entry) => entry.product.id !== item.product.id
+      (entry) => entry.product.id !== item.product.id,
     );
     setCartProducts(updatedCart);
   };
@@ -68,7 +76,7 @@ const ShopCartProduct = ({ item }: { item: ShopMyCartProduct }) => {
         </div>
         <div className="text-sm text-[var(--shopTextSecondary)] ">
           {(item.product.price * (selectedCurrency?.coefficient ?? 1)).toFixed(
-            2
+            2,
           )}
         </div>
       </div>

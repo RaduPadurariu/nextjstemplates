@@ -8,11 +8,9 @@ describe("PortalTemplates", () => {
     render(<PortalTemplates />);
 
     portalTemplatesList.forEach((template) => {
-      const links = screen.getAllByRole("link");
-      const hasMatchingHref = links.some(
-        (link) => link.getAttribute("href") === template.link
-      );
-      expect(hasMatchingHref).toBe(true);
+      const titleLink = screen.getByRole("link", { name: template.title });
+
+      expect(titleLink).toHaveAttribute("href", template.link);
     });
   });
 });

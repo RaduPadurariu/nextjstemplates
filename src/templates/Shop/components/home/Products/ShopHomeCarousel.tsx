@@ -83,7 +83,7 @@ const ShopHomeCarousel: React.FC<ShopHomeCarouselProps> = ({
                 </p>
                 <button
                   className="pt-4 pl-5 flex group items-center"
-                  onClick={(e) => handleAddToCart(e, item)}
+                  onClick={() => handleAddToCart(item)}
                 >
                   <div className="relative text-white p-0  rounded flex justify-around cursor-pointer bg-[var(--shopTextSecondary)] group-hover:bg-[var(--shopBGOrange)] transition-all duration-300 ease-in-out">
                     <i className="fa fa-shopping-cart z-[1] text-2xl cursor-pointer rounded text-white bg-[var(--shopBGPrimary)] group-hover:bg-[var(--shopBGOrange)] p-2 transition-all duration-300 ease-in-out"></i>

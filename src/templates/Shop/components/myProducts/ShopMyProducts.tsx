@@ -37,13 +37,13 @@ const ShopMyProducts = () => {
   const q = (searchParams.get("q") ?? "").trim().toLowerCase();
   if (q.length > 0) {
     filteredProducts = filteredProducts.filter((p) =>
-      p.title.toLowerCase().includes(q)
+      p.title.toLowerCase().includes(q),
     );
   }
 
   if (category) {
     filteredProducts = filteredProducts.filter(
-      (c) => c.category === selectedCategory?.title
+      (c) => c.category === selectedCategory?.title,
     );
 
     if (subCategory) {
@@ -51,13 +51,13 @@ const ShopMyProducts = () => {
         selectedCategory?.subItem
           .filter((o) => subCategory?.includes(o.slug))
           .map((el) => el.subCategory)
-          .includes(s.subCategory)
+          .includes(s.subCategory),
       );
     }
   }
 
   const sortFunction = shopMyProductsSortOptions.find(
-    (el) => el.value === currentSort
+    (el) => el.value === currentSort,
   )?.sortFunction;
 
   filteredProducts = sortFunction
@@ -270,7 +270,7 @@ const ShopMyProducts = () => {
                     </div>
                     <div
                       className="pt-4 flex group mt-auto"
-                      onClick={(e) => handleAddToCart(e, product)}
+                      onClick={() => handleAddToCart(product)}
                     >
                       <div className="relative text-white p-0  rounded flex justify-around cursor-pointer bg-[var(--shopTextSecondary)] group-hover:bg-[var(--shopBGOrange)] transition-all duration-300 ease-in-out">
                         <i className="fa fa-shopping-cart z-[1] text-2xl cursor-pointer rounded text-white bg-[var(--shopBGPrimary)] group-hover:bg-[var(--shopBGOrange)] p-2 transition-all duration-300 ease-in-out"></i>

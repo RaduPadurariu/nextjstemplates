@@ -2,8 +2,6 @@
 import { useReducer } from "react";
 
 type State = {
-  userName: string;
-  fullName: string;
   firstName: string;
   lastName: string;
   address: string;
@@ -14,8 +12,6 @@ type State = {
 };
 
 type Action =
-  | { type: "SET_USER_NAME"; payload: string }
-  | { type: "SET_FULL_NAME"; payload: string }
   | { type: "SET_FIRST_NAME"; payload: string }
   | { type: "SET_LAST_NAME"; payload: string }
   | { type: "SET_ADDRESS"; payload: string }
@@ -25,8 +21,6 @@ type Action =
   | { type: "SET_ABOUT_ME"; payload: string };
 
 const initialState: State = {
-  userName: "",
-  fullName: "",
   firstName: "",
   lastName: "",
   address: "",
@@ -38,10 +32,6 @@ const initialState: State = {
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
-    case "SET_USER_NAME":
-      return { ...state, userName: action.payload };
-    case "SET_FULL_NAME":
-      return { ...state, fullName: action.payload };
     case "SET_FIRST_NAME":
       return { ...state, firstName: action.payload };
     case "SET_LAST_NAME":

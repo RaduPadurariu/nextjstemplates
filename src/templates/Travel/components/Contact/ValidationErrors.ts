@@ -16,7 +16,7 @@ export function checkEmail(email: string) {
   } else {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      errors.push("Please enter a valid email address.");
+      errors.push("Please enter a valid email address");
     }
   }
 

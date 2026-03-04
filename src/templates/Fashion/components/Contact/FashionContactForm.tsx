@@ -44,18 +44,17 @@ const FashionContactForm = () => {
       termsErrors.length > 0
     ) {
       return;
-    } else {
-      dispatch({ type: "SET_NAME", payload: "" });
-      dispatch({ type: "SET_EMAIL", payload: "" });
-      dispatch({ type: "SET_SUBJECT", payload: "" });
-      dispatch({ type: "SET_MESSAGE", payload: "" });
-      dispatch({ type: "HAS_ACCEPTED_TERMS", payload: false });
-      dispatch({ type: "IS_AFTER_SUBMIT", payload: false });
-      dispatch({ type: "SUBMIT_STATUS", payload: true });
-      setTimeout(() => {
-        dispatch({ type: "SUBMIT_STATUS", payload: false });
-      }, 3000);
     }
+    dispatch({ type: "SET_NAME", payload: "" });
+    dispatch({ type: "SET_EMAIL", payload: "" });
+    dispatch({ type: "SET_SUBJECT", payload: "" });
+    dispatch({ type: "SET_MESSAGE", payload: "" });
+    dispatch({ type: "HAS_ACCEPTED_TERMS", payload: false });
+    dispatch({ type: "IS_AFTER_SUBMIT", payload: false });
+    dispatch({ type: "SUBMIT_STATUS", payload: true });
+    setTimeout(() => {
+      dispatch({ type: "SUBMIT_STATUS", payload: false });
+    }, 3000);
   };
   return (
     <form action="" className="flex flex-col" onSubmit={handleSubmit}>
@@ -63,60 +62,86 @@ const FashionContactForm = () => {
         Contact Us
       </h2>
       <div className="flex flex-col sm:flex-row gap-6 pb-4">
+        <div className="w-full sm:w-1/2">
+          <label className="sr-only" htmlFor="fashionContactName">
+            Name
+          </label>
+          <input
+            type="text"
+            id="fashionContactName"
+            className="w-full border-b-2 border-b-[#eee] py-2.5 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
+            placeholder="Name*"
+            value={state.name}
+            onChange={(e) =>
+              dispatch({ type: "SET_NAME", payload: e.target.value })
+            }
+          />
+        </div>
+
+        <div className="w-full sm:w-1/2">
+          <label htmlFor="fashionContactEmail" className="sr-only">
+            Email
+          </label>
+          <input
+            id="fashionContactEmail"
+            type="email"
+            className="w-full border-b-2 border-b-[#eee] py-2.5 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
+            placeholder="E-mail*"
+            value={state.email}
+            onChange={(e) =>
+              dispatch({ type: "SET_EMAIL", payload: e.target.value })
+            }
+          />
+        </div>
+      </div>
+      <div className="w-full">
+        <label htmlFor="fashionContactSubject" className="sr-only">
+          Subject
+        </label>
         <input
+          id="fashionContactSubject"
           type="text"
-          className="w-full sm:w-1/2 border-b-2 border-b-[#eee] py-2.5 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
-          placeholder="Name*"
-          value={state.name}
+          placeholder="Subject*"
+          className="block mb-1 pb-4 w-full border-b-2 border-b-[#eee] pt-2.5 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
+          value={state.subject}
           onChange={(e) =>
-            dispatch({ type: "SET_NAME", payload: e.target.value })
+            dispatch({ type: "SET_SUBJECT", payload: e.target.value })
           }
-          required
-        />
-        <input
-          type="email"
-          className="w-full sm:w-1/2 border-b-2 border-b-[#eee] py-2.5 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
-          placeholder="E-mail*"
-          value={state.email}
-          onChange={(e) =>
-            dispatch({ type: "SET_EMAIL", payload: e.target.value })
-          }
-          required
         />
       </div>
-      <input
-        type="text"
-        placeholder="Subject*"
-        className="block mb-1 pb-4 w-full border-b-2 border-b-[#eee] pt-2.5 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
-        value={state.subject}
-        onChange={(e) =>
-          dispatch({ type: "SET_SUBJECT", payload: e.target.value })
-        }
-        required
-      />
-      <textarea
-        name=""
-        id=""
-        placeholder="Message*"
-        className="h-[86px] w-full mb-4 border-b-2 border-b-[#eee] pb-4 pt-4 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
-        value={state.message}
-        onChange={(e) =>
-          dispatch({ type: "SET_MESSAGE", payload: e.target.value })
-        }
-        required
-      ></textarea>
-      <div className="flex">
-        <input
-          type="checkbox"
-          checked={state.hasAcceptedTerms}
+
+      <div className="w-full">
+        <label htmlFor="fashionContactMessage" className="sr-only">
+          Message
+        </label>
+        <textarea
+          id="fashionContactMessage"
+          placeholder="Message*"
+          className="h-[86px] w-full mb-4 border-b-2 border-b-[#eee] pb-4 pt-4 px-5.5 font-base leading-[1.2em] placeholder:text-[var(--fashionTextSecondary)] focus:outline-none"
+          value={state.message}
           onChange={(e) =>
-            dispatch({ type: "HAS_ACCEPTED_TERMS", payload: e.target.checked })
+            dispatch({ type: "SET_MESSAGE", payload: e.target.value })
           }
-        />
-        <p className="pl-4 leading-[1.5em] text-[13px]">
-          By using this form you agree with the storage and handling of your
-          data by this website.
-        </p>
+        ></textarea>
+      </div>
+
+      <div className="flex">
+        <label className="flex items-center">
+          <input
+            type="checkbox"
+            checked={state.hasAcceptedTerms}
+            onChange={(e) =>
+              dispatch({
+                type: "HAS_ACCEPTED_TERMS",
+                payload: e.target.checked,
+              })
+            }
+          />
+          <span className="pl-4 leading-[1.5em] text-[13px]">
+            By using this form you agree with the storage and handling of your
+            data by this website.
+          </span>
+        </label>
       </div>
       <button
         type="submit"
@@ -146,7 +171,7 @@ const FashionContactForm = () => {
             termsErrors.map((err, i) => <span key={i}>{err}</span>)}
         </span>
 
-        <span className="mr-1 text-green-700">
+        <span className="mr-1 text-green-700 text-center w-full">
           {state.submitStatus && "Message sent successfully"}
         </span>
       </div>

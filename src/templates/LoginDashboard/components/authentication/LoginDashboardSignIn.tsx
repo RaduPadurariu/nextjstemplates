@@ -1,9 +1,26 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import LoginDashboardSignInForm from "./LoginDashboardSignInForm";
 import LoginDashboardAuthSideSection from "./LoginDashboardAuthSideSection";
+import useAuthStore from "../../store/useAuthStore";
+import { useRouter } from "next/navigation";
 
 const LoginDashboardSignIn = () => {
+  const { isAuthenticated } = useAuthStore();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.replace("/loginDashboard/home");
+    }
+  }, [isAuthenticated, router]);
+
+  if (isAuthenticated) {
+    return null;
+  }
+
   return (
     <section className="relative flex items-center min-h-screen p-0 overflow-hidden bg-center bg-cover">
       <div className="w-full mx-auto px-6 max-w-[1024px] xl:max-w-[1280px] z-1">

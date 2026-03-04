@@ -1,21 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
-
-import { useProfileUpdate } from "../../hooks/useProfileUpdate";
+import React from "react";
 import LoginDashboardProfileBtns from "./LoginDashboardProfileBtns";
 import Image from "next/image";
 import useAuthStore from "@/templates/LoginDashboard/store/useAuthStore";
 
 const LoginDashboardProfileTitle = () => {
-  const { state, dispatch } = useProfileUpdate();
   const { user, isAuthenticated, isInitialized } = useAuthStore();
-
-  useEffect(() => {
-    if (user) {
-      dispatch({ type: "SET_FULL_NAME", payload: user.fullName || "" });
-    }
-  }, [user, dispatch]);
 
   return (
     <div className="flex flex-wrap -mx-3">
@@ -39,7 +30,7 @@ const LoginDashboardProfileTitle = () => {
       <div className="flex-none w-auto max-w-full px-3 my-auto">
         <div className="h-full">
           <h5 className="mb-1  font-semibold text-[var(--dashboardTextTitles)] text-xl">
-            {state.fullName}
+            {user.username}
           </h5>
           <p className="mb-0 font-semibold leading-normal  text-sm">
             Public Relations

@@ -27,68 +27,81 @@ const ShopContactForm = () => {
       messageErrors.length > 0
     ) {
       return;
-    } else {
-      dispatch({ type: "SET_NAME", payload: "" });
-      dispatch({ type: "SET_EMAIL", payload: "" });
-      dispatch({ type: "SET_MESSAGE", payload: "" });
-      dispatch({ type: "IS_AFTER_SUBMIT", payload: false });
-      dispatch({ type: "SUBMIT_STATUS", payload: true });
-
-      setTimeout(() => {
-        dispatch({ type: "SUBMIT_STATUS", payload: false });
-      }, 3000);
     }
+    dispatch({ type: "SET_NAME", payload: "" });
+    dispatch({ type: "SET_EMAIL", payload: "" });
+    dispatch({ type: "SET_MESSAGE", payload: "" });
+    dispatch({ type: "IS_AFTER_SUBMIT", payload: false });
+    dispatch({ type: "SUBMIT_STATUS", payload: true });
+
+    setTimeout(() => {
+      dispatch({ type: "SUBMIT_STATUS", payload: false });
+    }, 3000);
   };
 
   return (
     <form action="" className="mt-[37px] px-4 pb-[5px]" onSubmit={handleSubmit}>
       <div className="mt-1">
-        <input
-          type="text"
-          placeholder="Name"
-          value={state.name}
-          onChange={(e) =>
-            dispatch({ type: "SET_NAME", payload: e.target.value })
-          }
-          required
-          className="h-[47px] placeholder:text-[var(--shopBGSecondary)] bg-white border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGSecondary)] w-full block align-top py-1.5 px-5 leading-[1.43]"
-        />
-        <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
-          {nameErrors.length > 0 &&
-            nameErrors.map((err, i) => <span key={i}>{err}</span>)}
+        <div className="w-full">
+          <label htmlFor="shopContactName" className="sr-only">
+            Name
+          </label>
+          <input
+            id="shopContactName"
+            type="text"
+            placeholder="Name"
+            value={state.name}
+            onChange={(e) =>
+              dispatch({ type: "SET_NAME", payload: e.target.value })
+            }
+            className="h-[47px] placeholder:text-[var(--shopBGSecondary)] bg-white border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGSecondary)] w-full block align-top py-1.5 px-5 leading-[1.43]"
+          />
+          <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
+            {nameErrors.length > 0 &&
+              nameErrors.map((err, i) => <span key={i}>{err}</span>)}
+          </div>
         </div>
       </div>
       <div className="mt-1">
-        <input
-          type="email"
-          required
-          value={state.email}
-          placeholder="Email"
-          onChange={(e) =>
-            dispatch({ type: "SET_EMAIL", payload: e.target.value })
-          }
-          className="h-[47px] placeholder:text-[var(--shopBGSecondary)] bg-white border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGSecondary)] w-full block align-top py-1.5 px-5 leading-[1.43]"
-        />
-        <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
-          {emailErrors.length > 0 &&
-            emailErrors.map((err, i) => <span key={i}>{err}</span>)}
+        <div className="w-full">
+          <label htmlFor="shopContactEmail" className="sr-only">
+            Email
+          </label>
+          <input
+            id="shopContactEmail"
+            type="email"
+            value={state.email}
+            placeholder="Email"
+            onChange={(e) =>
+              dispatch({ type: "SET_EMAIL", payload: e.target.value })
+            }
+            className="h-[47px] placeholder:text-[var(--shopBGSecondary)] bg-white border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGSecondary)] w-full block align-top py-1.5 px-5 leading-[1.43]"
+          />
+          <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
+            {emailErrors.length > 0 &&
+              emailErrors.map((err, i) => <span key={i}>{err}</span>)}
+          </div>
         </div>
       </div>
       <div className="mt-1">
-        <textarea
-          name=""
-          id=""
-          value={state.message}
-          placeholder="Message"
-          required
-          onChange={(e) =>
-            dispatch({ type: "SET_MESSAGE", payload: e.target.value })
-          }
-          className="placeholder:text-[var(--shopBGSecondary)] min-w-full max-w-full min-h-[100px] bg-white border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGSecondary)] w-full block align-top py-[15px] px-5 h-[122px] leading-[1.43]"
-        ></textarea>
-        <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
-          {messageErrors.length > 0 &&
-            messageErrors.map((err, i) => <span key={i}>{err}</span>)}
+        <div className="w-full">
+          <label htmlFor="shopContactMessage" className="sr-only">
+            Message
+          </label>
+          <textarea
+            name=""
+            id="shopContactMessage"
+            value={state.message}
+            placeholder="Message"
+            onChange={(e) =>
+              dispatch({ type: "SET_MESSAGE", payload: e.target.value })
+            }
+            className="placeholder:text-[var(--shopBGSecondary)] min-w-full max-w-full min-h-[100px] bg-white border border-[var(--shopBorderPrimary)] text-sm text-[var(--shopBGSecondary)] w-full block align-top py-[15px] px-5 h-[122px] leading-[1.43]"
+          ></textarea>
+          <div className="text-xs text-red-400 mt-1 ml-1 min-h-[1rem]">
+            {messageErrors.length > 0 &&
+              messageErrors.map((err, i) => <span key={i}>{err}</span>)}
+          </div>
         </div>
       </div>
       <div className="">
